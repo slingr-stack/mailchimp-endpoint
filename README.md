@@ -1,0 +1,2 @@
+# mailchimp-endpoint
+Mailchimp endpoint
