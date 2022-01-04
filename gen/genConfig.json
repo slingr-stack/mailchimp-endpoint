@@ -1,0 +1,1832 @@
+{
+  "fileName": "mailchimp-helpers",
+  "endpointName": "mailchimp",
+  "apiDescriptors": [
+    {
+      "prefix": "",
+      "suffix": "apiRoot",
+      "method": "GET",
+      "url": "/",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/account-exports",
+      "acceptsCallbacks": false
+    },{
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/account-exports",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/account-exports/:export_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/authorized-apps",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/authorized-apps/:app_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/automations",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/automations",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/automations/:workflow_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/automations/:workflow_id/actions/archive",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/automations/:workflow_id/actions/pause-all-emails",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/automations/:workflow_id/actions/start-all-emails",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/automations/:workflow_id/emails",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/automations/:workflow_id/emails/:workflow_email_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/automations/:workflow_id/emails/:workflow_email_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/automations/:workflow_id/emails/:workflow_email_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/automations/:workflow_id/emails/:workflow_email_id/actions/pause",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/automations/:workflow_id/emails/:workflow_email_id/actions/start",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/automations/:workflow_id/emails/:workflow_email_id/queue",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/automations/:workflow_id/emails/:workflow_email_id/queue",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/automations/:workflow_id/emails/:workflow_email_id/queue/:subscriber_hash",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/automations/:workflow_id/removed-subscribers",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/automations/:workflow_id/removed-subscribers",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/automations/:workflow_id/removed-subscribers/:subscriber_hash",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/batches",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/batches",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/batches/:batch_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/batches/:batch_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/batch-webhooks",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/batch-webhooks",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/batch-webhooks/:batch_webhook_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/batch-webhooks/:batch_webhook_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/batch-webhooks/:batch_webhook_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/campaign-folders",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/campaign-folders",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/campaign-folders/:folder_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/campaign-folders/:folder_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/campaign-folders/:folder_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/campaigns",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/campaigns",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/campaigns/:campaign_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/campaigns/:campaign_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/campaigns/:campaign_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/campaigns/:campaign_id/actions/cancel-send",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/campaigns/:campaign_id/actions/send",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/campaigns/:campaign_id/actions/schedule",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/campaigns/:campaign_id/actions/unschedule",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/campaigns/:campaign_id/actions/pause",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/campaigns/:campaign_id/actions/resume",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/campaigns/:campaign_id/actions/replicate",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/campaigns/:campaign_id/actions/test",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/campaigns/:campaign_id/actions/create-resend",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/campaigns/:campaign_id/content",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "put",
+      "method": "PUT",
+      "url": "/campaigns/:campaign_id/content",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/campaigns/:campaign_id/feedback",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/campaigns/:campaign_id/feedback",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/campaigns/:campaign_id/feedback/:feedback_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/campaigns/:campaign_id/feedback/:feedback_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/campaigns/:campaign_id/feedback/:feedback_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/campaigns/:campaign_id/send-checklist",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/activity-feed/chimp-chatter",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/connected-sites",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/connected-sites",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/connected-sites/:connected_site_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/connected-sites/:connected_site_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/connected-sites/:connected_site_id/actions/verify-script-installation",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/conversations",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/conversations/:conversation_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/conversations/:conversation_id/messages",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/conversations/:conversation_id/messages/:message_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/customer-journeys/journeys/:journey_id/steps/:step_id/actions/trigger",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/ecommerce/stores",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/ecommerce/stores/:store_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/ecommerce/stores/:store_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id/carts/:cart_id/lines",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/ecommerce/stores/:store_id/carts/:cart_id/lines",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id/carts",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/ecommerce/stores/:store_id/carts",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id/carts/:cart_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/ecommerce/stores/:store_id/carts/:cart_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/ecommerce/stores/:store_id/carts/:cart_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id/customers",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/ecommerce/stores/:store_id/customers",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id/customers/:customer_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "put",
+      "method": "PUT",
+      "url": "/ecommerce/stores/:store_id/customers/:customer_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/ecommerce/stores/:store_id/customers/:customer_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/ecommerce/stores/:store_id/customers/:customer_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id/orders/:order_id/lines",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/ecommerce/stores/:store_id/orders/:order_id/lines",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/ecommerce/stores/:store_id/products",
+      "acceptsCallbacks": false
+    },{
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/orders",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id/orders",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/ecommerce/stores/:store_id/orders",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id/orders/:order_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/ecommerce/stores/:store_id/orders/:order_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/ecommerce/stores/:store_id/orders/:order_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id/products/:product_id/images",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/ecommerce/stores/:store_id/products/:product_id/images",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id/products/:product_id/images/:image_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/ecommerce/stores/:store_id/products/:product_id/images/:image_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/ecommerce/stores/:store_id/products/:product_id/images/:image_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id/products/:product_id/variants",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/ecommerce/stores/:store_id/products/:product_id/variants",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "put",
+      "method": "PUT",
+      "url": "/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id/products",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/ecommerce/stores/:store_id/products",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id/products/:product_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/ecommerce/stores/:store_id/products/:product_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/ecommerce/stores/:store_id/products/:product_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id/promo-rules/:promo_rule_id/promo-codes",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/ecommerce/stores/:store_id/promo-rules/:promo_rule_id/promo-codes",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id/promo-rules/:promo_rule_id/promo-codes/:promo_code_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/ecommerce/stores/:store_id/promo-rules/:promo_rule_id/promo-codes/:promo_code_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/ecommerce/stores/:store_id/promo-rules/:promo_rule_id/promo-codes/:promo_code_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id/promo-rules",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/ecommerce/stores/:store_id/promo-rules",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ecommerce/stores/:store_id/promo-rules/:promo_rule_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/ecommerce/stores/:store_id/promo-rules/:promo_rule_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/ecommerce/stores/:store_id/promo-rules/:promo_rule_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/facebook-ads",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/facebook-ads/:outreach_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/file-manager/files",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/file-manager/files",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/file-manager/files/:file_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/file-manager/files/:file_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/file-manager/files/:file_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/file-manager/folders",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/file-manager/folders",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/file-manager/folders/:folder_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/file-manager/folders/:folder_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/file-manager/folders/:folder_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/landing-pages",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/landing-pages",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/landing-pages/:page_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/landing-pages/:page_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/landing-pages/:page_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/landing-pages/:page_id/actions/publish",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/landing-pages/:page_id/actions/unpublish",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/landing-pages/:page_id/content",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/lists",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/lists/:list_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/lists/:list_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/lists/:list_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/abuse-reports",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/abuse-reports/:report_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/activity",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/clients",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/members/:subscriber_hash/events",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/lists/:list_id/members/:subscriber_hash/events",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/growth-history",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/growth-history/:month",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/interest-categories",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/lists/:list_id/interest-categories",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/interest-categories/:interest_category_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/lists/:list_id/interest-categories/:interest_category_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/lists/:list_id/interest-categories/:interest_category_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/interest-categories/:interest_category_id/interests",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/lists/:list_id/interest-categories/:interest_category_id/interests",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/locations",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/members/:subscriber_hash/activity",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/members/:subscriber_hash/activity-feed",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/members/:subscriber_hash/goals",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/members/:subscriber_hash/notes",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/lists/:list_id/members/:subscriber_hash/notes",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/members/:subscriber_hash/notes/:note_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/lists/:list_id/members/:subscriber_hash/notes/:note_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/lists/:list_id/members/:subscriber_hash/notes/:note_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/members/:subscriber_hash/tags",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/lists/:list_id/members/:subscriber_hash/tags",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/members",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/lists/:list_id/members",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "put",
+      "method": "PUT",
+      "url": "/lists/:list_id/members/:subscriber_hash",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/members/:subscriber_hash",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "put",
+      "method": "PUT",
+      "url": "/lists/:list_id/members/:subscriber_hash",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/lists/:list_id/members/:subscriber_hash",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/lists/:list_id/members/:subscriber_hash",
+      "acceptsCallbacks": false
+    },
+
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/lists/:list_id/members/:subscriber_hash/actions/delete-permanent",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/merge-fields",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/lists/:list_id/merge-fields",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/merge-fields/:merge_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/lists/:list_id/merge-fields/:merge_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/lists/:list_id/merge-fields/:merge_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/segments/:segment_id/members",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/lists/:list_id/segments/:segment_id/members",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/lists/:list_id/segments/:segment_id/members/:subscriber_hash",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/segments",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/lists/:list_id/segments",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/segments/:segment_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/lists/:list_id/segments/:segment_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/lists/:list_id/segments/:segment_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/lists/:list_id/segments/:segment_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/signup-forms",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/lists/:list_id/signup-forms",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/tag-search",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/webhooks",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/lists/:list_id/webhooks",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/lists/:list_id/webhooks/:webhook_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/lists/:list_id/webhooks/:webhook_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/lists/:list_id/webhooks/:webhook_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/ping",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reporting/facebook-ads",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reporting/facebook-ads/:outreach_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reporting/facebook-ads/:outreach_id/ecommerce-product-activity",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reporting/landing-pages",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reporting/landing-pages/:outreach_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id/abuse-reports",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id/abuse-reports/:report_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id/advice",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id/open-details",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id/open-details/:subscriber_hash",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id/click-details",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id/click-details/:link_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id/click-details/:link_id/members",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id/click-details/:link_id/members/:subscriber_hash",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id/domain-performance",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id/ecommerce-product-activity",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id/eepurl",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id/email-activity",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id/email-activity/:subscriber_hash",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id/locations",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id/sent-to",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id/sent-to/:subscriber_hash",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id/sub-reports",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id/unsubscribed",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/reports/:campaign_id/unsubscribed/:subscriber_hash",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/search-campaigns",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/search-members",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/template-folders",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/template-folders",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/template-folders/:folder_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/template-folders/:folder_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/template-folders/:folder_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/templates",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/templates",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/templates/:template_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "patch",
+      "method": "PATCH",
+      "url": "/templates/:template_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/templates/:template_id",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/templates/:template_id/default-content",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/verified-domains",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/verified-domains",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "get",
+      "method": "GET",
+      "url": "/verified-domains/:domain_name",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "delete",
+      "method": "DELETE",
+      "url": "/verified-domains/:domain_name",
+      "acceptsCallbacks": false
+    },
+    {
+      "prefix": "",
+      "suffix": "post",
+      "method": "POST",
+      "url": "/verified-domains/:domain_name/actions/verify",
+      "acceptsCallbacks": false
+    }
+  ]
+}

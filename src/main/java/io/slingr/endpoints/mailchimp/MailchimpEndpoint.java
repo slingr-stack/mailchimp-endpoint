@@ -26,6 +26,7 @@ import java.util.Date;
  * <p>Mailchimp endpoint
  * <p>
  * <p>Created by hpacini on 19/07/17.
+ * <p>Modified by nmarquez on 04/01/22
  */
 @SlingrEndpoint(name = "mailchimp", functionPrefix = "_")
 public class MailchimpEndpoint extends HttpEndpoint {
