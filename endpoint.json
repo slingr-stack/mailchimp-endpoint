@@ -23,7 +23,7 @@
     {
       "label": "Webhook",
       "name": "webhook",
-      "description": "Happens when a Mailchimp hits the endpoint URL."
+      "description": "Happens when a Mailchimp Webhook hits the endpoint URL."
     }
   ],
   "functions": [
@@ -65,7 +65,8 @@
     }
   ],
   "scripts": [
-    "mailchimp-fn-helpers.js",
+    "http-generic-helpers.js",
+    "mailchimp-helpers.js",
     "functions.js"
   ],
   "configuration": [

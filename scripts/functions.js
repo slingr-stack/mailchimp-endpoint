@@ -43,3 +43,8 @@ endpoint.emailHash = function (email) {
         return json.hash;
     }
 };
+
+endpoint.getResourceById = function (fileId) {
+    var json = endpoint._getResourceById({fileId: fileId});
+    return json.file_data;
+};

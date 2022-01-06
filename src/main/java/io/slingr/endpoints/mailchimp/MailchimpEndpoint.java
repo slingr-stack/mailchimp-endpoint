@@ -3,13 +3,12 @@ package io.slingr.endpoints.mailchimp;
 import io.slingr.endpoints.HttpEndpoint;
 import io.slingr.endpoints.exceptions.EndpointException;
 import io.slingr.endpoints.exceptions.ErrorCode;
-import io.slingr.endpoints.framework.annotations.EndpointFunction;
-import io.slingr.endpoints.framework.annotations.EndpointProperty;
-import io.slingr.endpoints.framework.annotations.EndpointWebService;
-import io.slingr.endpoints.framework.annotations.SlingrEndpoint;
+import io.slingr.endpoints.framework.annotations.*;
+import io.slingr.endpoints.services.AppLogs;
 import io.slingr.endpoints.services.HttpService;
 import io.slingr.endpoints.services.rest.RestMethod;
 import io.slingr.endpoints.utils.Json;
+import io.slingr.endpoints.ws.exchange.FunctionRequest;
 import io.slingr.endpoints.ws.exchange.WebServiceRequest;
 import io.slingr.endpoints.ws.exchange.WebServiceResponse;
 import org.apache.commons.lang.StringUtils;
@@ -32,6 +31,9 @@ import java.util.Date;
 public class MailchimpEndpoint extends HttpEndpoint {
     private static final Logger logger = LoggerFactory.getLogger(MailchimpEndpoint.class);
 
+    @ApplicationLogger
+    private AppLogs appLogger;
+
     private static final String MAILCHIMP_API_URL = "https://%s.api.mailchimp.com/3.0/";
     private static final char[] HEX_DIGITS = "0123456789ABCDEF".toCharArray();
 
@@ -46,26 +48,6 @@ public class MailchimpEndpoint extends HttpEndpoint {
         return generateBaseUrl(apiKey);
     }
 
-    @Override
-    public void endpointStarted() {
-        httpService().setupBasicAuthentication("anyUser", apiKey);
-    }
-
-    @EndpointWebService
-    public WebServiceResponse webhooks(WebServiceRequest request) {
-        final Json json = HttpService.defaultWebhookConverter(request);
-        if (request.getMethod().equals(RestMethod.POST)) {
-            if (request.getBody() != null) {
-                json.set("body", request.getBody());
-            }
-
-            // send the webhook event
-            events().send(HttpService.WEBHOOK_EVENT, json);
-
-        }
-        return HttpService.defaultWebhookResponse();
-    }
-
     private static String generateBaseUrl(String apiKey) {
         if (StringUtils.isBlank(apiKey)) {
             throw EndpointException.permanent(ErrorCode.CLIENT, "Empty apiKey.");
@@ -78,6 +60,26 @@ public class MailchimpEndpoint extends HttpEndpoint {
 
         final String server = apiKey.substring(dash + 1);
         return String.format(MAILCHIMP_API_URL, StringUtils.isBlank(server) ? "us1" : server.trim());
+    }
+
+    @Override
+    public void endpointStarted() {
+        httpService().setupBasicAuthentication("anyUser", apiKey);
+    }
+
+    @EndpointFunction(name = "_post")
+    public Json post(FunctionRequest request) {
+
+        Json req = request.getJsonParams();
+        Json body = req.json("body");
+        String path = req.string("path");
+
+        if (path.contains("/file-manager/files")) {
+            getResourceById(body);
+        }
+        req.set("body", body);
+
+        return httpService().defaultPostRequest(req);
     }
 
     @EndpointFunction(name = "_emailHash")
@@ -151,18 +153,16 @@ public class MailchimpEndpoint extends HttpEndpoint {
     }
 
     @EndpointFunction(name = "_getResourceById")
-    public Json getResourceById(Json request) {
-        String key = "file_id";
+    public Json getResourceById(Json requestBody) {
+        String key = "fileId";
         try {
-            if (!request.isEmpty(key)) {
-                String fileId = request.string(key);
-                request.remove(key);
+            if (!requestBody.isEmpty(key)) {
+                String fileId = requestBody.string(key);
+                requestBody.remove(key);
                 Json descriptor = files().metadata(fileId);
                 if (descriptor != null && !descriptor.isEmpty()) {
                     String file = files().download(fileId, true);
-                    return Json.map().set("fileData", file);
-                } else {
-                    throw EndpointException.permanent(ErrorCode.ARGUMENT, String.format("File with id [%s] not found", fileId));
+                    return requestBody.set("file_data", file);
                 }
             }
         } catch (Exception ex) {
@@ -171,4 +171,20 @@ public class MailchimpEndpoint extends HttpEndpoint {
         return null;
     }
 
+    @EndpointWebService
+    public WebServiceResponse webhooks(WebServiceRequest request) {
+        Json webhookBody = request.getJsonBody();
+        //Small verification to discard strange webhooks
+        if (request.getMethod().equals(RestMethod.POST) &&
+                webhookBody.contains("type") && webhookBody.string("type").matches("subscribe|unsubscribe|profile|cleaned|upemail|campaign") &&
+                webhookBody.contains("fired_at") && !webhookBody.string("fired_at").isEmpty() &&
+                webhookBody.contains("data")) {
+            // send the webhook event
+            events().send(HttpService.WEBHOOK_EVENT, webhookBody);
+        } else {
+            logger.info("Webhook discarded because of bad formatting",webhookBody);
+            appLogger.warn("[mailchimp] Webhook discarded because of bad formatting",webhookBody);
+        }
+        return HttpService.defaultWebhookResponse();
+    }
 }
