@@ -40,6 +40,9 @@ public class MailchimpEndpoint extends HttpEndpoint {
     @EndpointProperty
     private String apiKey;
 
+    @EndpointProperty
+    private String webhooksToken;
+
     public MailchimpEndpoint() {
     }
 
@@ -173,18 +176,17 @@ public class MailchimpEndpoint extends HttpEndpoint {
 
     @EndpointWebService
     public WebServiceResponse webhooks(WebServiceRequest request) {
+        Json webhookQueryParams = request.getParameters();
+        String webhookToken = webhookQueryParams.contains("token") ? webhookQueryParams.string("token") : "";
+
         Json webhookBody = request.getJsonBody();
-        //Small verification to discard strange webhooks
-        if (request.getMethod().equals(RestMethod.POST) &&
-                webhookBody.contains("type") && webhookBody.string("type").matches("subscribe|unsubscribe|profile|cleaned|upemail|campaign") &&
-                webhookBody.contains("fired_at") && !webhookBody.string("fired_at").isEmpty() &&
-                webhookBody.contains("data")) {
-            // send the webhook event
+        if (!webhookToken.isEmpty() && webhookToken.equals(this.webhooksToken)){
             events().send(HttpService.WEBHOOK_EVENT, webhookBody);
         } else {
-            logger.info("Webhook discarded because of bad formatting",webhookBody);
-            appLogger.warn("[mailchimp] Webhook discarded because of bad formatting",webhookBody);
+            logger.info("Webhook discarded because token was not valid",webhookBody);
+            appLogger.warn("[mailchimp] Webhook discarded because token was not valid",webhookBody);
         }
+
         return HttpService.defaultWebhookResponse();
     }
 }

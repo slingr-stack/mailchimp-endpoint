@@ -84,6 +84,12 @@
       "value": "@config.WEBHOOK_URL"
     },
     {
+      "name": "webhooksToken",
+      "label": "Webhooks Token",
+      "type": "text",
+      "description": "Secret password used to validate that webhooks received are from mailchimp. This can be changed, and if so, we recommend using a strong password with at least 8 characters, one lowercase and uppercase letters & one number"
+    },
+    {
       "name": "config",
       "label": "Configuration",
       "value": "You will need to configure the Webhook URL in each individual MailChimp list. Please refer to the following web site for information: <a href='http://apidocs.mailchimp.com/webhooks/#configuring-webhooks' target='_blank'>http://apidocs.mailchimp.com/webhooks/#configuring-webhooks</a>",
