@@ -111,7 +111,6 @@ Instead of having to use the generic HTTP methods, you can (and should) make use
 <details>
     <summary>Click here to see all the helpers</summary>
 
-    ```javascript
     /*
     * API URL: '/'
     * HTTP Method: 'GET'
@@ -1931,8 +1930,6 @@ Instead of having to use the generic HTTP methods, you can (and should) make use
 	*/
     app.endpoints.mailchimplists.members.put(listId, subscriberHash, body);
 
-    
-    ```
 </details>
 
 For more information about how shortcuts work, and how they are generated, take a look at the [slingr-helpgen tool](https://github.com/slingr-stack/slingr-helpgen).
