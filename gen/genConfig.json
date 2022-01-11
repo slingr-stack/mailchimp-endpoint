@@ -7,678 +7,775 @@
       "suffix": "apiRoot",
       "method": "GET",
       "url": "/",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/root/list-api-root-resources/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/account-exports",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/account-exports/list-account-exports/"
     },{
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/account-exports",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/account-exports/add-export/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/account-exports/:export_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/account-exports/get-account-export-info/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/authorized-apps",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/authorized-apps/list-authorized-apps/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/authorized-apps/:app_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/authorized-apps/get-authorized-app-info/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/automations",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/automation/list-automations/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/automations",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/automation/add-automation/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/automations/:workflow_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/automation/get-automation-info/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/automations/:workflow_id/actions/archive",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/automation/archive-automation/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/automations/:workflow_id/actions/pause-all-emails",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/automation/pause-automation-emails/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/automations/:workflow_id/actions/start-all-emails",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/automation/start-automation-emails/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/automations/:workflow_id/emails",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/automation-email/list-automated-emails/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/automations/:workflow_id/emails/:workflow_email_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/automation-email/get-workflow-email-info/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/automations/:workflow_id/emails/:workflow_email_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/automation-email/update-workflow-email/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/automations/:workflow_id/emails/:workflow_email_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/automation-email/delete-workflow-email/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/automations/:workflow_id/emails/:workflow_email_id/actions/pause",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/automation-email/pause-automated-email/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/automations/:workflow_id/emails/:workflow_email_id/actions/start",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/automation-email/start-automated-email/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/automations/:workflow_id/emails/:workflow_email_id/queue",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/automation-email-queue/list-automated-email-subscribers/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/automations/:workflow_id/emails/:workflow_email_id/queue",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/automation-email-queue/add-subscriber-to-workflow-email/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/automations/:workflow_id/emails/:workflow_email_id/queue/:subscriber_hash",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/automation-email-queue/get-automated-email-subscriber/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/automations/:workflow_id/removed-subscribers",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/automation-removed-subscribers/list-subscribers-removed-from-workflow/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/automations/:workflow_id/removed-subscribers",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/automation-removed-subscribers/remove-subscriber-from-workflow/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/automations/:workflow_id/removed-subscribers/:subscriber_hash",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/automation-removed-subscribers/get-subscriber-removed-from-workflow/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/batches",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/batch-operations/list-batch-requests/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/batches",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/batch-operations/start-batch-operation/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/batches/:batch_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/batch-operations/get-batch-operation-status/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/batches/:batch_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/batch-operations/delete-batch-request/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/batch-webhooks",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/batch-webhooks/list-batch-webhooks/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/batch-webhooks",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/batch-webhooks/add-batch-webhook/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/batch-webhooks/:batch_webhook_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/batch-webhooks/get-batch-webhook-info/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/batch-webhooks/:batch_webhook_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/batch-webhooks/update-batch-webhook/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/batch-webhooks/:batch_webhook_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/batch-webhooks/delete-batch-webhook/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/campaign-folders",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaign-folders/list-campaign-folders/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/campaign-folders",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaign-folders/add-campaign-folder/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/campaign-folders/:folder_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaign-folders/get-campaign-folder/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/campaign-folders/:folder_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaign-folders/update-campaign-folder/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/campaign-folders/:folder_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaign-folders/delete-campaign-folder/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/campaigns",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaigns/list-campaigns/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/campaigns",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaigns/add-campaign/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/campaigns/:campaign_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaigns/get-campaign-info/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/campaigns/:campaign_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaigns/update-campaign-settings/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/campaigns/:campaign_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaigns/delete-campaign/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/campaigns/:campaign_id/actions/cancel-send",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaigns/cancel-campaign/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/campaigns/:campaign_id/actions/send",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaigns/send-campaign/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/campaigns/:campaign_id/actions/schedule",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaigns/schedule-campaign/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/campaigns/:campaign_id/actions/unschedule",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaigns/unschedule-campaign/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/campaigns/:campaign_id/actions/pause",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaigns/pause-rss-campaign/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/campaigns/:campaign_id/actions/resume",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaigns/resume-rss-campaign/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/campaigns/:campaign_id/actions/replicate",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaigns/replicate-campaign/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/campaigns/:campaign_id/actions/test",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaigns/send-test-email/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/campaigns/:campaign_id/actions/create-resend",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaigns/resend-campaign/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/campaigns/:campaign_id/content",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaign-content/get-campaign-content/"
     },
     {
       "prefix": "",
       "suffix": "put",
       "method": "PUT",
       "url": "/campaigns/:campaign_id/content",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaign-content/set-campaign-content/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/campaigns/:campaign_id/feedback",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaign-feedback/list-campaign-feedback/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/campaigns/:campaign_id/feedback",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaign-feedback/add-campaign-feedback/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/campaigns/:campaign_id/feedback/:feedback_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaign-feedback/get-campaign-feedback-message/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/campaigns/:campaign_id/feedback/:feedback_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaign-feedback/update-campaign-feedback-message/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/campaigns/:campaign_id/feedback/:feedback_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaign-feedback/delete-campaign-feedback-message/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/campaigns/:campaign_id/send-checklist",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaign-checklist/get-campaign-send-checklist/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/activity-feed/chimp-chatter",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/chimp-chatter/get-latest-chimp-chatter/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/connected-sites",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/connected-sites/list-connected-sites/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/connected-sites",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/connected-sites/add-connected-site/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/connected-sites/:connected_site_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/connected-sites/get-connected-site/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/connected-sites/:connected_site_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/connected-sites/delete-connected-site/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/connected-sites/:connected_site_id/actions/verify-script-installation",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/connected-sites/verify-connected-site-script/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/conversations",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/conversations/list-conversations/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/conversations/:conversation_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/conversations/get-conversation/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/conversations/:conversation_id/messages",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/conversation-messages/list-messages/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/conversations/:conversation_id/messages/:message_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/conversation-messages/get-message/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/customer-journeys/journeys/:journey_id/steps/:step_id/actions/trigger",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/customer-journeys-journeys-steps-actions/customer-journeys-api-trigger-for-a-contact/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-stores/list-stores/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/ecommerce/stores",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-stores/add-store/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-stores/get-store-info/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/ecommerce/stores/:store_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-stores/update-store/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/ecommerce/stores/:store_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-stores/delete-store/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id/carts/:cart_id/lines",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-cart-lines/list-cart-line-items/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/ecommerce/stores/:store_id/carts/:cart_id/lines",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-cart-lines/add-cart-line-item/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-cart-lines/get-cart-line-item/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-cart-lines/update-cart-line-item/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-cart-lines/delete-cart-line-item/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id/carts",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-carts/list-carts/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/ecommerce/stores/:store_id/carts",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-carts/add-cart/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id/carts/:cart_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-carts/get-cart-info/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/ecommerce/stores/:store_id/carts/:cart_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-carts/update-cart/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/ecommerce/stores/:store_id/carts/:cart_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-carts/delete-cart/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id/customers",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-customers/list-customers/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/ecommerce/stores/:store_id/customers",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-customers/add-customer/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id/customers/:customer_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-customers/get-customer-info/"
     },
     {
       "prefix": "",
       "suffix": "put",
       "method": "PUT",
       "url": "/ecommerce/stores/:store_id/customers/:customer_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-customers/add-or-update-customer/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/ecommerce/stores/:store_id/customers/:customer_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-customers/update-customer/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/ecommerce/stores/:store_id/customers/:customer_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-customers/delete-customer/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id/orders/:order_id/lines",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-order-lines/list-order-line-items/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/ecommerce/stores/:store_id/orders/:order_id/lines",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-order-lines/add-order-line-item/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-order-lines/get-order-line-item/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-order-lines/update-order-line-item/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-order-lines/delete-order-line-item/"
     },
     {
       "prefix": "",
@@ -691,658 +788,744 @@
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/orders",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-orders/list-account-orders/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id/orders",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-orders/list-orders/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/ecommerce/stores/:store_id/orders",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-orders/add-order/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id/orders/:order_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-orders/get-order-info/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/ecommerce/stores/:store_id/orders/:order_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-orders/update-order/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/ecommerce/stores/:store_id/orders/:order_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-product-images/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id/products/:product_id/images",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-product-images/list-product-images/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/ecommerce/stores/:store_id/products/:product_id/images",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-product-images/add-product-image/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id/products/:product_id/images/:image_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-product-images/get-product-image-info/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/ecommerce/stores/:store_id/products/:product_id/images/:image_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-product-images/update-product-image/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/ecommerce/stores/:store_id/products/:product_id/images/:image_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-product-images/delete-product-image/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id/products/:product_id/variants",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-product-variants/list-product-variants/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/ecommerce/stores/:store_id/products/:product_id/variants",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-product-variants/add-product-variant/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-product-variants/get-product-variant-info/"
     },
     {
       "prefix": "",
       "suffix": "put",
       "method": "PUT",
       "url": "/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-product-variants/add-or-update-product-variant/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-product-variants/update-product-variant/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-product-variants/delete-product-variant/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id/products",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-products/list-product/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/ecommerce/stores/:store_id/products",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-products/add-product/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id/products/:product_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-products/get-product-info/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/ecommerce/stores/:store_id/products/:product_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-products/update-product/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/ecommerce/stores/:store_id/products/:product_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-products/delete-product/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id/promo-rules/:promo_rule_id/promo-codes",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-promo-codes/list-promo-codes/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/ecommerce/stores/:store_id/promo-rules/:promo_rule_id/promo-codes",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-promo-codes/add-promo-code/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id/promo-rules/:promo_rule_id/promo-codes/:promo_code_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-promo-codes/get-promo-code/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/ecommerce/stores/:store_id/promo-rules/:promo_rule_id/promo-codes/:promo_code_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-promo-codes/update-promo-code/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/ecommerce/stores/:store_id/promo-rules/:promo_rule_id/promo-codes/:promo_code_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-promo-codes/delete-promo-code/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id/promo-rules",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-promo-rules/list-promo-rules/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/ecommerce/stores/:store_id/promo-rules",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-promo-rules/add-promo-rule/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ecommerce/stores/:store_id/promo-rules/:promo_rule_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-promo-rules/get-promo-rule/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/ecommerce/stores/:store_id/promo-rules/:promo_rule_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-promo-rules/update-promo-rule/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/ecommerce/stores/:store_id/promo-rules/:promo_rule_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ecommerce-promo-rules/delete-promo-rule/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/facebook-ads",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/facebook-ads/list-facebook-ads/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/facebook-ads/:outreach_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/facebook-ads/get-facebook-ad-info/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/file-manager/files",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/file-manager-files/list-stored-files/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/file-manager/files",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/file-manager-files/add-file/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/file-manager/files/:file_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/file-manager-files/get-file/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/file-manager/files/:file_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/file-manager-files/update-file/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/file-manager/files/:file_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/file-manager-files/delete-file/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/file-manager/folders",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/file-manager-folders/list-folders/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/file-manager/folders",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/file-manager-folders/add-folder/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/file-manager/folders/:folder_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/file-manager-folders/get-folder/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/file-manager/folders/:folder_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/file-manager-folders/update-folder/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/file-manager/folders/:folder_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/file-manager-folders/delete-folder/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/landing-pages",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/landing-pages/list-landing-pages/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/landing-pages",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/landing-pages/add-landing-page/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/landing-pages/:page_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/landing-pages/get-landing-page-info/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/landing-pages/:page_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/landing-pages/update-landing-page/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/landing-pages/:page_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/landing-pages/delete-landing-page/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/landing-pages/:page_id/actions/publish",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/landing-pages/publish-landing-page/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/landing-pages/:page_id/actions/unpublish",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/landing-pages/unpublish-landing-page/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/landing-pages/:page_id/content",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/landing-pages-content/get-landing-page-content/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/lists/get-lists-info/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/lists",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/lists/add-list/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/lists/get-list-info/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/lists/:list_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/lists/update-lists/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/lists/:list_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/lists/delete-list/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/lists/:list_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/abuse-reports",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/abuse-reports/list-abuse-reports/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/abuse-reports/:report_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/abuse-reports/get-abuse-report/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/activity",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-activity/list-recent-activity/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/clients",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-clients/list-top-email-clients/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/members/:subscriber_hash/events",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-member-events/list-member-events/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/lists/:list_id/members/:subscriber_hash/events",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-member-events/add-event/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/growth-history",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-growth-history/list-growth-history-data/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/growth-history/:month",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-growth-history/get-growth-history-by-month/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/interest-categories",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/interest-categories/list-interest-categories/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/lists/:list_id/interest-categories",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/interest-categories/:interest_category_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/interest-categories/get-interest-category-info/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/lists/:list_id/interest-categories/:interest_category_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/interest-categories/update-interest-category/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/lists/:list_id/interest-categories/:interest_category_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/interest-categories/delete-interest-category/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/interest-categories/:interest_category_id/interests",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/interests/list-interests-in-category/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/lists/:list_id/interest-categories/:interest_category_id/interests",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/interests/add-interest-in-category/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/interests/get-interest-in-category/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/interests/update-interest-in-category/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/interests/delete-interest-in-category/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/locations",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-locations/list-locations/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/members/:subscriber_hash/activity",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-member-activity/view-recent-activity-50/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/members/:subscriber_hash/activity-feed",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-member-activity-feed/view-recent-activity/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/members/:subscriber_hash/goals",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-member-notes/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/members/:subscriber_hash/notes",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-member-notes/list-recent-member-notes/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/lists/:list_id/members/:subscriber_hash/notes",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-member-notes/add-member-note/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/members/:subscriber_hash/notes/:note_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-member-notes/get-member-note/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/lists/:list_id/members/:subscriber_hash/notes/:note_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-member-notes/update-note/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/lists/:list_id/members/:subscriber_hash/notes/:note_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-member-notes/delete-note/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/members/:subscriber_hash/tags",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-member-tags/list-member-tags/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/lists/:list_id/members/:subscriber_hash/tags",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-member-tags/add-or-remove-member-tags/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/members",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-members/list-members-info/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/lists/:list_id/members",
-      "acceptsCallbacks": false
-    },
-    {
-      "prefix": "",
-      "suffix": "put",
-      "method": "PUT",
-      "url": "/lists/:list_id/members/:subscriber_hash",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-members/add-member-to-list/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/members/:subscriber_hash",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-members/get-member-info/"
     },
     {
       "prefix": "",
       "suffix": "put",
       "method": "PUT",
       "url": "/lists/:list_id/members/:subscriber_hash",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-members/add-or-update-list-member/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/lists/:list_id/members/:subscriber_hash",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-members/update-list-member/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/lists/:list_id/members/:subscriber_hash",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-members/archive-list-member/"
     },
 
     {
@@ -1350,483 +1533,552 @@
       "suffix": "post",
       "method": "POST",
       "url": "/lists/:list_id/members/:subscriber_hash/actions/delete-permanent",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-members/delete-list-member/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/merge-fields",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-merges/list-merge-fields/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/lists/:list_id/merge-fields",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-merges/add-merge-field/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/merge-fields/:merge_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-merges/get-merge-field/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/lists/:list_id/merge-fields/:merge_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-merges/update-merge-field/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/lists/:list_id/merge-fields/:merge_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-segment-members/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/segments/:segment_id/members",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-segment-members/list-members-in-segment/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/lists/:list_id/segments/:segment_id/members",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-segment-members/add-member-to-segment/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/lists/:list_id/segments/:segment_id/members/:subscriber_hash",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-segment-members/remove-list-member-from-segment/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/segments",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-segments/list-segments/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/lists/:list_id/segments",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-segments/add-segment/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/segments/:segment_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-segments/get-segment-info/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/lists/:list_id/segments/:segment_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-segments/delete-segment/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/lists/:list_id/segments/:segment_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-segments/update-segment/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/lists/:list_id/segments/:segment_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-segments/batch-add-or-remove-members/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/signup-forms",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-signup-forms/list-signup-forms/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/lists/:list_id/signup-forms",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-signup-forms/customize-signup-form/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/tag-search",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/lists-tags-search/search-for-tags-on-a-list-by-name/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/webhooks",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-webhooks/list-webhooks/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/lists/:list_id/webhooks",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-webhooks/add-webhook/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/lists/:list_id/webhooks/:webhook_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-webhooks/get-webhook-info/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/lists/:list_id/webhooks/:webhook_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-webhooks/delete-webhook/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/lists/:list_id/webhooks/:webhook_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/list-webhooks/update-webhook/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/ping",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/ping/ping/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reporting/facebook-ads",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/reporting-facebook-ads/list-facebook-ads-reports/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reporting/facebook-ads/:outreach_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/reporting-facebook-ads/get-facebook-ad-report/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reporting/facebook-ads/:outreach_id/ecommerce-product-activity",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/reporting-facebook-ads/list-facebook-ecommerce-report/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reporting/landing-pages",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/reporting-landing-pages/list-landing-pages-reports/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reporting/landing-pages/:outreach_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/reporting-landing-pages/get-landing-page-report/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/reports/list-campaign-reports/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/reports/get-campaign-report/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id/abuse-reports",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaign-abuse/list-abuse-reports/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id/abuse-reports/:report_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaign-abuse/get-abuse-report/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id/advice",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaign-advice/list-campaign-feedback/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id/open-details",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/open-reports/list-campaign-open-details/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id/open-details/:subscriber_hash",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/open-reports/get-opened-campaign-subscriber/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id/click-details",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/click-reports/list-campaign-details/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id/click-details/:link_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/click-reports/get-campaign-link-details/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id/click-details/:link_id/members",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/link-clickers/list-clicked-link-subscribers/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id/click-details/:link_id/members/:subscriber_hash",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/link-clickers/get-clicked-link-subscriber/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id/domain-performance",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/domain-performance-reports/list-domain-performance-stats/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id/ecommerce-product-activity",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/campaign-ecommerce-product-activity/list-campaign-product-activity/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id/eepurl",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/eepurl-reports/list-eep-url-activity/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id/email-activity",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/email-activity-reports/list-email-activity/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id/email-activity/:subscriber_hash",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/email-activity-reports/get-subscriber-email-activity/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id/locations",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/location-reports/list-top-open-activities/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id/sent-to",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/sent-to-reports/list-campaign-recipients/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id/sent-to/:subscriber_hash",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/sent-to-reports/get-campaign-recipient-info/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id/sub-reports",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/sub-reports/list-child-campaign-reports/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id/unsubscribed",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/unsub-reports/list-unsubscribed-members/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/reports/:campaign_id/unsubscribed/:subscriber_hash",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/unsub-reports/get-unsubscribed-member/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/search-campaigns",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/search-campaigns/search-campaigns/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/search-members",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/search-members/search-members/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/template-folders",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/template-folders/list-template-folders/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/template-folders",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/template-folders/add-template-folder/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/template-folders/:folder_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/template-folders/get-template-folder/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/template-folders/:folder_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/template-folders/update-template-folder/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/template-folders/:folder_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/template-folders/delete-template-folder/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/templates",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/templates/list-templates/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/templates",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/templates/add-template/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/templates/:template_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/templates/get-template-info/"
     },
     {
       "prefix": "",
       "suffix": "patch",
       "method": "PATCH",
       "url": "/templates/:template_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/templates/update-template/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/templates/:template_id",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/templates/delete-template/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/templates/:template_id/default-content",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/template-default-content/view-default-content/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/verified-domains",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/verified-domains/list-sending-domains/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/verified-domains",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/verified-domains/add-domain-to-account/"
     },
     {
       "prefix": "",
       "suffix": "get",
       "method": "GET",
       "url": "/verified-domains/:domain_name",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/verified-domains/get-domain-info/"
     },
     {
       "prefix": "",
       "suffix": "delete",
       "method": "DELETE",
       "url": "/verified-domains/:domain_name",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/verified-domains/delete-domain/"
     },
     {
       "prefix": "",
       "suffix": "post",
       "method": "POST",
       "url": "/verified-domains/:domain_name/actions/verify",
-      "acceptsCallbacks": false
+      "acceptsCallbacks": false,
+      "docsLink": "https://mailchimp.com/developer/marketing/api/verified-domains/verify-domain/"
     }
   ]
 }
