@@ -111,1824 +111,1827 @@ Instead of having to use the generic HTTP methods, you can (and should) make use
 <details>
     <summary>Click here to see all the helpers</summary>
 
-    /*
-    * API URL: '/'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/root/list-api-root-resources/
-	*/
-    app.endpoints.mailchimpapiRoot();
-
-    /*
-    * API URL: '/account-exports'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/account-exports/list-account-exports/
-	*/
-    app.endpoints.mailchimpaccountExports.get();
-
-    /*
-    * API URL: '/authorized-apps'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/authorized-apps/list-authorized-apps/
-	*/
-    app.endpoints.mailchimpauthorizedApps.get();
-
-    /*
-    * API URL: '/authorized-apps/:app_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/authorized-apps/get-authorized-app-info/
-	*/
-    app.endpoints.mailchimpauthorizedApps.get(appId);
-
-    /*
-    * API URL: '/automations'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/automation/list-automations/
-	*/
-    app.endpoints.mailchimpautomations.get();
-
-    /*
-    * API URL: '/automations/:workflow_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/automation/get-automation-info/
-	*/
-    app.endpoints.mailchimpautomations.get(workflowId);
-
-    /*
-    * API URL: '/automations/:workflow_id/emails'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/automation-email/list-automated-emails/
-	*/
-    app.endpoints.mailchimpautomations.emails.get(workflowId);
-
-    /*
-    * API URL: '/automations/:workflow_id/emails/:workflow_email_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/automation-email/get-workflow-email-info/
-	*/
-    app.endpoints.mailchimpautomations.emails.get(workflowId, workflowEmailId);
-
-    /*
-    * API URL: '/automations/:workflow_id/emails/:workflow_email_id/queue'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/automation-email-queue/list-automated-email-subscribers/
-	*/
-    app.endpoints.mailchimpautomations.emails.queue.get(workflowId, workflowEmailId);
-
-    /*
-    * API URL: '/automations/:workflow_id/emails/:workflow_email_id/queue/:subscriber_hash'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/automation-email-queue/get-automated-email-subscriber/
-	*/
-    app.endpoints.mailchimpautomations.emails.queue.get(workflowId, workflowEmailId, subscriberHash);
-
-    /*
-    * API URL: '/automations/:workflow_id/removed-subscribers'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/automation-removed-subscribers/list-subscribers-removed-from-workflow/
-	*/
-    app.endpoints.mailchimpautomations.removedSubscribers.get(workflowId);
-
-    /*
-    * API URL: '/automations/:workflow_id/removed-subscribers/:subscriber_hash'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/automation-removed-subscribers/get-subscriber-removed-from-workflow/
-	*/
-    app.endpoints.mailchimpautomations.removedSubscribers.get(workflowId, subscriberHash);
-
-    /*
-    * API URL: '/batches'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/batch-operations/list-batch-requests/
-	*/
-    app.endpoints.mailchimpbatches.get();
-
-    /*
-    * API URL: '/batches/:batch_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/batch-operations/get-batch-operation-status/
-	*/
-    app.endpoints.mailchimpbatches.get(batchId);
-
-    /*
-    * API URL: '/batch-webhooks'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/batch-webhooks/list-batch-webhooks/
-	*/
-    app.endpoints.mailchimpbatchWebhooks.get();
-
-    /*
-    * API URL: '/batch-webhooks/:batch_webhook_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/batch-webhooks/get-batch-webhook-info/
-	*/
-    app.endpoints.mailchimpbatchWebhooks.get(batchWebhookId);
-
-    /*
-    * API URL: '/campaign-folders'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/campaign-folders/list-campaign-folders/
-	*/
-    app.endpoints.mailchimpcampaignFolders.get();
-
-    /*
-    * API URL: '/campaign-folders/:folder_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/campaign-folders/get-campaign-folder/
-	*/
-    app.endpoints.mailchimpcampaignFolders.get(folderId);
-
-    /*
-    * API URL: '/campaigns'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/campaigns/list-campaigns/
-	*/
-    app.endpoints.mailchimpcampaigns.get();
-
-    /*
-    * API URL: '/campaigns/:campaign_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/campaigns/get-campaign-info/
-	*/
-    app.endpoints.mailchimpcampaigns.get(campaignId);
-
-    /*
-    * API URL: '/campaigns/:campaign_id/content'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/campaign-content/get-campaign-content/
-	*/
-    app.endpoints.mailchimpcampaigns.content.get(campaignId);
-
-    /*
-    * API URL: '/campaigns/:campaign_id/feedback'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/campaign-feedback/list-campaign-feedback/
-	*/
-    app.endpoints.mailchimpcampaigns.feedback.get(campaignId);
-
-    /*
-    * API URL: '/campaigns/:campaign_id/feedback/:feedback_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/campaign-feedback/get-campaign-feedback-message/
-	*/
-    app.endpoints.mailchimpcampaigns.feedback.get(campaignId, feedbackId);
-
-    /*
-    * API URL: '/campaigns/:campaign_id/send-checklist'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/campaign-checklist/get-campaign-send-checklist/
-	*/
-    app.endpoints.mailchimpcampaigns.sendChecklist.get(campaignId);
-
-    /*
-    * API URL: '/activity-feed/chimp-chatter'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/chimp-chatter/get-latest-chimp-chatter/
-	*/
-    app.endpoints.mailchimpactivityFeed.chimpChatter.get();
-
-    /*
-    * API URL: '/connected-sites'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/connected-sites/list-connected-sites/
-	*/
-    app.endpoints.mailchimpconnectedSites.get();
-
-    /*
-    * API URL: '/connected-sites/:connected_site_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/connected-sites/get-connected-site/
-	*/
-    app.endpoints.mailchimpconnectedSites.get(connectedSiteId);
-
-    /*
-    * API URL: '/conversations'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/conversations/list-conversations/
-	*/
-    app.endpoints.mailchimpconversations.get();
-
-    /*
-    * API URL: '/conversations/:conversation_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/conversations/get-conversation/
-	*/
-    app.endpoints.mailchimpconversations.get(conversationId);
-
-    /*
-    * API URL: '/conversations/:conversation_id/messages'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/conversation-messages/list-messages/
-	*/
-    app.endpoints.mailchimpconversations.messages.get(conversationId);
-
-    /*
-    * API URL: '/conversations/:conversation_id/messages/:message_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/conversation-messages/get-message/
-	*/
-    app.endpoints.mailchimpconversations.messages.get(conversationId, messageId);
-
-    /*
-    * API URL: '/ecommerce/stores'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-stores/list-stores/
-	*/
-    app.endpoints.mailchimpecommerce.stores.get();
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-stores/get-store-info/
-	*/
-    app.endpoints.mailchimpecommerce.stores.get(storeId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/carts/:cart_id/lines'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-cart-lines/list-cart-line-items/
-	*/
-    app.endpoints.mailchimpecommerce.stores.carts.lines.get(storeId, cartId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-cart-lines/get-cart-line-item/
-	*/
-    app.endpoints.mailchimpecommerce.stores.carts.lines.get(storeId, cartId, lineId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/carts'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-carts/list-carts/
-	*/
-    app.endpoints.mailchimpecommerce.stores.carts.get(storeId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/carts/:cart_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-carts/get-cart-info/
-	*/
-    app.endpoints.mailchimpecommerce.stores.carts.get(storeId, cartId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/customers'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-customers/list-customers/
-	*/
-    app.endpoints.mailchimpecommerce.stores.customers.get(storeId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/customers/:customer_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-customers/get-customer-info/
-	*/
-    app.endpoints.mailchimpecommerce.stores.customers.get(storeId, customerId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/orders/:order_id/lines'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-order-lines/list-order-line-items/
-	*/
-    app.endpoints.mailchimpecommerce.stores.orders.lines.get(storeId, orderId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-order-lines/get-order-line-item/
-	*/
-    app.endpoints.mailchimpecommerce.stores.orders.lines.get(storeId, orderId, lineId);
-
-    /*
-    * API URL: '/ecommerce/orders'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-orders/list-account-orders/
-	*/
-    app.endpoints.mailchimpecommerce.orders.get();
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/orders'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-orders/list-orders/
-	*/
-    app.endpoints.mailchimpecommerce.stores.orders.get(storeId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/orders/:order_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-orders/get-order-info/
-	*/
-    app.endpoints.mailchimpecommerce.stores.orders.get(storeId, orderId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/products/:product_id/images'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-images/list-product-images/
-	*/
-    app.endpoints.mailchimpecommerce.stores.products.images.get(storeId, productId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/products/:product_id/images/:image_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-images/get-product-image-info/
-	*/
-    app.endpoints.mailchimpecommerce.stores.products.images.get(storeId, productId, imageId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/products/:product_id/variants'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-variants/list-product-variants/
-	*/
-    app.endpoints.mailchimpecommerce.stores.products.variants.get(storeId, productId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-variants/get-product-variant-info/
-	*/
-    app.endpoints.mailchimpecommerce.stores.products.variants.get(storeId, productId, variantId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/products'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-products/list-product/
-	*/
-    app.endpoints.mailchimpecommerce.stores.products.get(storeId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/products/:product_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-products/get-product-info/
-	*/
-    app.endpoints.mailchimpecommerce.stores.products.get(storeId, productId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/promo-rules/:promo_rule_id/promo-codes'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-promo-codes/list-promo-codes/
-	*/
-    app.endpoints.mailchimpecommerce.stores.promoRules.promoCodes.get(storeId, promoRuleId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/promo-rules/:promo_rule_id/promo-codes/:promo_code_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-promo-codes/get-promo-code/
-	*/
-    app.endpoints.mailchimpecommerce.stores.promoRules.promoCodes.get(storeId, promoRuleId, promoCodeId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/promo-rules'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-promo-rules/list-promo-rules/
-	*/
-    app.endpoints.mailchimpecommerce.stores.promoRules.get(storeId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/promo-rules/:promo_rule_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-promo-rules/get-promo-rule/
-	*/
-    app.endpoints.mailchimpecommerce.stores.promoRules.get(storeId, promoRuleId);
-
-    /*
-    * API URL: '/facebook-ads'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/facebook-ads/list-facebook-ads/
-	*/
-    app.endpoints.mailchimpfacebookAds.get();
-
-    /*
-    * API URL: '/facebook-ads/:outreach_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/facebook-ads/get-facebook-ad-info/
-	*/
-    app.endpoints.mailchimpfacebookAds.get(outreachId);
-
-    /*
-    * API URL: '/file-manager/files'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/file-manager-files/list-stored-files/
-	*/
-    app.endpoints.mailchimpfileManager.files.get();
-
-    /*
-    * API URL: '/file-manager/files/:file_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/file-manager-files/get-file/
-	*/
-    app.endpoints.mailchimpfileManager.files.get(fileId);
-
-    /*
-    * API URL: '/file-manager/folders'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/file-manager-folders/list-folders/
-	*/
-    app.endpoints.mailchimpfileManager.folders.get();
-
-    /*
-    * API URL: '/file-manager/folders/:folder_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/file-manager-folders/get-folder/
-	*/
-    app.endpoints.mailchimpfileManager.folders.get(folderId);
-
-    /*
-    * API URL: '/landing-pages'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/landing-pages/list-landing-pages/
-	*/
-    app.endpoints.mailchimplandingPages.get();
-
-    /*
-    * API URL: '/landing-pages/:page_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/landing-pages/get-landing-page-info/
-	*/
-    app.endpoints.mailchimplandingPages.get(pageId);
-
-    /*
-    * API URL: '/landing-pages/:page_id/content'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/landing-pages-content/get-landing-page-content/
-	*/
-    app.endpoints.mailchimplandingPages.content.get(pageId);
-
-    /*
-    * API URL: '/lists'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/lists/get-lists-info/
-	*/
-    app.endpoints.mailchimplists.get();
-
-    /*
-    * API URL: '/lists/:list_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/lists/get-list-info/
-	*/
-    app.endpoints.mailchimplists.get(listId);
-
-    /*
-    * API URL: '/lists/:list_id/abuse-reports'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/abuse-reports/list-abuse-reports/
-	*/
-    app.endpoints.mailchimplists.abuseReports.get(listId);
-
-    /*
-    * API URL: '/lists/:list_id/abuse-reports/:report_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/abuse-reports/get-abuse-report/
-	*/
-    app.endpoints.mailchimplists.abuseReports.get(listId, reportId);
-
-    /*
-    * API URL: '/lists/:list_id/activity'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-activity/list-recent-activity/
-	*/
-    app.endpoints.mailchimplists.activity.get(listId);
-
-    /*
-    * API URL: '/lists/:list_id/clients'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-clients/list-top-email-clients/
-	*/
-    app.endpoints.mailchimplists.clients.get(listId);
-
-    /*
-    * API URL: '/lists/:list_id/members/:subscriber_hash/events'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-member-events/list-member-events/
-	*/
-    app.endpoints.mailchimplists.members.events.get(listId, subscriberHash);
-
-    /*
-    * API URL: '/lists/:list_id/growth-history'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-growth-history/list-growth-history-data/
-	*/
-    app.endpoints.mailchimplists.growthHistory.get(listId);
-
-    /*
-    * API URL: '/lists/:list_id/growth-history/:month'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-growth-history/get-growth-history-by-month/
-	*/
-    app.endpoints.mailchimplists.growthHistory.get(listId, month);
-
-    /*
-    * API URL: '/lists/:list_id/interest-categories'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/interest-categories/list-interest-categories/
-	*/
-    app.endpoints.mailchimplists.interestCategories.get(listId);
-
-    /*
-    * API URL: '/lists/:list_id/interest-categories/:interest_category_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/interest-categories/get-interest-category-info/
-	*/
-    app.endpoints.mailchimplists.interestCategories.get(listId, interestCategoryId);
-
-    /*
-    * API URL: '/lists/:list_id/interest-categories/:interest_category_id/interests'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/interests/list-interests-in-category/
-	*/
-    app.endpoints.mailchimplists.interestCategories.interests.get(listId, interestCategoryId);
-
-    /*
-    * API URL: '/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/interests/get-interest-in-category/
-	*/
-    app.endpoints.mailchimplists.interestCategories.interests.get(listId, interestCategoryId, interestId);
-
-    /*
-    * API URL: '/lists/:list_id/locations'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-locations/list-locations/
-	*/
-    app.endpoints.mailchimplists.locations.get(listId);
-
-    /*
-    * API URL: '/lists/:list_id/members/:subscriber_hash/activity'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-member-activity/view-recent-activity-50/
-	*/
-    app.endpoints.mailchimplists.members.activity.get(listId, subscriberHash);
-
-    /*
-    * API URL: '/lists/:list_id/members/:subscriber_hash/activity-feed'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-member-activity-feed/view-recent-activity/
-	*/
-    app.endpoints.mailchimplists.members.activityFeed.get(listId, subscriberHash);
-
-    /*
-    * API URL: '/lists/:list_id/members/:subscriber_hash/goals'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-member-notes/
-	*/
-    app.endpoints.mailchimplists.members.goals.get(listId, subscriberHash);
-
-    /*
-    * API URL: '/lists/:list_id/members/:subscriber_hash/notes'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-member-notes/list-recent-member-notes/
-	*/
-    app.endpoints.mailchimplists.members.notes.get(listId, subscriberHash);
-
-    /*
-    * API URL: '/lists/:list_id/members/:subscriber_hash/notes/:note_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-member-notes/get-member-note/
-	*/
-    app.endpoints.mailchimplists.members.notes.get(listId, subscriberHash, noteId);
-
-    /*
-    * API URL: '/lists/:list_id/members/:subscriber_hash/tags'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-member-tags/list-member-tags/
-	*/
-    app.endpoints.mailchimplists.members.tags.get(listId, subscriberHash);
-
-    /*
-    * API URL: '/lists/:list_id/members'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-members/list-members-info/
-	*/
-    app.endpoints.mailchimplists.members.get(listId);
-
-    /*
-    * API URL: '/lists/:list_id/members/:subscriber_hash'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-members/get-member-info/
-	*/
-    app.endpoints.mailchimplists.members.get(listId, subscriberHash);
-
-    /*
-    * API URL: '/lists/:list_id/merge-fields'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-merges/list-merge-fields/
-	*/
-    app.endpoints.mailchimplists.mergeFields.get(listId);
-
-    /*
-    * API URL: '/lists/:list_id/merge-fields/:merge_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-merges/get-merge-field/
-	*/
-    app.endpoints.mailchimplists.mergeFields.get(listId, mergeId);
-
-    /*
-    * API URL: '/lists/:list_id/segments/:segment_id/members'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-segment-members/list-members-in-segment/
-	*/
-    app.endpoints.mailchimplists.segments.members.get(listId, segmentId);
-
-    /*
-    * API URL: '/lists/:list_id/segments'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-segments/list-segments/
-	*/
-    app.endpoints.mailchimplists.segments.get(listId);
-
-    /*
-    * API URL: '/lists/:list_id/segments/:segment_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-segments/get-segment-info/
-	*/
-    app.endpoints.mailchimplists.segments.get(listId, segmentId);
-
-    /*
-    * API URL: '/lists/:list_id/signup-forms'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-signup-forms/list-signup-forms/
-	*/
-    app.endpoints.mailchimplists.signupForms.get(listId);
-
-    /*
-    * API URL: '/lists/:list_id/tag-search'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/lists-tags-search/search-for-tags-on-a-list-by-name/
-	*/
-    app.endpoints.mailchimplists.tagSearch.get(listId);
-
-    /*
-    * API URL: '/lists/:list_id/webhooks'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-webhooks/list-webhooks/
-	*/
-    app.endpoints.mailchimplists.webhooks.get(listId);
-
-    /*
-    * API URL: '/lists/:list_id/webhooks/:webhook_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/list-webhooks/get-webhook-info/
-	*/
-    app.endpoints.mailchimplists.webhooks.get(listId, webhookId);
-
-    /*
-    * API URL: '/ping'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/ping/ping/
-	*/
-    app.endpoints.mailchimpping.get();
-
-    /*
-    * API URL: '/reporting/facebook-ads'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/reporting-facebook-ads/list-facebook-ads-reports/
-	*/
-    app.endpoints.mailchimpreporting.facebookAds.get();
-
-    /*
-    * API URL: '/reporting/facebook-ads/:outreach_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/reporting-facebook-ads/get-facebook-ad-report/
-	*/
-    app.endpoints.mailchimpreporting.facebookAds.get(outreachId);
-
-    /*
-    * API URL: '/reporting/facebook-ads/:outreach_id/ecommerce-product-activity'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/reporting-facebook-ads/list-facebook-ecommerce-report/
-	*/
-    app.endpoints.mailchimpreporting.facebookAds.ecommerceProductActivity.get(outreachId);
-
-    /*
-    * API URL: '/reporting/landing-pages'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/reporting-landing-pages/list-landing-pages-reports/
-	*/
-    app.endpoints.mailchimpreporting.landingPages.get();
-
-    /*
-    * API URL: '/reporting/landing-pages/:outreach_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/reporting-landing-pages/get-landing-page-report/
-	*/
-    app.endpoints.mailchimpreporting.landingPages.get(outreachId);
-
-    /*
-    * API URL: '/reports'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/reports/list-campaign-reports/
-	*/
-    app.endpoints.mailchimpreports.get();
-
-    /*
-    * API URL: '/reports/:campaign_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/reports/get-campaign-report/
-	*/
-    app.endpoints.mailchimpreports.get(campaignId);
-
-    /*
-    * API URL: '/reports/:campaign_id/abuse-reports'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/campaign-abuse/list-abuse-reports/
-	*/
-    app.endpoints.mailchimpreports.abuseReports.get(campaignId);
-
-    /*
-    * API URL: '/reports/:campaign_id/abuse-reports/:report_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/campaign-abuse/get-abuse-report/
-	*/
-    app.endpoints.mailchimpreports.abuseReports.get(campaignId, reportId);
-
-    /*
-    * API URL: '/reports/:campaign_id/advice'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/campaign-advice/list-campaign-feedback/
-	*/
-    app.endpoints.mailchimpreports.advice.get(campaignId);
-
-    /*
-    * API URL: '/reports/:campaign_id/open-details'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/open-reports/list-campaign-open-details/
-	*/
-    app.endpoints.mailchimpreports.openDetails.get(campaignId);
-
-    /*
-    * API URL: '/reports/:campaign_id/open-details/:subscriber_hash'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/open-reports/get-opened-campaign-subscriber/
-	*/
-    app.endpoints.mailchimpreports.openDetails.get(campaignId, subscriberHash);
-
-    /*
-    * API URL: '/reports/:campaign_id/click-details'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/click-reports/list-campaign-details/
-	*/
-    app.endpoints.mailchimpreports.clickDetails.get(campaignId);
-
-    /*
-    * API URL: '/reports/:campaign_id/click-details/:link_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/click-reports/get-campaign-link-details/
-	*/
-    app.endpoints.mailchimpreports.clickDetails.get(campaignId, linkId);
-
-    /*
-    * API URL: '/reports/:campaign_id/click-details/:link_id/members'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/link-clickers/list-clicked-link-subscribers/
-	*/
-    app.endpoints.mailchimpreports.clickDetails.members.get(campaignId, linkId);
-
-    /*
-    * API URL: '/reports/:campaign_id/click-details/:link_id/members/:subscriber_hash'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/link-clickers/get-clicked-link-subscriber/
-	*/
-    app.endpoints.mailchimpreports.clickDetails.members.get(campaignId, linkId, subscriberHash);
-
-    /*
-    * API URL: '/reports/:campaign_id/domain-performance'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/domain-performance-reports/list-domain-performance-stats/
-	*/
-    app.endpoints.mailchimpreports.domainPerformance.get(campaignId);
-
-    /*
-    * API URL: '/reports/:campaign_id/ecommerce-product-activity'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/campaign-ecommerce-product-activity/list-campaign-product-activity/
-	*/
-    app.endpoints.mailchimpreports.ecommerceProductActivity.get(campaignId);
-
-    /*
-    * API URL: '/reports/:campaign_id/eepurl'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/eepurl-reports/list-eep-url-activity/
-	*/
-    app.endpoints.mailchimpreports.eepurl.get(campaignId);
-
-    /*
-    * API URL: '/reports/:campaign_id/email-activity'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/email-activity-reports/list-email-activity/
-	*/
-    app.endpoints.mailchimpreports.emailActivity.get(campaignId);
-
-    /*
-    * API URL: '/reports/:campaign_id/email-activity/:subscriber_hash'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/email-activity-reports/get-subscriber-email-activity/
-	*/
-    app.endpoints.mailchimpreports.emailActivity.get(campaignId, subscriberHash);
-
-    /*
-    * API URL: '/reports/:campaign_id/locations'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/location-reports/list-top-open-activities/
-	*/
-    app.endpoints.mailchimpreports.locations.get(campaignId);
-
-    /*
-    * API URL: '/reports/:campaign_id/sent-to'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/sent-to-reports/list-campaign-recipients/
-	*/
-    app.endpoints.mailchimpreports.sentTo.get(campaignId);
-
-    /*
-    * API URL: '/reports/:campaign_id/sent-to/:subscriber_hash'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/sent-to-reports/get-campaign-recipient-info/
-	*/
-    app.endpoints.mailchimpreports.sentTo.get(campaignId, subscriberHash);
-
-    /*
-    * API URL: '/reports/:campaign_id/sub-reports'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/sub-reports/list-child-campaign-reports/
-	*/
-    app.endpoints.mailchimpreports.subReports.get(campaignId);
-
-    /*
-    * API URL: '/reports/:campaign_id/unsubscribed'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/unsub-reports/list-unsubscribed-members/
-	*/
-    app.endpoints.mailchimpreports.unsubscribed.get(campaignId);
-
-    /*
-    * API URL: '/reports/:campaign_id/unsubscribed/:subscriber_hash'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/unsub-reports/get-unsubscribed-member/
-	*/
-    app.endpoints.mailchimpreports.unsubscribed.get(campaignId, subscriberHash);
-
-    /*
-    * API URL: '/search-campaigns'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/search-campaigns/search-campaigns/
-	*/
-    app.endpoints.mailchimpsearchCampaigns.get();
-
-    /*
-    * API URL: '/search-members'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/search-members/search-members/
-	*/
-    app.endpoints.mailchimpsearchMembers.get();
-
-    /*
-    * API URL: '/template-folders'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/template-folders/list-template-folders/
-	*/
-    app.endpoints.mailchimptemplateFolders.get();
-
-    /*
-    * API URL: '/template-folders/:folder_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/template-folders/get-template-folder/
-	*/
-    app.endpoints.mailchimptemplateFolders.get(folderId);
-
-    /*
-    * API URL: '/templates'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/templates/list-templates/
-	*/
-    app.endpoints.mailchimptemplates.get();
-
-    /*
-    * API URL: '/templates/:template_id'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/templates/get-template-info/
-	*/
-    app.endpoints.mailchimptemplates.get(templateId);
-
-    /*
-    * API URL: '/templates/:template_id/default-content'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/template-default-content/view-default-content/
-	*/
-    app.endpoints.mailchimptemplates.defaultContent.get(templateId);
-
-    /*
-    * API URL: '/verified-domains'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/verified-domains/list-sending-domains/
-	*/
-    app.endpoints.mailchimpverifiedDomains.get();
-
-    /*
-    * API URL: '/verified-domains/:domain_name'
-    * HTTP Method: 'GET'
-    * More info: https://mailchimp.com/developer/marketing/api/verified-domains/get-domain-info/
-	*/
-    app.endpoints.mailchimpverifiedDomains.get(domainName);
-
-    /*
-    * API URL: '/account-exports'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/account-exports/add-export/
-	*/
-    app.endpoints.mailchimpaccountExports.post(body);
-
-    /*
-    * API URL: '/account-exports/:export_id'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/account-exports/get-account-export-info/
-	*/
-    app.endpoints.mailchimpaccountExports.post(exportId, body);
-
-    /*
-    * API URL: '/automations'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/automation/add-automation/
-	*/
-    app.endpoints.mailchimpautomations.post(body);
-
-    /*
-    * API URL: '/automations/:workflow_id/actions/archive'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/automation/archive-automation/
-	*/
-    app.endpoints.mailchimpautomations.actions.archive.post(workflowId, body);
-
-    /*
-    * API URL: '/automations/:workflow_id/actions/pause-all-emails'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/automation/pause-automation-emails/
-	*/
-    app.endpoints.mailchimpautomations.actions.pauseAllEmails.post(workflowId, body);
-
-    /*
-    * API URL: '/automations/:workflow_id/actions/start-all-emails'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/automation/start-automation-emails/
-	*/
-    app.endpoints.mailchimpautomations.actions.startAllEmails.post(workflowId, body);
-
-    /*
-    * API URL: '/automations/:workflow_id/emails/:workflow_email_id/actions/pause'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/automation-email/pause-automated-email/
-	*/
-    app.endpoints.mailchimpautomations.emails.actions.pause.post(workflowId, workflowEmailId, body);
-
-    /*
-    * API URL: '/automations/:workflow_id/emails/:workflow_email_id/actions/start'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/automation-email/start-automated-email/
-	*/
-    app.endpoints.mailchimpautomations.emails.actions.start.post(workflowId, workflowEmailId, body);
-
-    /*
-    * API URL: '/automations/:workflow_id/emails/:workflow_email_id/queue'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/automation-email-queue/add-subscriber-to-workflow-email/
-	*/
-    app.endpoints.mailchimpautomations.emails.queue.post(workflowId, workflowEmailId, body);
-
-    /*
-    * API URL: '/automations/:workflow_id/removed-subscribers'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/automation-removed-subscribers/remove-subscriber-from-workflow/
-	*/
-    app.endpoints.mailchimpautomations.removedSubscribers.post(workflowId, body);
-
-    /*
-    * API URL: '/batches'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/batch-operations/start-batch-operation/
-	*/
-    app.endpoints.mailchimpbatches.post(body);
-
-    /*
-    * API URL: '/batch-webhooks'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/batch-webhooks/add-batch-webhook/
-	*/
-    app.endpoints.mailchimpbatchWebhooks.post(body);
-
-    /*
-    * API URL: '/campaign-folders'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/campaign-folders/add-campaign-folder/
-	*/
-    app.endpoints.mailchimpcampaignFolders.post(body);
-
-    /*
-    * API URL: '/campaigns'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/campaigns/add-campaign/
-	*/
-    app.endpoints.mailchimpcampaigns.post(body);
-
-    /*
-    * API URL: '/campaigns/:campaign_id/actions/cancel-send'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/campaigns/cancel-campaign/
-	*/
-    app.endpoints.mailchimpcampaigns.actions.cancelSend.post(campaignId, body);
-
-    /*
-    * API URL: '/campaigns/:campaign_id/actions/send'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/campaigns/send-campaign/
-	*/
-    app.endpoints.mailchimpcampaigns.actions.send.post(campaignId, body);
-
-    /*
-    * API URL: '/campaigns/:campaign_id/actions/schedule'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/campaigns/schedule-campaign/
-	*/
-    app.endpoints.mailchimpcampaigns.actions.schedule.post(campaignId, body);
-
-    /*
-    * API URL: '/campaigns/:campaign_id/actions/unschedule'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/campaigns/unschedule-campaign/
-	*/
-    app.endpoints.mailchimpcampaigns.actions.unschedule.post(campaignId, body);
-
-    /*
-    * API URL: '/campaigns/:campaign_id/actions/pause'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/campaigns/pause-rss-campaign/
-	*/
-    app.endpoints.mailchimpcampaigns.actions.pause.post(campaignId, body);
-
-    /*
-    * API URL: '/campaigns/:campaign_id/actions/resume'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/campaigns/resume-rss-campaign/
-	*/
-    app.endpoints.mailchimpcampaigns.actions.resume.post(campaignId, body);
-
-    /*
-    * API URL: '/campaigns/:campaign_id/actions/replicate'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/campaigns/replicate-campaign/
-	*/
-    app.endpoints.mailchimpcampaigns.actions.replicate.post(campaignId, body);
-
-    /*
-    * API URL: '/campaigns/:campaign_id/actions/test'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/campaigns/send-test-email/
-	*/
-    app.endpoints.mailchimpcampaigns.actions.test.post(campaignId, body);
-
-    /*
-    * API URL: '/campaigns/:campaign_id/actions/create-resend'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/campaigns/resend-campaign/
-	*/
-    app.endpoints.mailchimpcampaigns.actions.createResend.post(campaignId, body);
-
-    /*
-    * API URL: '/campaigns/:campaign_id/feedback'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/campaign-feedback/add-campaign-feedback/
-	*/
-    app.endpoints.mailchimpcampaigns.feedback.post(campaignId, body);
-
-    /*
-    * API URL: '/connected-sites'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/connected-sites/add-connected-site/
-	*/
-    app.endpoints.mailchimpconnectedSites.post(body);
-
-    /*
-    * API URL: '/connected-sites/:connected_site_id/actions/verify-script-installation'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/connected-sites/verify-connected-site-script/
-	*/
-    app.endpoints.mailchimpconnectedSites.actions.verifyScriptInstallation.post(connectedSiteId, body);
-
-    /*
-    * API URL: '/customer-journeys/journeys/:journey_id/steps/:step_id/actions/trigger'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/customer-journeys-journeys-steps-actions/customer-journeys-api-trigger-for-a-contact/
-	*/
-    app.endpoints.mailchimpcustomerJourneys.journeys.steps.actions.trigger.post(journeyId, stepId, body);
-
-    /*
-    * API URL: '/ecommerce/stores'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-stores/add-store/
-	*/
-    app.endpoints.mailchimpecommerce.stores.post(body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/carts/:cart_id/lines'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-cart-lines/add-cart-line-item/
-	*/
-    app.endpoints.mailchimpecommerce.stores.carts.lines.post(storeId, cartId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/carts'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-carts/add-cart/
-	*/
-    app.endpoints.mailchimpecommerce.stores.carts.post(storeId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/customers'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-customers/add-customer/
-	*/
-    app.endpoints.mailchimpecommerce.stores.customers.post(storeId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/orders/:order_id/lines'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-order-lines/add-order-line-item/
-	*/
-    app.endpoints.mailchimpecommerce.stores.orders.lines.post(storeId, orderId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/products'
-    * HTTP Method: 'POST'
-    */
-    app.endpoints.mailchimpecommerce.stores.products.post(storeId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/orders'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-orders/add-order/
-	*/
-    app.endpoints.mailchimpecommerce.stores.orders.post(storeId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/products/:product_id/images'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-images/add-product-image/
-	*/
-    app.endpoints.mailchimpecommerce.stores.products.images.post(storeId, productId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/products/:product_id/variants'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-variants/add-product-variant/
-	*/
-    app.endpoints.mailchimpecommerce.stores.products.variants.post(storeId, productId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/products'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-products/add-product/
-	*/
-    app.endpoints.mailchimpecommerce.stores.products.post(storeId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/promo-rules/:promo_rule_id/promo-codes'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-promo-codes/add-promo-code/
-	*/
-    app.endpoints.mailchimpecommerce.stores.promoRules.promoCodes.post(storeId, promoRuleId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/promo-rules'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-promo-rules/add-promo-rule/
-	*/
-    app.endpoints.mailchimpecommerce.stores.promoRules.post(storeId, body);
-
-    /*
-    * API URL: '/file-manager/files'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/file-manager-files/add-file/
-	*/
-    app.endpoints.mailchimpfileManager.files.post(body);
-
-    /*
-    * API URL: '/file-manager/folders'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/file-manager-folders/add-folder/
-	*/
-    app.endpoints.mailchimpfileManager.folders.post(body);
-
-    /*
-    * API URL: '/landing-pages'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/landing-pages/add-landing-page/
-	*/
-    app.endpoints.mailchimplandingPages.post(body);
-
-    /*
-    * API URL: '/landing-pages/:page_id/actions/publish'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/landing-pages/publish-landing-page/
-	*/
-    app.endpoints.mailchimplandingPages.actions.publish.post(pageId, body);
-
-    /*
-    * API URL: '/landing-pages/:page_id/actions/unpublish'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/landing-pages/unpublish-landing-page/
-	*/
-    app.endpoints.mailchimplandingPages.actions.unpublish.post(pageId, body);
-
-    /*
-    * API URL: '/lists'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/lists/add-list/
-	*/
-    app.endpoints.mailchimplists.post(body);
-
-    /*
-    * API URL: '/lists/:list_id'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/
-	*/
-    app.endpoints.mailchimplists.post(listId, body);
-
-    /*
-    * API URL: '/lists/:list_id/members/:subscriber_hash/events'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/list-member-events/add-event/
-	*/
-    app.endpoints.mailchimplists.members.events.post(listId, subscriberHash, body);
-
-    /*
-    * API URL: '/lists/:list_id/interest-categories'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/
-	*/
-    app.endpoints.mailchimplists.interestCategories.post(listId, body);
-
-    /*
-    * API URL: '/lists/:list_id/interest-categories/:interest_category_id/interests'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/interests/add-interest-in-category/
-	*/
-    app.endpoints.mailchimplists.interestCategories.interests.post(listId, interestCategoryId, body);
-
-    /*
-    * API URL: '/lists/:list_id/members/:subscriber_hash/notes'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/list-member-notes/add-member-note/
-	*/
-    app.endpoints.mailchimplists.members.notes.post(listId, subscriberHash, body);
-
-    /*
-    * API URL: '/lists/:list_id/members/:subscriber_hash/tags'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/list-member-tags/add-or-remove-member-tags/
-	*/
-    app.endpoints.mailchimplists.members.tags.post(listId, subscriberHash, body);
-
-    /*
-    * API URL: '/lists/:list_id/members'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/list-members/add-member-to-list/
-	*/
-    app.endpoints.mailchimplists.members.post(listId, body);
-
-    /*
-    * API URL: '/lists/:list_id/members/:subscriber_hash/actions/delete-permanent'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/list-members/delete-list-member/
-	*/
-    app.endpoints.mailchimplists.members.actions.deletePermanent.post(listId, subscriberHash, body);
-
-    /*
-    * API URL: '/lists/:list_id/merge-fields'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/list-merges/add-merge-field/
-	*/
-    app.endpoints.mailchimplists.mergeFields.post(listId, body);
-
-    /*
-    * API URL: '/lists/:list_id/segments/:segment_id/members'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/list-segment-members/add-member-to-segment/
-	*/
-    app.endpoints.mailchimplists.segments.members.post(listId, segmentId, body);
-
-    /*
-    * API URL: '/lists/:list_id/segments'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/list-segments/add-segment/
-	*/
-    app.endpoints.mailchimplists.segments.post(listId, body);
-
-    /*
-    * API URL: '/lists/:list_id/segments/:segment_id'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/list-segments/batch-add-or-remove-members/
-	*/
-    app.endpoints.mailchimplists.segments.post(listId, segmentId, body);
-
-    /*
-    * API URL: '/lists/:list_id/signup-forms'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/list-signup-forms/customize-signup-form/
-	*/
-    app.endpoints.mailchimplists.signupForms.post(listId, body);
-
-    /*
-    * API URL: '/lists/:list_id/webhooks'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/list-webhooks/add-webhook/
-	*/
-    app.endpoints.mailchimplists.webhooks.post(listId, body);
-
-    /*
-    * API URL: '/template-folders'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/template-folders/add-template-folder/
-	*/
-    app.endpoints.mailchimptemplateFolders.post(body);
-
-    /*
-    * API URL: '/templates'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/templates/add-template/
-	*/
-    app.endpoints.mailchimptemplates.post(body);
-
-    /*
-    * API URL: '/verified-domains'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/verified-domains/add-domain-to-account/
-	*/
-    app.endpoints.mailchimpverifiedDomains.post(body);
-
-    /*
-    * API URL: '/verified-domains/:domain_name/actions/verify'
-    * HTTP Method: 'POST'
-    * More info: https://mailchimp.com/developer/marketing/api/verified-domains/verify-domain/
-	*/
-    app.endpoints.mailchimpverifiedDomains.actions.verify.post(domainName, body);
-
-    /*
-    * API URL: '/automations/:workflow_id/emails/:workflow_email_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/automation-email/update-workflow-email/
-	*/
-    app.endpoints.mailchimpautomations.emails.patch(workflowId, workflowEmailId, body);
-
-    /*
-    * API URL: '/batch-webhooks/:batch_webhook_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/batch-webhooks/update-batch-webhook/
-	*/
-    app.endpoints.mailchimpbatchWebhooks.patch(batchWebhookId, body);
-
-    /*
-    * API URL: '/campaign-folders/:folder_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/campaign-folders/update-campaign-folder/
-	*/
-    app.endpoints.mailchimpcampaignFolders.patch(folderId, body);
-
-    /*
-    * API URL: '/campaigns/:campaign_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/campaigns/update-campaign-settings/
-	*/
-    app.endpoints.mailchimpcampaigns.patch(campaignId, body);
-
-    /*
-    * API URL: '/campaigns/:campaign_id/feedback/:feedback_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/campaign-feedback/update-campaign-feedback-message/
-	*/
-    app.endpoints.mailchimpcampaigns.feedback.patch(campaignId, feedbackId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-stores/update-store/
-	*/
-    app.endpoints.mailchimpecommerce.stores.patch(storeId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-cart-lines/update-cart-line-item/
-	*/
-    app.endpoints.mailchimpecommerce.stores.carts.lines.patch(storeId, cartId, lineId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/carts/:cart_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-carts/update-cart/
-	*/
-    app.endpoints.mailchimpecommerce.stores.carts.patch(storeId, cartId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/customers/:customer_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-customers/update-customer/
-	*/
-    app.endpoints.mailchimpecommerce.stores.customers.patch(storeId, customerId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-order-lines/update-order-line-item/
-	*/
-    app.endpoints.mailchimpecommerce.stores.orders.lines.patch(storeId, orderId, lineId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/orders/:order_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-orders/update-order/
-	*/
-    app.endpoints.mailchimpecommerce.stores.orders.patch(storeId, orderId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/products/:product_id/images/:image_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-images/update-product-image/
-	*/
-    app.endpoints.mailchimpecommerce.stores.products.images.patch(storeId, productId, imageId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-variants/update-product-variant/
-	*/
-    app.endpoints.mailchimpecommerce.stores.products.variants.patch(storeId, productId, variantId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/products/:product_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-products/update-product/
-	*/
-    app.endpoints.mailchimpecommerce.stores.products.patch(storeId, productId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/promo-rules/:promo_rule_id/promo-codes/:promo_code_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-promo-codes/update-promo-code/
-	*/
-    app.endpoints.mailchimpecommerce.stores.promoRules.promoCodes.patch(storeId, promoRuleId, promoCodeId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/promo-rules/:promo_rule_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-promo-rules/update-promo-rule/
-	*/
-    app.endpoints.mailchimpecommerce.stores.promoRules.patch(storeId, promoRuleId, body);
-
-    /*
-    * API URL: '/file-manager/files/:file_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/file-manager-files/update-file/
-	*/
-    app.endpoints.mailchimpfileManager.files.patch(fileId, body);
-
-    /*
-    * API URL: '/file-manager/folders/:folder_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/file-manager-folders/update-folder/
-	*/
-    app.endpoints.mailchimpfileManager.folders.patch(folderId, body);
-
-    /*
-    * API URL: '/landing-pages/:page_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/landing-pages/update-landing-page/
-	*/
-    app.endpoints.mailchimplandingPages.patch(pageId, body);
-
-    /*
-    * API URL: '/lists/:list_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/lists/update-lists/
-	*/
-    app.endpoints.mailchimplists.patch(listId, body);
-
-    /*
-    * API URL: '/lists/:list_id/interest-categories/:interest_category_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/interest-categories/update-interest-category/
-	*/
-    app.endpoints.mailchimplists.interestCategories.patch(listId, interestCategoryId, body);
-
-    /*
-    * API URL: '/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/interests/update-interest-in-category/
-	*/
-    app.endpoints.mailchimplists.interestCategories.interests.patch(listId, interestCategoryId, interestId, body);
-
-    /*
-    * API URL: '/lists/:list_id/members/:subscriber_hash/notes/:note_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/list-member-notes/update-note/
-	*/
-    app.endpoints.mailchimplists.members.notes.patch(listId, subscriberHash, noteId, body);
-
-    /*
-    * API URL: '/lists/:list_id/members/:subscriber_hash'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/list-members/update-list-member/
-	*/
-    app.endpoints.mailchimplists.members.patch(listId, subscriberHash, body);
-
-    /*
-    * API URL: '/lists/:list_id/merge-fields/:merge_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/list-merges/update-merge-field/
-	*/
-    app.endpoints.mailchimplists.mergeFields.patch(listId, mergeId, body);
-
-    /*
-    * API URL: '/lists/:list_id/segments/:segment_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/list-segments/update-segment/
-	*/
-    app.endpoints.mailchimplists.segments.patch(listId, segmentId, body);
-
-    /*
-    * API URL: '/lists/:list_id/webhooks/:webhook_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/list-webhooks/update-webhook/
-	*/
-    app.endpoints.mailchimplists.webhooks.patch(listId, webhookId, body);
-
-    /*
-    * API URL: '/template-folders/:folder_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/template-folders/update-template-folder/
-	*/
-    app.endpoints.mailchimptemplateFolders.patch(folderId, body);
-
-    /*
-    * API URL: '/templates/:template_id'
-    * HTTP Method: 'PATCH'
-    * More info: https://mailchimp.com/developer/marketing/api/templates/update-template/
-	*/
-    app.endpoints.mailchimptemplates.patch(templateId, body);
-
-    /*
-    * API URL: '/automations/:workflow_id/emails/:workflow_email_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/automation-email/delete-workflow-email/
-	*/
-    app.endpoints.mailchimpautomations.emails.delete(workflowId, workflowEmailId);
-
-    /*
-    * API URL: '/batches/:batch_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/batch-operations/delete-batch-request/
-	*/
-    app.endpoints.mailchimpbatches.delete(batchId);
-
-    /*
-    * API URL: '/batch-webhooks/:batch_webhook_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/batch-webhooks/delete-batch-webhook/
-	*/
-    app.endpoints.mailchimpbatchWebhooks.delete(batchWebhookId);
-
-    /*
-    * API URL: '/campaign-folders/:folder_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/campaign-folders/delete-campaign-folder/
-	*/
-    app.endpoints.mailchimpcampaignFolders.delete(folderId);
-
-    /*
-    * API URL: '/campaigns/:campaign_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/campaigns/delete-campaign/
-	*/
-    app.endpoints.mailchimpcampaigns.delete(campaignId);
-
-    /*
-    * API URL: '/campaigns/:campaign_id/feedback/:feedback_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/campaign-feedback/delete-campaign-feedback-message/
-	*/
-    app.endpoints.mailchimpcampaigns.feedback.delete(campaignId, feedbackId);
-
-    /*
-    * API URL: '/connected-sites/:connected_site_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/connected-sites/delete-connected-site/
-	*/
-    app.endpoints.mailchimpconnectedSites.delete(connectedSiteId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-stores/delete-store/
-	*/
-    app.endpoints.mailchimpecommerce.stores.delete(storeId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-cart-lines/delete-cart-line-item/
-	*/
-    app.endpoints.mailchimpecommerce.stores.carts.lines.delete(storeId, cartId, lineId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/carts/:cart_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-carts/delete-cart/
-	*/
-    app.endpoints.mailchimpecommerce.stores.carts.delete(storeId, cartId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/customers/:customer_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-customers/delete-customer/
-	*/
-    app.endpoints.mailchimpecommerce.stores.customers.delete(storeId, customerId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-order-lines/delete-order-line-item/
-	*/
-    app.endpoints.mailchimpecommerce.stores.orders.lines.delete(storeId, orderId, lineId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/orders/:order_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-images/
-	*/
-    app.endpoints.mailchimpecommerce.stores.orders.delete(storeId, orderId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/products/:product_id/images/:image_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-images/delete-product-image/
-	*/
-    app.endpoints.mailchimpecommerce.stores.products.images.delete(storeId, productId, imageId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-variants/delete-product-variant/
-	*/
-    app.endpoints.mailchimpecommerce.stores.products.variants.delete(storeId, productId, variantId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/products/:product_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-products/delete-product/
-	*/
-    app.endpoints.mailchimpecommerce.stores.products.delete(storeId, productId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/promo-rules/:promo_rule_id/promo-codes/:promo_code_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-promo-codes/delete-promo-code/
-	*/
-    app.endpoints.mailchimpecommerce.stores.promoRules.promoCodes.delete(storeId, promoRuleId, promoCodeId);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/promo-rules/:promo_rule_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-promo-rules/delete-promo-rule/
-	*/
-    app.endpoints.mailchimpecommerce.stores.promoRules.delete(storeId, promoRuleId);
-
-    /*
-    * API URL: '/file-manager/files/:file_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/file-manager-files/delete-file/
-	*/
-    app.endpoints.mailchimpfileManager.files.delete(fileId);
-
-    /*
-    * API URL: '/file-manager/folders/:folder_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/file-manager-folders/delete-folder/
-	*/
-    app.endpoints.mailchimpfileManager.folders.delete(folderId);
-
-    /*
-    * API URL: '/landing-pages/:page_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/landing-pages/delete-landing-page/
-	*/
-    app.endpoints.mailchimplandingPages.delete(pageId);
-
-    /*
-    * API URL: '/lists/:list_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/lists/delete-list/
-	*/
-    app.endpoints.mailchimplists.delete(listId);
-
-    /*
-    * API URL: '/lists/:list_id/interest-categories/:interest_category_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/interest-categories/delete-interest-category/
-	*/
-    app.endpoints.mailchimplists.interestCategories.delete(listId, interestCategoryId);
-
-    /*
-    * API URL: '/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/interests/delete-interest-in-category/
-	*/
-    app.endpoints.mailchimplists.interestCategories.interests.delete(listId, interestCategoryId, interestId);
-
-    /*
-    * API URL: '/lists/:list_id/members/:subscriber_hash/notes/:note_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/list-member-notes/delete-note/
-	*/
-    app.endpoints.mailchimplists.members.notes.delete(listId, subscriberHash, noteId);
-
-    /*
-    * API URL: '/lists/:list_id/members/:subscriber_hash'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/list-members/archive-list-member/
-	*/
-    app.endpoints.mailchimplists.members.delete(listId, subscriberHash);
-
-    /*
-    * API URL: '/lists/:list_id/merge-fields/:merge_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/list-segment-members/
-	*/
-    app.endpoints.mailchimplists.mergeFields.delete(listId, mergeId);
-
-    /*
-    * API URL: '/lists/:list_id/segments/:segment_id/members/:subscriber_hash'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/list-segment-members/remove-list-member-from-segment/
-	*/
-    app.endpoints.mailchimplists.segments.members.delete(listId, segmentId, subscriberHash);
-
-    /*
-    * API URL: '/lists/:list_id/segments/:segment_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/list-segments/delete-segment/
-	*/
-    app.endpoints.mailchimplists.segments.delete(listId, segmentId);
-
-    /*
-    * API URL: '/lists/:list_id/webhooks/:webhook_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/list-webhooks/delete-webhook/
-	*/
-    app.endpoints.mailchimplists.webhooks.delete(listId, webhookId);
-
-    /*
-    * API URL: '/template-folders/:folder_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/template-folders/delete-template-folder/
-	*/
-    app.endpoints.mailchimptemplateFolders.delete(folderId);
-
-    /*
-    * API URL: '/templates/:template_id'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/templates/delete-template/
-	*/
-    app.endpoints.mailchimptemplates.delete(templateId);
-
-    /*
-    * API URL: '/verified-domains/:domain_name'
-    * HTTP Method: 'DELETE'
-    * More info: https://mailchimp.com/developer/marketing/api/verified-domains/delete-domain/
-	*/
-    app.endpoints.mailchimpverifiedDomains.delete(domainName);
-
-    /*
-    * API URL: '/campaigns/:campaign_id/content'
-    * HTTP Method: 'PUT'
-    * More info: https://mailchimp.com/developer/marketing/api/campaign-content/set-campaign-content/
-	*/
-    app.endpoints.mailchimpcampaigns.content.put(campaignId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/customers/:customer_id'
-    * HTTP Method: 'PUT'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-customers/add-or-update-customer/
-	*/
-    app.endpoints.mailchimpecommerce.stores.customers.put(storeId, customerId, body);
-
-    /*
-    * API URL: '/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id'
-    * HTTP Method: 'PUT'
-    * More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-variants/add-or-update-product-variant/
-	*/
-    app.endpoints.mailchimpecommerce.stores.products.variants.put(storeId, productId, variantId, body);
-
-    /*
-    * API URL: '/lists/:list_id/members/:subscriber_hash'
-    * HTTP Method: 'PUT'
-    * More info: https://mailchimp.com/developer/marketing/api/list-members/add-or-update-list-member/
-	*/
-    app.endpoints.mailchimplists.members.put(listId, subscriberHash, body);
+<br>
+
+* API URL: '/'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/root/list-api-root-resources/
+```javascript
+app.endpoints.mailchimp.apiRoot()
+```
+---
+* API URL: '/account-exports'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/account-exports/list-account-exports/
+```javascript
+app.endpoints.mailchimp.accountExports.get()
+```
+---
+* API URL: '/authorized-apps'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/authorized-apps/list-authorized-apps/
+```javascript
+app.endpoints.mailchimp.authorizedApps.get()
+```
+---
+* API URL: '/authorized-apps/:app_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/authorized-apps/get-authorized-app-info/
+```javascript
+app.endpoints.mailchimp.authorizedApps.get(appId)
+```
+---
+* API URL: '/automations'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/automation/list-automations/
+```javascript
+app.endpoints.mailchimp.automations.get()
+```
+---
+* API URL: '/automations/:workflow_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/automation/get-automation-info/
+```javascript
+app.endpoints.mailchimp.automations.get(workflowId)
+```
+---
+* API URL: '/automations/:workflow_id/emails'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/automation-email/list-automated-emails/
+```javascript
+app.endpoints.mailchimp.automations.emails.get(workflowId)
+```
+---
+* API URL: '/automations/:workflow_id/emails/:workflow_email_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/automation-email/get-workflow-email-info/
+```javascript
+app.endpoints.mailchimp.automations.emails.get(workflowId, workflowEmailId)
+```
+---
+* API URL: '/automations/:workflow_id/emails/:workflow_email_id/queue'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/automation-email-queue/list-automated-email-subscribers/
+```javascript
+app.endpoints.mailchimp.automations.emails.queue.get(workflowId, workflowEmailId)
+```
+---
+* API URL: '/automations/:workflow_id/emails/:workflow_email_id/queue/:subscriber_hash'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/automation-email-queue/get-automated-email-subscriber/
+```javascript
+app.endpoints.mailchimp.automations.emails.queue.get(workflowId, workflowEmailId, subscriberHash)
+```
+---
+* API URL: '/automations/:workflow_id/removed-subscribers'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/automation-removed-subscribers/list-subscribers-removed-from-workflow/
+```javascript
+app.endpoints.mailchimp.automations.removedSubscribers.get(workflowId)
+```
+---
+* API URL: '/automations/:workflow_id/removed-subscribers/:subscriber_hash'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/automation-removed-subscribers/get-subscriber-removed-from-workflow/
+```javascript
+app.endpoints.mailchimp.automations.removedSubscribers.get(workflowId, subscriberHash)
+```
+---
+* API URL: '/batches'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/batch-operations/list-batch-requests/
+```javascript
+app.endpoints.mailchimp.batches.get()
+```
+---
+* API URL: '/batches/:batch_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/batch-operations/get-batch-operation-status/
+```javascript
+app.endpoints.mailchimp.batches.get(batchId)
+```
+---
+* API URL: '/batch-webhooks'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/batch-webhooks/list-batch-webhooks/
+```javascript
+app.endpoints.mailchimp.batchWebhooks.get()
+```
+---
+* API URL: '/batch-webhooks/:batch_webhook_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/batch-webhooks/get-batch-webhook-info/
+```javascript
+app.endpoints.mailchimp.batchWebhooks.get(batchWebhookId)
+```
+---
+* API URL: '/campaign-folders'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/campaign-folders/list-campaign-folders/
+```javascript
+app.endpoints.mailchimp.campaignFolders.get()
+```
+---
+* API URL: '/campaign-folders/:folder_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/campaign-folders/get-campaign-folder/
+```javascript
+app.endpoints.mailchimp.campaignFolders.get(folderId)
+```
+---
+* API URL: '/campaigns'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/campaigns/list-campaigns/
+```javascript
+app.endpoints.mailchimp.campaigns.get()
+```
+---
+* API URL: '/campaigns/:campaign_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/campaigns/get-campaign-info/
+```javascript
+app.endpoints.mailchimp.campaigns.get(campaignId)
+```
+---
+* API URL: '/campaigns/:campaign_id/content'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/campaign-content/get-campaign-content/
+```javascript
+app.endpoints.mailchimp.campaigns.content.get(campaignId)
+```
+---
+* API URL: '/campaigns/:campaign_id/feedback'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/campaign-feedback/list-campaign-feedback/
+```javascript
+app.endpoints.mailchimp.campaigns.feedback.get(campaignId)
+```
+---
+* API URL: '/campaigns/:campaign_id/feedback/:feedback_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/campaign-feedback/get-campaign-feedback-message/
+```javascript
+app.endpoints.mailchimp.campaigns.feedback.get(campaignId, feedbackId)
+```
+---
+* API URL: '/campaigns/:campaign_id/send-checklist'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/campaign-checklist/get-campaign-send-checklist/
+```javascript
+app.endpoints.mailchimp.campaigns.sendChecklist.get(campaignId)
+```
+---
+* API URL: '/activity-feed/chimp-chatter'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/chimp-chatter/get-latest-chimp-chatter/
+```javascript
+app.endpoints.mailchimp.activityFeed.chimpChatter.get()
+```
+---
+* API URL: '/connected-sites'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/connected-sites/list-connected-sites/
+```javascript
+app.endpoints.mailchimp.connectedSites.get()
+```
+---
+* API URL: '/connected-sites/:connected_site_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/connected-sites/get-connected-site/
+```javascript
+app.endpoints.mailchimp.connectedSites.get(connectedSiteId)
+```
+---
+* API URL: '/conversations'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/conversations/list-conversations/
+```javascript
+app.endpoints.mailchimp.conversations.get()
+```
+---
+* API URL: '/conversations/:conversation_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/conversations/get-conversation/
+```javascript
+app.endpoints.mailchimp.conversations.get(conversationId)
+```
+---
+* API URL: '/conversations/:conversation_id/messages'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/conversation-messages/list-messages/
+```javascript
+app.endpoints.mailchimp.conversations.messages.get(conversationId)
+```
+---
+* API URL: '/conversations/:conversation_id/messages/:message_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/conversation-messages/get-message/
+```javascript
+app.endpoints.mailchimp.conversations.messages.get(conversationId, messageId)
+```
+---
+* API URL: '/ecommerce/stores'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-stores/list-stores/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.get()
+```
+---
+* API URL: '/ecommerce/stores/:store_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-stores/get-store-info/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.get(storeId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/carts/:cart_id/lines'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-cart-lines/list-cart-line-items/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.carts.lines.get(storeId, cartId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-cart-lines/get-cart-line-item/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.carts.lines.get(storeId, cartId, lineId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/carts'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-carts/list-carts/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.carts.get(storeId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/carts/:cart_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-carts/get-cart-info/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.carts.get(storeId, cartId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/customers'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-customers/list-customers/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.customers.get(storeId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/customers/:customer_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-customers/get-customer-info/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.customers.get(storeId, customerId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/orders/:order_id/lines'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-order-lines/list-order-line-items/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.orders.lines.get(storeId, orderId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-order-lines/get-order-line-item/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.orders.lines.get(storeId, orderId, lineId)
+```
+---
+* API URL: '/ecommerce/orders'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-orders/list-account-orders/
+```javascript
+app.endpoints.mailchimp.ecommerce.orders.get()
+```
+---
+* API URL: '/ecommerce/stores/:store_id/orders'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-orders/list-orders/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.orders.get(storeId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/orders/:order_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-orders/get-order-info/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.orders.get(storeId, orderId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/products/:product_id/images'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-images/list-product-images/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.products.images.get(storeId, productId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/products/:product_id/images/:image_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-images/get-product-image-info/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.products.images.get(storeId, productId, imageId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/products/:product_id/variants'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-variants/list-product-variants/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.products.variants.get(storeId, productId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-variants/get-product-variant-info/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.products.variants.get(storeId, productId, variantId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/products'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-products/list-product/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.products.get(storeId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/products/:product_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-products/get-product-info/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.products.get(storeId, productId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/promo-rules/:promo_rule_id/promo-codes'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-promo-codes/list-promo-codes/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.promoRules.promoCodes.get(storeId, promoRuleId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/promo-rules/:promo_rule_id/promo-codes/:promo_code_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-promo-codes/get-promo-code/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.promoRules.promoCodes.get(storeId, promoRuleId, promoCodeId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/promo-rules'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-promo-rules/list-promo-rules/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.promoRules.get(storeId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/promo-rules/:promo_rule_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-promo-rules/get-promo-rule/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.promoRules.get(storeId, promoRuleId)
+```
+---
+* API URL: '/facebook-ads'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/facebook-ads/list-facebook-ads/
+```javascript
+app.endpoints.mailchimp.facebookAds.get()
+```
+---
+* API URL: '/facebook-ads/:outreach_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/facebook-ads/get-facebook-ad-info/
+```javascript
+app.endpoints.mailchimp.facebookAds.get(outreachId)
+```
+---
+* API URL: '/file-manager/files'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/file-manager-files/list-stored-files/
+```javascript
+app.endpoints.mailchimp.fileManager.files.get()
+```
+---
+* API URL: '/file-manager/files/:file_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/file-manager-files/get-file/
+```javascript
+app.endpoints.mailchimp.fileManager.files.get(fileId)
+```
+---
+* API URL: '/file-manager/folders'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/file-manager-folders/list-folders/
+```javascript
+app.endpoints.mailchimp.fileManager.folders.get()
+```
+---
+* API URL: '/file-manager/folders/:folder_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/file-manager-folders/get-folder/
+```javascript
+app.endpoints.mailchimp.fileManager.folders.get(folderId)
+```
+---
+* API URL: '/landing-pages'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/landing-pages/list-landing-pages/
+```javascript
+app.endpoints.mailchimp.landingPages.get()
+```
+---
+* API URL: '/landing-pages/:page_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/landing-pages/get-landing-page-info/
+```javascript
+app.endpoints.mailchimp.landingPages.get(pageId)
+```
+---
+* API URL: '/landing-pages/:page_id/content'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/landing-pages-content/get-landing-page-content/
+```javascript
+app.endpoints.mailchimp.landingPages.content.get(pageId)
+```
+---
+* API URL: '/lists'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/lists/get-lists-info/
+```javascript
+app.endpoints.mailchimp.lists.get()
+```
+---
+* API URL: '/lists/:list_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/lists/get-list-info/
+```javascript
+app.endpoints.mailchimp.lists.get(listId)
+```
+---
+* API URL: '/lists/:list_id/abuse-reports'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/abuse-reports/list-abuse-reports/
+```javascript
+app.endpoints.mailchimp.lists.abuseReports.get(listId)
+```
+---
+* API URL: '/lists/:list_id/abuse-reports/:report_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/abuse-reports/get-abuse-report/
+```javascript
+app.endpoints.mailchimp.lists.abuseReports.get(listId, reportId)
+```
+---
+* API URL: '/lists/:list_id/activity'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-activity/list-recent-activity/
+```javascript
+app.endpoints.mailchimp.lists.activity.get(listId)
+```
+---
+* API URL: '/lists/:list_id/clients'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-clients/list-top-email-clients/
+```javascript
+app.endpoints.mailchimp.lists.clients.get(listId)
+```
+---
+* API URL: '/lists/:list_id/members/:subscriber_hash/events'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-member-events/list-member-events/
+```javascript
+app.endpoints.mailchimp.lists.members.events.get(listId, subscriberHash)
+```
+---
+* API URL: '/lists/:list_id/growth-history'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-growth-history/list-growth-history-data/
+```javascript
+app.endpoints.mailchimp.lists.growthHistory.get(listId)
+```
+---
+* API URL: '/lists/:list_id/growth-history/:month'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-growth-history/get-growth-history-by-month/
+```javascript
+app.endpoints.mailchimp.lists.growthHistory.get(listId, month)
+```
+---
+* API URL: '/lists/:list_id/interest-categories'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/interest-categories/list-interest-categories/
+```javascript
+app.endpoints.mailchimp.lists.interestCategories.get(listId)
+```
+---
+* API URL: '/lists/:list_id/interest-categories/:interest_category_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/interest-categories/get-interest-category-info/
+```javascript
+app.endpoints.mailchimp.lists.interestCategories.get(listId, interestCategoryId)
+```
+---
+* API URL: '/lists/:list_id/interest-categories/:interest_category_id/interests'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/interests/list-interests-in-category/
+```javascript
+app.endpoints.mailchimp.lists.interestCategories.interests.get(listId, interestCategoryId)
+```
+---
+* API URL: '/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/interests/get-interest-in-category/
+```javascript
+app.endpoints.mailchimp.lists.interestCategories.interests.get(listId, interestCategoryId, interestId)
+```
+---
+* API URL: '/lists/:list_id/locations'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-locations/list-locations/
+```javascript
+app.endpoints.mailchimp.lists.locations.get(listId)
+```
+---
+* API URL: '/lists/:list_id/members/:subscriber_hash/activity'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-member-activity/view-recent-activity-50/
+```javascript
+app.endpoints.mailchimp.lists.members.activity.get(listId, subscriberHash)
+```
+---
+* API URL: '/lists/:list_id/members/:subscriber_hash/activity-feed'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-member-activity-feed/view-recent-activity/
+```javascript
+app.endpoints.mailchimp.lists.members.activityFeed.get(listId, subscriberHash)
+```
+---
+* API URL: '/lists/:list_id/members/:subscriber_hash/goals'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-member-notes/
+```javascript
+app.endpoints.mailchimp.lists.members.goals.get(listId, subscriberHash)
+```
+---
+* API URL: '/lists/:list_id/members/:subscriber_hash/notes'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-member-notes/list-recent-member-notes/
+```javascript
+app.endpoints.mailchimp.lists.members.notes.get(listId, subscriberHash)
+```
+---
+* API URL: '/lists/:list_id/members/:subscriber_hash/notes/:note_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-member-notes/get-member-note/
+```javascript
+app.endpoints.mailchimp.lists.members.notes.get(listId, subscriberHash, noteId)
+```
+---
+* API URL: '/lists/:list_id/members/:subscriber_hash/tags'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-member-tags/list-member-tags/
+```javascript
+app.endpoints.mailchimp.lists.members.tags.get(listId, subscriberHash)
+```
+---
+* API URL: '/lists/:list_id/members'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-members/list-members-info/
+```javascript
+app.endpoints.mailchimp.lists.members.get(listId)
+```
+---
+* API URL: '/lists/:list_id/members/:subscriber_hash'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-members/get-member-info/
+```javascript
+app.endpoints.mailchimp.lists.members.get(listId, subscriberHash)
+```
+---
+* API URL: '/lists/:list_id/merge-fields'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-merges/list-merge-fields/
+```javascript
+app.endpoints.mailchimp.lists.mergeFields.get(listId)
+```
+---
+* API URL: '/lists/:list_id/merge-fields/:merge_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-merges/get-merge-field/
+```javascript
+app.endpoints.mailchimp.lists.mergeFields.get(listId, mergeId)
+```
+---
+* API URL: '/lists/:list_id/segments/:segment_id/members'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-segment-members/list-members-in-segment/
+```javascript
+app.endpoints.mailchimp.lists.segments.members.get(listId, segmentId)
+```
+---
+* API URL: '/lists/:list_id/segments'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-segments/list-segments/
+```javascript
+app.endpoints.mailchimp.lists.segments.get(listId)
+```
+---
+* API URL: '/lists/:list_id/segments/:segment_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-segments/get-segment-info/
+```javascript
+app.endpoints.mailchimp.lists.segments.get(listId, segmentId)
+```
+---
+* API URL: '/lists/:list_id/signup-forms'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-signup-forms/list-signup-forms/
+```javascript
+app.endpoints.mailchimp.lists.signupForms.get(listId)
+```
+---
+* API URL: '/lists/:list_id/tag-search'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/lists-tags-search/search-for-tags-on-a-list-by-name/
+```javascript
+app.endpoints.mailchimp.lists.tagSearch.get(listId)
+```
+---
+* API URL: '/lists/:list_id/webhooks'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-webhooks/list-webhooks/
+```javascript
+app.endpoints.mailchimp.lists.webhooks.get(listId)
+```
+---
+* API URL: '/lists/:list_id/webhooks/:webhook_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/list-webhooks/get-webhook-info/
+```javascript
+app.endpoints.mailchimp.lists.webhooks.get(listId, webhookId)
+```
+---
+* API URL: '/ping'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/ping/ping/
+```javascript
+app.endpoints.mailchimp.ping.get()
+```
+---
+* API URL: '/reporting/facebook-ads'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/reporting-facebook-ads/list-facebook-ads-reports/
+```javascript
+app.endpoints.mailchimp.reporting.facebookAds.get()
+```
+---
+* API URL: '/reporting/facebook-ads/:outreach_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/reporting-facebook-ads/get-facebook-ad-report/
+```javascript
+app.endpoints.mailchimp.reporting.facebookAds.get(outreachId)
+```
+---
+* API URL: '/reporting/facebook-ads/:outreach_id/ecommerce-product-activity'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/reporting-facebook-ads/list-facebook-ecommerce-report/
+```javascript
+app.endpoints.mailchimp.reporting.facebookAds.ecommerceProductActivity.get(outreachId)
+```
+---
+* API URL: '/reporting/landing-pages'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/reporting-landing-pages/list-landing-pages-reports/
+```javascript
+app.endpoints.mailchimp.reporting.landingPages.get()
+```
+---
+* API URL: '/reporting/landing-pages/:outreach_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/reporting-landing-pages/get-landing-page-report/
+```javascript
+app.endpoints.mailchimp.reporting.landingPages.get(outreachId)
+```
+---
+* API URL: '/reports'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/reports/list-campaign-reports/
+```javascript
+app.endpoints.mailchimp.reports.get()
+```
+---
+* API URL: '/reports/:campaign_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/reports/get-campaign-report/
+```javascript
+app.endpoints.mailchimp.reports.get(campaignId)
+```
+---
+* API URL: '/reports/:campaign_id/abuse-reports'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/campaign-abuse/list-abuse-reports/
+```javascript
+app.endpoints.mailchimp.reports.abuseReports.get(campaignId)
+```
+---
+* API URL: '/reports/:campaign_id/abuse-reports/:report_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/campaign-abuse/get-abuse-report/
+```javascript
+app.endpoints.mailchimp.reports.abuseReports.get(campaignId, reportId)
+```
+---
+* API URL: '/reports/:campaign_id/advice'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/campaign-advice/list-campaign-feedback/
+```javascript
+app.endpoints.mailchimp.reports.advice.get(campaignId)
+```
+---
+* API URL: '/reports/:campaign_id/open-details'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/open-reports/list-campaign-open-details/
+```javascript
+app.endpoints.mailchimp.reports.openDetails.get(campaignId)
+```
+---
+* API URL: '/reports/:campaign_id/open-details/:subscriber_hash'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/open-reports/get-opened-campaign-subscriber/
+```javascript
+app.endpoints.mailchimp.reports.openDetails.get(campaignId, subscriberHash)
+```
+---
+* API URL: '/reports/:campaign_id/click-details'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/click-reports/list-campaign-details/
+```javascript
+app.endpoints.mailchimp.reports.clickDetails.get(campaignId)
+```
+---
+* API URL: '/reports/:campaign_id/click-details/:link_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/click-reports/get-campaign-link-details/
+```javascript
+app.endpoints.mailchimp.reports.clickDetails.get(campaignId, linkId)
+```
+---
+* API URL: '/reports/:campaign_id/click-details/:link_id/members'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/link-clickers/list-clicked-link-subscribers/
+```javascript
+app.endpoints.mailchimp.reports.clickDetails.members.get(campaignId, linkId)
+```
+---
+* API URL: '/reports/:campaign_id/click-details/:link_id/members/:subscriber_hash'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/link-clickers/get-clicked-link-subscriber/
+```javascript
+app.endpoints.mailchimp.reports.clickDetails.members.get(campaignId, linkId, subscriberHash)
+```
+---
+* API URL: '/reports/:campaign_id/domain-performance'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/domain-performance-reports/list-domain-performance-stats/
+```javascript
+app.endpoints.mailchimp.reports.domainPerformance.get(campaignId)
+```
+---
+* API URL: '/reports/:campaign_id/ecommerce-product-activity'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/campaign-ecommerce-product-activity/list-campaign-product-activity/
+```javascript
+app.endpoints.mailchimp.reports.ecommerceProductActivity.get(campaignId)
+```
+---
+* API URL: '/reports/:campaign_id/eepurl'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/eepurl-reports/list-eep-url-activity/
+```javascript
+app.endpoints.mailchimp.reports.eepurl.get(campaignId)
+```
+---
+* API URL: '/reports/:campaign_id/email-activity'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/email-activity-reports/list-email-activity/
+```javascript
+app.endpoints.mailchimp.reports.emailActivity.get(campaignId)
+```
+---
+* API URL: '/reports/:campaign_id/email-activity/:subscriber_hash'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/email-activity-reports/get-subscriber-email-activity/
+```javascript
+app.endpoints.mailchimp.reports.emailActivity.get(campaignId, subscriberHash)
+```
+---
+* API URL: '/reports/:campaign_id/locations'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/location-reports/list-top-open-activities/
+```javascript
+app.endpoints.mailchimp.reports.locations.get(campaignId)
+```
+---
+* API URL: '/reports/:campaign_id/sent-to'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/sent-to-reports/list-campaign-recipients/
+```javascript
+app.endpoints.mailchimp.reports.sentTo.get(campaignId)
+```
+---
+* API URL: '/reports/:campaign_id/sent-to/:subscriber_hash'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/sent-to-reports/get-campaign-recipient-info/
+```javascript
+app.endpoints.mailchimp.reports.sentTo.get(campaignId, subscriberHash)
+```
+---
+* API URL: '/reports/:campaign_id/sub-reports'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/sub-reports/list-child-campaign-reports/
+```javascript
+app.endpoints.mailchimp.reports.subReports.get(campaignId)
+```
+---
+* API URL: '/reports/:campaign_id/unsubscribed'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/unsub-reports/list-unsubscribed-members/
+```javascript
+app.endpoints.mailchimp.reports.unsubscribed.get(campaignId)
+```
+---
+* API URL: '/reports/:campaign_id/unsubscribed/:subscriber_hash'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/unsub-reports/get-unsubscribed-member/
+```javascript
+app.endpoints.mailchimp.reports.unsubscribed.get(campaignId, subscriberHash)
+```
+---
+* API URL: '/search-campaigns'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/search-campaigns/search-campaigns/
+```javascript
+app.endpoints.mailchimp.searchCampaigns.get()
+```
+---
+* API URL: '/search-members'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/search-members/search-members/
+```javascript
+app.endpoints.mailchimp.searchMembers.get()
+```
+---
+* API URL: '/template-folders'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/template-folders/list-template-folders/
+```javascript
+app.endpoints.mailchimp.templateFolders.get()
+```
+---
+* API URL: '/template-folders/:folder_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/template-folders/get-template-folder/
+```javascript
+app.endpoints.mailchimp.templateFolders.get(folderId)
+```
+---
+* API URL: '/templates'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/templates/list-templates/
+```javascript
+app.endpoints.mailchimp.templates.get()
+```
+---
+* API URL: '/templates/:template_id'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/templates/get-template-info/
+```javascript
+app.endpoints.mailchimp.templates.get(templateId)
+```
+---
+* API URL: '/templates/:template_id/default-content'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/template-default-content/view-default-content/
+```javascript
+app.endpoints.mailchimp.templates.defaultContent.get(templateId)
+```
+---
+* API URL: '/verified-domains'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/verified-domains/list-sending-domains/
+```javascript
+app.endpoints.mailchimp.verifiedDomains.get()
+```
+---
+* API URL: '/verified-domains/:domain_name'
+* HTTP Method: 'GET'
+* More info: https://mailchimp.com/developer/marketing/api/verified-domains/get-domain-info/
+```javascript
+app.endpoints.mailchimp.verifiedDomains.get(domainName)
+```
+---
+* API URL: '/account-exports'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/account-exports/add-export/
+```javascript
+app.endpoints.mailchimp.accountExports.post(body)
+```
+---
+* API URL: '/account-exports/:export_id'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/account-exports/get-account-export-info/
+```javascript
+app.endpoints.mailchimp.accountExports.post(exportId, body)
+```
+---
+* API URL: '/automations'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/automation/add-automation/
+```javascript
+app.endpoints.mailchimp.automations.post(body)
+```
+---
+* API URL: '/automations/:workflow_id/actions/archive'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/automation/archive-automation/
+```javascript
+app.endpoints.mailchimp.automations.actions.archive.post(workflowId, body)
+```
+---
+* API URL: '/automations/:workflow_id/actions/pause-all-emails'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/automation/pause-automation-emails/
+```javascript
+app.endpoints.mailchimp.automations.actions.pauseAllEmails.post(workflowId, body)
+```
+---
+* API URL: '/automations/:workflow_id/actions/start-all-emails'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/automation/start-automation-emails/
+```javascript
+app.endpoints.mailchimp.automations.actions.startAllEmails.post(workflowId, body)
+```
+---
+* API URL: '/automations/:workflow_id/emails/:workflow_email_id/actions/pause'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/automation-email/pause-automated-email/
+```javascript
+app.endpoints.mailchimp.automations.emails.actions.pause.post(workflowId, workflowEmailId, body)
+```
+---
+* API URL: '/automations/:workflow_id/emails/:workflow_email_id/actions/start'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/automation-email/start-automated-email/
+```javascript
+app.endpoints.mailchimp.automations.emails.actions.start.post(workflowId, workflowEmailId, body)
+```
+---
+* API URL: '/automations/:workflow_id/emails/:workflow_email_id/queue'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/automation-email-queue/add-subscriber-to-workflow-email/
+```javascript
+app.endpoints.mailchimp.automations.emails.queue.post(workflowId, workflowEmailId, body)
+```
+---
+* API URL: '/automations/:workflow_id/removed-subscribers'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/automation-removed-subscribers/remove-subscriber-from-workflow/
+```javascript
+app.endpoints.mailchimp.automations.removedSubscribers.post(workflowId, body)
+```
+---
+* API URL: '/batches'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/batch-operations/start-batch-operation/
+```javascript
+app.endpoints.mailchimp.batches.post(body)
+```
+---
+* API URL: '/batch-webhooks'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/batch-webhooks/add-batch-webhook/
+```javascript
+app.endpoints.mailchimp.batchWebhooks.post(body)
+```
+---
+* API URL: '/campaign-folders'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/campaign-folders/add-campaign-folder/
+```javascript
+app.endpoints.mailchimp.campaignFolders.post(body)
+```
+---
+* API URL: '/campaigns'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/campaigns/add-campaign/
+```javascript
+app.endpoints.mailchimp.campaigns.post(body)
+```
+---
+* API URL: '/campaigns/:campaign_id/actions/cancel-send'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/campaigns/cancel-campaign/
+```javascript
+app.endpoints.mailchimp.campaigns.actions.cancelSend.post(campaignId, body)
+```
+---
+* API URL: '/campaigns/:campaign_id/actions/send'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/campaigns/send-campaign/
+```javascript
+app.endpoints.mailchimp.campaigns.actions.send.post(campaignId, body)
+```
+---
+* API URL: '/campaigns/:campaign_id/actions/schedule'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/campaigns/schedule-campaign/
+```javascript
+app.endpoints.mailchimp.campaigns.actions.schedule.post(campaignId, body)
+```
+---
+* API URL: '/campaigns/:campaign_id/actions/unschedule'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/campaigns/unschedule-campaign/
+```javascript
+app.endpoints.mailchimp.campaigns.actions.unschedule.post(campaignId, body)
+```
+---
+* API URL: '/campaigns/:campaign_id/actions/pause'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/campaigns/pause-rss-campaign/
+```javascript
+app.endpoints.mailchimp.campaigns.actions.pause.post(campaignId, body)
+```
+---
+* API URL: '/campaigns/:campaign_id/actions/resume'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/campaigns/resume-rss-campaign/
+```javascript
+app.endpoints.mailchimp.campaigns.actions.resume.post(campaignId, body)
+```
+---
+* API URL: '/campaigns/:campaign_id/actions/replicate'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/campaigns/replicate-campaign/
+```javascript
+app.endpoints.mailchimp.campaigns.actions.replicate.post(campaignId, body)
+```
+---
+* API URL: '/campaigns/:campaign_id/actions/test'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/campaigns/send-test-email/
+```javascript
+app.endpoints.mailchimp.campaigns.actions.test.post(campaignId, body)
+```
+---
+* API URL: '/campaigns/:campaign_id/actions/create-resend'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/campaigns/resend-campaign/
+```javascript
+app.endpoints.mailchimp.campaigns.actions.createResend.post(campaignId, body)
+```
+---
+* API URL: '/campaigns/:campaign_id/feedback'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/campaign-feedback/add-campaign-feedback/
+```javascript
+app.endpoints.mailchimp.campaigns.feedback.post(campaignId, body)
+```
+---
+* API URL: '/connected-sites'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/connected-sites/add-connected-site/
+```javascript
+app.endpoints.mailchimp.connectedSites.post(body)
+```
+---
+* API URL: '/connected-sites/:connected_site_id/actions/verify-script-installation'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/connected-sites/verify-connected-site-script/
+```javascript
+app.endpoints.mailchimp.connectedSites.actions.verifyScriptInstallation.post(connectedSiteId, body)
+```
+---
+* API URL: '/customer-journeys/journeys/:journey_id/steps/:step_id/actions/trigger'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/customer-journeys-journeys-steps-actions/customer-journeys-api-trigger-for-a-contact/
+```javascript
+app.endpoints.mailchimp.customerJourneys.journeys.steps.actions.trigger.post(journeyId, stepId, body)
+```
+---
+* API URL: '/ecommerce/stores'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-stores/add-store/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.post(body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/carts/:cart_id/lines'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-cart-lines/add-cart-line-item/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.carts.lines.post(storeId, cartId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/carts'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-carts/add-cart/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.carts.post(storeId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/customers'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-customers/add-customer/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.customers.post(storeId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/orders/:order_id/lines'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-order-lines/add-order-line-item/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.orders.lines.post(storeId, orderId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/products'
+* HTTP Method: 'POST'
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.products.post(storeId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/orders'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-orders/add-order/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.orders.post(storeId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/products/:product_id/images'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-images/add-product-image/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.products.images.post(storeId, productId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/products/:product_id/variants'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-variants/add-product-variant/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.products.variants.post(storeId, productId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/products'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-products/add-product/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.products.post(storeId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/promo-rules/:promo_rule_id/promo-codes'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-promo-codes/add-promo-code/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.promoRules.promoCodes.post(storeId, promoRuleId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/promo-rules'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-promo-rules/add-promo-rule/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.promoRules.post(storeId, body)
+```
+---
+* API URL: '/file-manager/files'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/file-manager-files/add-file/
+```javascript
+app.endpoints.mailchimp.fileManager.files.post(body)
+```
+---
+* API URL: '/file-manager/folders'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/file-manager-folders/add-folder/
+```javascript
+app.endpoints.mailchimp.fileManager.folders.post(body)
+```
+---
+* API URL: '/landing-pages'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/landing-pages/add-landing-page/
+```javascript
+app.endpoints.mailchimp.landingPages.post(body)
+```
+---
+* API URL: '/landing-pages/:page_id/actions/publish'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/landing-pages/publish-landing-page/
+```javascript
+app.endpoints.mailchimp.landingPages.actions.publish.post(pageId, body)
+```
+---
+* API URL: '/landing-pages/:page_id/actions/unpublish'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/landing-pages/unpublish-landing-page/
+```javascript
+app.endpoints.mailchimp.landingPages.actions.unpublish.post(pageId, body)
+```
+---
+* API URL: '/lists'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/lists/add-list/
+```javascript
+app.endpoints.mailchimp.lists.post(body)
+```
+---
+* API URL: '/lists/:list_id'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/
+```javascript
+app.endpoints.mailchimp.lists.post(listId, body)
+```
+---
+* API URL: '/lists/:list_id/members/:subscriber_hash/events'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/list-member-events/add-event/
+```javascript
+app.endpoints.mailchimp.lists.members.events.post(listId, subscriberHash, body)
+```
+---
+* API URL: '/lists/:list_id/interest-categories'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/
+```javascript
+app.endpoints.mailchimp.lists.interestCategories.post(listId, body)
+```
+---
+* API URL: '/lists/:list_id/interest-categories/:interest_category_id/interests'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/interests/add-interest-in-category/
+```javascript
+app.endpoints.mailchimp.lists.interestCategories.interests.post(listId, interestCategoryId, body)
+```
+---
+* API URL: '/lists/:list_id/members/:subscriber_hash/notes'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/list-member-notes/add-member-note/
+```javascript
+app.endpoints.mailchimp.lists.members.notes.post(listId, subscriberHash, body)
+```
+---
+* API URL: '/lists/:list_id/members/:subscriber_hash/tags'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/list-member-tags/add-or-remove-member-tags/
+```javascript
+app.endpoints.mailchimp.lists.members.tags.post(listId, subscriberHash, body)
+```
+---
+* API URL: '/lists/:list_id/members'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/list-members/add-member-to-list/
+```javascript
+app.endpoints.mailchimp.lists.members.post(listId, body)
+```
+---
+* API URL: '/lists/:list_id/members/:subscriber_hash/actions/delete-permanent'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/list-members/delete-list-member/
+```javascript
+app.endpoints.mailchimp.lists.members.actions.deletePermanent.post(listId, subscriberHash, body)
+```
+---
+* API URL: '/lists/:list_id/merge-fields'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/list-merges/add-merge-field/
+```javascript
+app.endpoints.mailchimp.lists.mergeFields.post(listId, body)
+```
+---
+* API URL: '/lists/:list_id/segments/:segment_id/members'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/list-segment-members/add-member-to-segment/
+```javascript
+app.endpoints.mailchimp.lists.segments.members.post(listId, segmentId, body)
+```
+---
+* API URL: '/lists/:list_id/segments'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/list-segments/add-segment/
+```javascript
+app.endpoints.mailchimp.lists.segments.post(listId, body)
+```
+---
+* API URL: '/lists/:list_id/segments/:segment_id'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/list-segments/batch-add-or-remove-members/
+```javascript
+app.endpoints.mailchimp.lists.segments.post(listId, segmentId, body)
+```
+---
+* API URL: '/lists/:list_id/signup-forms'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/list-signup-forms/customize-signup-form/
+```javascript
+app.endpoints.mailchimp.lists.signupForms.post(listId, body)
+```
+---
+* API URL: '/lists/:list_id/webhooks'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/list-webhooks/add-webhook/
+```javascript
+app.endpoints.mailchimp.lists.webhooks.post(listId, body)
+```
+---
+* API URL: '/template-folders'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/template-folders/add-template-folder/
+```javascript
+app.endpoints.mailchimp.templateFolders.post(body)
+```
+---
+* API URL: '/templates'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/templates/add-template/
+```javascript
+app.endpoints.mailchimp.templates.post(body)
+```
+---
+* API URL: '/verified-domains'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/verified-domains/add-domain-to-account/
+```javascript
+app.endpoints.mailchimp.verifiedDomains.post(body)
+```
+---
+* API URL: '/verified-domains/:domain_name/actions/verify'
+* HTTP Method: 'POST'
+* More info: https://mailchimp.com/developer/marketing/api/verified-domains/verify-domain/
+```javascript
+app.endpoints.mailchimp.verifiedDomains.actions.verify.post(domainName, body)
+```
+---
+* API URL: '/automations/:workflow_id/emails/:workflow_email_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/automation-email/update-workflow-email/
+```javascript
+app.endpoints.mailchimp.automations.emails.patch(workflowId, workflowEmailId, body)
+```
+---
+* API URL: '/batch-webhooks/:batch_webhook_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/batch-webhooks/update-batch-webhook/
+```javascript
+app.endpoints.mailchimp.batchWebhooks.patch(batchWebhookId, body)
+```
+---
+* API URL: '/campaign-folders/:folder_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/campaign-folders/update-campaign-folder/
+```javascript
+app.endpoints.mailchimp.campaignFolders.patch(folderId, body)
+```
+---
+* API URL: '/campaigns/:campaign_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/campaigns/update-campaign-settings/
+```javascript
+app.endpoints.mailchimp.campaigns.patch(campaignId, body)
+```
+---
+* API URL: '/campaigns/:campaign_id/feedback/:feedback_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/campaign-feedback/update-campaign-feedback-message/
+```javascript
+app.endpoints.mailchimp.campaigns.feedback.patch(campaignId, feedbackId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-stores/update-store/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.patch(storeId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-cart-lines/update-cart-line-item/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.carts.lines.patch(storeId, cartId, lineId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/carts/:cart_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-carts/update-cart/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.carts.patch(storeId, cartId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/customers/:customer_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-customers/update-customer/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.customers.patch(storeId, customerId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-order-lines/update-order-line-item/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.orders.lines.patch(storeId, orderId, lineId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/orders/:order_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-orders/update-order/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.orders.patch(storeId, orderId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/products/:product_id/images/:image_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-images/update-product-image/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.products.images.patch(storeId, productId, imageId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-variants/update-product-variant/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.products.variants.patch(storeId, productId, variantId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/products/:product_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-products/update-product/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.products.patch(storeId, productId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/promo-rules/:promo_rule_id/promo-codes/:promo_code_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-promo-codes/update-promo-code/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.promoRules.promoCodes.patch(storeId, promoRuleId, promoCodeId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/promo-rules/:promo_rule_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-promo-rules/update-promo-rule/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.promoRules.patch(storeId, promoRuleId, body)
+```
+---
+* API URL: '/file-manager/files/:file_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/file-manager-files/update-file/
+```javascript
+app.endpoints.mailchimp.fileManager.files.patch(fileId, body)
+```
+---
+* API URL: '/file-manager/folders/:folder_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/file-manager-folders/update-folder/
+```javascript
+app.endpoints.mailchimp.fileManager.folders.patch(folderId, body)
+```
+---
+* API URL: '/landing-pages/:page_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/landing-pages/update-landing-page/
+```javascript
+app.endpoints.mailchimp.landingPages.patch(pageId, body)
+```
+---
+* API URL: '/lists/:list_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/lists/update-lists/
+```javascript
+app.endpoints.mailchimp.lists.patch(listId, body)
+```
+---
+* API URL: '/lists/:list_id/interest-categories/:interest_category_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/interest-categories/update-interest-category/
+```javascript
+app.endpoints.mailchimp.lists.interestCategories.patch(listId, interestCategoryId, body)
+```
+---
+* API URL: '/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/interests/update-interest-in-category/
+```javascript
+app.endpoints.mailchimp.lists.interestCategories.interests.patch(listId, interestCategoryId, interestId, body)
+```
+---
+* API URL: '/lists/:list_id/members/:subscriber_hash/notes/:note_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/list-member-notes/update-note/
+```javascript
+app.endpoints.mailchimp.lists.members.notes.patch(listId, subscriberHash, noteId, body)
+```
+---
+* API URL: '/lists/:list_id/members/:subscriber_hash'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/list-members/update-list-member/
+```javascript
+app.endpoints.mailchimp.lists.members.patch(listId, subscriberHash, body)
+```
+---
+* API URL: '/lists/:list_id/merge-fields/:merge_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/list-merges/update-merge-field/
+```javascript
+app.endpoints.mailchimp.lists.mergeFields.patch(listId, mergeId, body)
+```
+---
+* API URL: '/lists/:list_id/segments/:segment_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/list-segments/update-segment/
+```javascript
+app.endpoints.mailchimp.lists.segments.patch(listId, segmentId, body)
+```
+---
+* API URL: '/lists/:list_id/webhooks/:webhook_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/list-webhooks/update-webhook/
+```javascript
+app.endpoints.mailchimp.lists.webhooks.patch(listId, webhookId, body)
+```
+---
+* API URL: '/template-folders/:folder_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/template-folders/update-template-folder/
+```javascript
+app.endpoints.mailchimp.templateFolders.patch(folderId, body)
+```
+---
+* API URL: '/templates/:template_id'
+* HTTP Method: 'PATCH'
+* More info: https://mailchimp.com/developer/marketing/api/templates/update-template/
+```javascript
+app.endpoints.mailchimp.templates.patch(templateId, body)
+```
+---
+* API URL: '/automations/:workflow_id/emails/:workflow_email_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/automation-email/delete-workflow-email/
+```javascript
+app.endpoints.mailchimp.automations.emails.delete(workflowId, workflowEmailId)
+```
+---
+* API URL: '/batches/:batch_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/batch-operations/delete-batch-request/
+```javascript
+app.endpoints.mailchimp.batches.delete(batchId)
+```
+---
+* API URL: '/batch-webhooks/:batch_webhook_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/batch-webhooks/delete-batch-webhook/
+```javascript
+app.endpoints.mailchimp.batchWebhooks.delete(batchWebhookId)
+```
+---
+* API URL: '/campaign-folders/:folder_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/campaign-folders/delete-campaign-folder/
+```javascript
+app.endpoints.mailchimp.campaignFolders.delete(folderId)
+```
+---
+* API URL: '/campaigns/:campaign_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/campaigns/delete-campaign/
+```javascript
+app.endpoints.mailchimp.campaigns.delete(campaignId)
+```
+---
+* API URL: '/campaigns/:campaign_id/feedback/:feedback_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/campaign-feedback/delete-campaign-feedback-message/
+```javascript
+app.endpoints.mailchimp.campaigns.feedback.delete(campaignId, feedbackId)
+```
+---
+* API URL: '/connected-sites/:connected_site_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/connected-sites/delete-connected-site/
+```javascript
+app.endpoints.mailchimp.connectedSites.delete(connectedSiteId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-stores/delete-store/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.delete(storeId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-cart-lines/delete-cart-line-item/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.carts.lines.delete(storeId, cartId, lineId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/carts/:cart_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-carts/delete-cart/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.carts.delete(storeId, cartId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/customers/:customer_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-customers/delete-customer/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.customers.delete(storeId, customerId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-order-lines/delete-order-line-item/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.orders.lines.delete(storeId, orderId, lineId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/orders/:order_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-images/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.orders.delete(storeId, orderId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/products/:product_id/images/:image_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-images/delete-product-image/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.products.images.delete(storeId, productId, imageId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-variants/delete-product-variant/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.products.variants.delete(storeId, productId, variantId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/products/:product_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-products/delete-product/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.products.delete(storeId, productId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/promo-rules/:promo_rule_id/promo-codes/:promo_code_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-promo-codes/delete-promo-code/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.promoRules.promoCodes.delete(storeId, promoRuleId, promoCodeId)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/promo-rules/:promo_rule_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-promo-rules/delete-promo-rule/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.promoRules.delete(storeId, promoRuleId)
+```
+---
+* API URL: '/file-manager/files/:file_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/file-manager-files/delete-file/
+```javascript
+app.endpoints.mailchimp.fileManager.files.delete(fileId)
+```
+---
+* API URL: '/file-manager/folders/:folder_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/file-manager-folders/delete-folder/
+```javascript
+app.endpoints.mailchimp.fileManager.folders.delete(folderId)
+```
+---
+* API URL: '/landing-pages/:page_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/landing-pages/delete-landing-page/
+```javascript
+app.endpoints.mailchimp.landingPages.delete(pageId)
+```
+---
+* API URL: '/lists/:list_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/lists/delete-list/
+```javascript
+app.endpoints.mailchimp.lists.delete(listId)
+```
+---
+* API URL: '/lists/:list_id/interest-categories/:interest_category_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/interest-categories/delete-interest-category/
+```javascript
+app.endpoints.mailchimp.lists.interestCategories.delete(listId, interestCategoryId)
+```
+---
+* API URL: '/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/interests/delete-interest-in-category/
+```javascript
+app.endpoints.mailchimp.lists.interestCategories.interests.delete(listId, interestCategoryId, interestId)
+```
+---
+* API URL: '/lists/:list_id/members/:subscriber_hash/notes/:note_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/list-member-notes/delete-note/
+```javascript
+app.endpoints.mailchimp.lists.members.notes.delete(listId, subscriberHash, noteId)
+```
+---
+* API URL: '/lists/:list_id/members/:subscriber_hash'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/list-members/archive-list-member/
+```javascript
+app.endpoints.mailchimp.lists.members.delete(listId, subscriberHash)
+```
+---
+* API URL: '/lists/:list_id/merge-fields/:merge_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/list-segment-members/
+```javascript
+app.endpoints.mailchimp.lists.mergeFields.delete(listId, mergeId)
+```
+---
+* API URL: '/lists/:list_id/segments/:segment_id/members/:subscriber_hash'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/list-segment-members/remove-list-member-from-segment/
+```javascript
+app.endpoints.mailchimp.lists.segments.members.delete(listId, segmentId, subscriberHash)
+```
+---
+* API URL: '/lists/:list_id/segments/:segment_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/list-segments/delete-segment/
+```javascript
+app.endpoints.mailchimp.lists.segments.delete(listId, segmentId)
+```
+---
+* API URL: '/lists/:list_id/webhooks/:webhook_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/list-webhooks/delete-webhook/
+```javascript
+app.endpoints.mailchimp.lists.webhooks.delete(listId, webhookId)
+```
+---
+* API URL: '/template-folders/:folder_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/template-folders/delete-template-folder/
+```javascript
+app.endpoints.mailchimp.templateFolders.delete(folderId)
+```
+---
+* API URL: '/templates/:template_id'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/templates/delete-template/
+```javascript
+app.endpoints.mailchimp.templates.delete(templateId)
+```
+---
+* API URL: '/verified-domains/:domain_name'
+* HTTP Method: 'DELETE'
+* More info: https://mailchimp.com/developer/marketing/api/verified-domains/delete-domain/
+```javascript
+app.endpoints.mailchimp.verifiedDomains.delete(domainName)
+```
+---
+* API URL: '/campaigns/:campaign_id/content'
+* HTTP Method: 'PUT'
+* More info: https://mailchimp.com/developer/marketing/api/campaign-content/set-campaign-content/
+```javascript
+app.endpoints.mailchimp.campaigns.content.put(campaignId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/customers/:customer_id'
+* HTTP Method: 'PUT'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-customers/add-or-update-customer/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.customers.put(storeId, customerId, body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id'
+* HTTP Method: 'PUT'
+* More info: https://mailchimp.com/developer/marketing/api/ecommerce-product-variants/add-or-update-product-variant/
+```javascript
+app.endpoints.mailchimp.ecommerce.stores.products.variants.put(storeId, productId, variantId, body)
+```
+---
+* API URL: '/lists/:list_id/members/:subscriber_hash'
+* HTTP Method: 'PUT'
+* More info: https://mailchimp.com/developer/marketing/api/list-members/add-or-update-list-member/
+```javascript
+app.endpoints.mailchimp.lists.members.put(listId, subscriberHash, body)
+```
+---
 
 </details>
 
