@@ -33,151 +33,151 @@ Instead of having to use the generic HTTP methods, you can (and should) make use
 * API URL: '/batch-webhooks/{batch_webhook_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.batchWebhooks.{batchWebhookId}.patch(body)
+app.endpoints.mailchimp.batchWebhooks.batchWebhookId.patch(body)
 ```
 ---
 * API URL: '/campaign-folders/{folder_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.campaignFolders.{folderId}.patch(body)
+app.endpoints.mailchimp.campaignFolders.folderId.patch(body)
 ```
 ---
 * API URL: '/campaigns/{campaign_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.campaigns.{campaignId}.patch(body)
+app.endpoints.mailchimp.campaigns.campaignId.patch(body)
 ```
 ---
 * API URL: '/campaigns/{campaign_id}/feedback/{feedback_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.campaigns.{campaignId}.feedback.{feedbackId}.patch(body)
+app.endpoints.mailchimp.campaigns.campaignId.feedback.feedbackId.patch(body)
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.patch(body)
+app.endpoints.mailchimp.ecommerce.stores.storeId.patch(body)
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/carts/{cart_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.carts.{cartId}.patch(body)
+app.endpoints.mailchimp.ecommerce.stores.storeId.carts.cartId.patch(body)
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/carts/{cart_id}/lines/{line_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.carts.{cartId}.lines.{lineId}.patch(body)
+app.endpoints.mailchimp.ecommerce.stores.storeId.carts.cartId.lines.lineId.patch(body)
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/customers/{customer_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.customers.{customerId}.patch(body)
+app.endpoints.mailchimp.ecommerce.stores.storeId.customers.customerId.patch(body)
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/orders/{order_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.orders.{orderId}.patch(body)
+app.endpoints.mailchimp.ecommerce.stores.storeId.orders.orderId.patch(body)
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/orders/{order_id}/lines/{line_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.orders.{orderId}.lines.{lineId}.patch(body)
+app.endpoints.mailchimp.ecommerce.stores.storeId.orders.orderId.lines.lineId.patch(body)
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/products/{product_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.products.{productId}.patch(body)
+app.endpoints.mailchimp.ecommerce.stores.storeId.products.productId.patch(body)
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/products/{product_id}/images/{image_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.products.{productId}.images.{imageId}.patch(body)
+app.endpoints.mailchimp.ecommerce.stores.storeId.products.productId.images.imageId.patch(body)
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.products.{productId}.variants.{variantId}.patch(body)
+app.endpoints.mailchimp.ecommerce.stores.storeId.products.productId.variants.variantId.patch(body)
 ```
 ---
 * API URL: '/file-manager/files/{file_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.fileManager.files.{fileId}.patch(body)
+app.endpoints.mailchimp.fileManager.files.fileId.patch(body)
 ```
 ---
 * API URL: '/file-manager/folders/{folder_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.fileManager.folders.{folderId}.patch(body)
+app.endpoints.mailchimp.fileManager.folders.folderId.patch(body)
 ```
 ---
 * API URL: '/lists/{list_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.patch(body)
+app.endpoints.mailchimp.lists.listId.patch(body)
 ```
 ---
 * API URL: '/lists/{list_id}/interest-categories/{interest_category_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.interestCategories.{interestCategoryId}.patch(body)
+app.endpoints.mailchimp.lists.listId.interestCategories.interestCategoryId.patch(body)
 ```
 ---
 * API URL: '/lists/{list_id}/interest-categories/{interest_category_id}/interests/{interest_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.interestCategories.{interestCategoryId}.interests.{interestId}.patch(body)
+app.endpoints.mailchimp.lists.listId.interestCategories.interestCategoryId.interests.interestId.patch(body)
 ```
 ---
 * API URL: '/lists/{list_id}/members/{subscriber_hash}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.members.{subscriberHash}.patch(body)
+app.endpoints.mailchimp.lists.listId.members.subscriberHash.patch(body)
 ```
 ---
 * API URL: '/lists/{list_id}/members/{subscriber_hash}/notes/{note_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.members.{subscriberHash}.notes.{noteId}.patch(body)
+app.endpoints.mailchimp.lists.listId.members.subscriberHash.notes.noteId.patch(body)
 ```
 ---
 * API URL: '/lists/{list_id}/merge-fields/{merge_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.mergeFields.{mergeId}.patch(body)
+app.endpoints.mailchimp.lists.listId.mergeFields.mergeId.patch(body)
 ```
 ---
 * API URL: '/lists/{list_id}/segments/{segment_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.segments.{segmentId}.patch(body)
+app.endpoints.mailchimp.lists.listId.segments.segmentId.patch(body)
 ```
 ---
 * API URL: '/lists/{list_id}/webhooks/{webhook_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.webhooks.{webhookId}.patch(body)
+app.endpoints.mailchimp.lists.listId.webhooks.webhookId.patch(body)
 ```
 ---
 * API URL: '/template-folders/{folder_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.templateFolders.{folderId}.patch(body)
+app.endpoints.mailchimp.templateFolders.folderId.patch(body)
 ```
 ---
 * API URL: '/templates/{template_id}'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.mailchimp.templates.{templateId}.patch(body)
+app.endpoints.mailchimp.templates.templateId.patch(body)
 ```
 ---
 * API URL: '/authorized-apps'
@@ -189,37 +189,37 @@ app.endpoints.mailchimp.authorizedApps.post(body)
 * API URL: '/automations/{workflow_id}/actions/pause-all-emails'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.automations.{workflowId}.actions.pauseAllEmails.post(body)
+app.endpoints.mailchimp.automations.workflowId.actions.pauseAllEmails.post(body)
 ```
 ---
 * API URL: '/automations/{workflow_id}/actions/start-all-emails'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.automations.{workflowId}.actions.startAllEmails.post(body)
+app.endpoints.mailchimp.automations.workflowId.actions.startAllEmails.post(body)
 ```
 ---
 * API URL: '/automations/{workflow_id}/emails/{workflow_email_id}/actions/pause'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.automations.{workflowId}.emails.{workflowEmailId}.actions.pause.post(body)
+app.endpoints.mailchimp.automations.workflowId.emails.workflowEmailId.actions.pause.post(body)
 ```
 ---
 * API URL: '/automations/{workflow_id}/emails/{workflow_email_id}/actions/start'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.automations.{workflowId}.emails.{workflowEmailId}.actions.start.post(body)
+app.endpoints.mailchimp.automations.workflowId.emails.workflowEmailId.actions.start.post(body)
 ```
 ---
 * API URL: '/automations/{workflow_id}/emails/{workflow_email_id}/queue'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.automations.{workflowId}.emails.{workflowEmailId}.queue.post(body)
+app.endpoints.mailchimp.automations.workflowId.emails.workflowEmailId.queue.post(body)
 ```
 ---
 * API URL: '/automations/{workflow_id}/removed-subscribers'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.automations.{workflowId}.removedSubscribers.post(body)
+app.endpoints.mailchimp.automations.workflowId.removedSubscribers.post(body)
 ```
 ---
 * API URL: '/batches'
@@ -249,61 +249,61 @@ app.endpoints.mailchimp.campaigns.post(body)
 * API URL: '/campaigns/{campaign_id}/actions/cancel-send'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.campaigns.{campaignId}.actions.cancelSend.post(body)
+app.endpoints.mailchimp.campaigns.campaignId.actions.cancelSend.post(body)
 ```
 ---
 * API URL: '/campaigns/{campaign_id}/actions/pause'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.campaigns.{campaignId}.actions.pause.post(body)
+app.endpoints.mailchimp.campaigns.campaignId.actions.pause.post(body)
 ```
 ---
 * API URL: '/campaigns/{campaign_id}/actions/replicate'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.campaigns.{campaignId}.actions.replicate.post(body)
+app.endpoints.mailchimp.campaigns.campaignId.actions.replicate.post(body)
 ```
 ---
 * API URL: '/campaigns/{campaign_id}/actions/resume'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.campaigns.{campaignId}.actions.resume.post(body)
+app.endpoints.mailchimp.campaigns.campaignId.actions.resume.post(body)
 ```
 ---
 * API URL: '/campaigns/{campaign_id}/actions/schedule'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.campaigns.{campaignId}.actions.schedule.post(body)
+app.endpoints.mailchimp.campaigns.campaignId.actions.schedule.post(body)
 ```
 ---
 * API URL: '/campaigns/{campaign_id}/actions/send'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.campaigns.{campaignId}.actions.send.post(body)
+app.endpoints.mailchimp.campaigns.campaignId.actions.send.post(body)
 ```
 ---
 * API URL: '/campaigns/{campaign_id}/actions/test'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.campaigns.{campaignId}.actions.test.post(body)
+app.endpoints.mailchimp.campaigns.campaignId.actions.test.post(body)
 ```
 ---
 * API URL: '/campaigns/{campaign_id}/actions/unschedule'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.campaigns.{campaignId}.actions.unschedule.post(body)
+app.endpoints.mailchimp.campaigns.campaignId.actions.unschedule.post(body)
 ```
 ---
 * API URL: '/campaigns/{campaign_id}/feedback'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.campaigns.{campaignId}.feedback.post(body)
+app.endpoints.mailchimp.campaigns.campaignId.feedback.post(body)
 ```
 ---
 * API URL: '/conversations/{conversation_id}/messages'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.conversations.{conversationId}.messages.post(body)
+app.endpoints.mailchimp.conversations.conversationId.messages.post(body)
 ```
 ---
 * API URL: '/ecommerce/stores'
@@ -315,49 +315,49 @@ app.endpoints.mailchimp.ecommerce.stores.post(body)
 * API URL: '/ecommerce/stores/{store_id}/carts'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.carts.post(body)
+app.endpoints.mailchimp.ecommerce.stores.storeId.carts.post(body)
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/carts/{cart_id}'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.carts.{cartId}.post(body)
+app.endpoints.mailchimp.ecommerce.stores.storeId.carts.cartId.post(body)
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/carts/{cart_id}/lines'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.carts.{cartId}.lines.post(body)
+app.endpoints.mailchimp.ecommerce.stores.storeId.carts.cartId.lines.post(body)
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/customers'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.customers.post(body)
+app.endpoints.mailchimp.ecommerce.stores.storeId.customers.post(body)
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/orders'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.orders.post(body)
+app.endpoints.mailchimp.ecommerce.stores.storeId.orders.post(body)
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/products'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.products.post(body)
+app.endpoints.mailchimp.ecommerce.stores.storeId.products.post(body)
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/products/{product_id}/images'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.products.{productId}.images.post(body)
+app.endpoints.mailchimp.ecommerce.stores.storeId.products.productId.images.post(body)
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/products/{product_id}/variants'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.products.{productId}.variants.post(body)
+app.endpoints.mailchimp.ecommerce.stores.storeId.products.productId.variants.post(body)
 ```
 ---
 * API URL: '/file-manager/files'
@@ -381,73 +381,73 @@ app.endpoints.mailchimp.lists.post(body)
 * API URL: '/lists/{list_id}'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.post(body)
+app.endpoints.mailchimp.lists.listId.post(body)
 ```
 ---
 * API URL: '/lists/{list_id}/interest-categories'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.interestCategories.post(body)
+app.endpoints.mailchimp.lists.listId.interestCategories.post(body)
 ```
 ---
 * API URL: '/lists/{list_id}/interest-categories/{interest_category_id}'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.interestCategories.{interestCategoryId}.post(body)
+app.endpoints.mailchimp.lists.listId.interestCategories.interestCategoryId.post(body)
 ```
 ---
 * API URL: '/lists/{list_id}/interest-categories/{interest_category_id}/interests'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.interestCategories.{interestCategoryId}.interests.post(body)
+app.endpoints.mailchimp.lists.listId.interestCategories.interestCategoryId.interests.post(body)
 ```
 ---
 * API URL: '/lists/{list_id}/members'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.members.post(body)
+app.endpoints.mailchimp.lists.listId.members.post(body)
 ```
 ---
 * API URL: '/lists/{list_id}/members/{subscriber_hash}/notes'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.members.{subscriberHash}.notes.post(body)
+app.endpoints.mailchimp.lists.listId.members.subscriberHash.notes.post(body)
 ```
 ---
 * API URL: '/lists/{list_id}/merge-fields'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.mergeFields.post(body)
+app.endpoints.mailchimp.lists.listId.mergeFields.post(body)
 ```
 ---
 * API URL: '/lists/{list_id}/segments'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.segments.post(body)
+app.endpoints.mailchimp.lists.listId.segments.post(body)
 ```
 ---
 * API URL: '/lists/{list_id}/segments/{segment_id}'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.segments.{segmentId}.post(body)
+app.endpoints.mailchimp.lists.listId.segments.segmentId.post(body)
 ```
 ---
 * API URL: '/lists/{list_id}/segments/{segment_id}/members'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.segments.{segmentId}.members.post(body)
+app.endpoints.mailchimp.lists.listId.segments.segmentId.members.post(body)
 ```
 ---
 * API URL: '/lists/{list_id}/signup-forms'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.signupForms.post(body)
+app.endpoints.mailchimp.lists.listId.signupForms.post(body)
 ```
 ---
 * API URL: '/lists/{list_id}/webhooks'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.webhooks.post(body)
+app.endpoints.mailchimp.lists.listId.webhooks.post(body)
 ```
 ---
 * API URL: '/template-folders'
@@ -471,7 +471,7 @@ app.endpoints.mailchimp.authorizedApps.get()
 * API URL: '/authorized-apps/{app_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.authorizedApps.{appId}.get()
+app.endpoints.mailchimp.authorizedApps.appId.get()
 ```
 ---
 * API URL: '/automations'
@@ -483,37 +483,37 @@ app.endpoints.mailchimp.automations.get()
 * API URL: '/automations/{workflow_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.automations.{workflowId}.get()
+app.endpoints.mailchimp.automations.workflowId.get()
 ```
 ---
 * API URL: '/automations/{workflow_id}/emails'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.automations.{workflowId}.emails.get()
+app.endpoints.mailchimp.automations.workflowId.emails.get()
 ```
 ---
 * API URL: '/automations/{workflow_id}/emails/{workflow_email_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.automations.{workflowId}.emails.{workflowEmailId}.get()
+app.endpoints.mailchimp.automations.workflowId.emails.workflowEmailId.get()
 ```
 ---
 * API URL: '/automations/{workflow_id}/emails/{workflow_email_id}/queue'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.automations.{workflowId}.emails.{workflowEmailId}.queue.get()
+app.endpoints.mailchimp.automations.workflowId.emails.workflowEmailId.queue.get()
 ```
 ---
 * API URL: '/automations/{workflow_id}/emails/{workflow_email_id}/queue/{subscriber_hash}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.automations.{workflowId}.emails.{workflowEmailId}.queue.{subscriberHash}.get()
+app.endpoints.mailchimp.automations.workflowId.emails.workflowEmailId.queue.subscriberHash.get()
 ```
 ---
 * API URL: '/automations/{workflow_id}/removed-subscribers'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.automations.{workflowId}.removedSubscribers.get()
+app.endpoints.mailchimp.automations.workflowId.removedSubscribers.get()
 ```
 ---
 * API URL: '/batches'
@@ -525,7 +525,7 @@ app.endpoints.mailchimp.batches.get()
 * API URL: '/batches/{batch_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.batches.{batchId}.get()
+app.endpoints.mailchimp.batches.batchId.get()
 ```
 ---
 * API URL: '/batch-webhooks'
@@ -537,7 +537,7 @@ app.endpoints.mailchimp.batchWebhooks.get()
 * API URL: '/batch-webhooks/{batch_webhook_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.batchWebhooks.{batchWebhookId}.get()
+app.endpoints.mailchimp.batchWebhooks.batchWebhookId.get()
 ```
 ---
 * API URL: '/campaign-folders'
@@ -549,7 +549,7 @@ app.endpoints.mailchimp.campaignFolders.get()
 * API URL: '/campaign-folders/{folder_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.campaignFolders.{folderId}.get()
+app.endpoints.mailchimp.campaignFolders.folderId.get()
 ```
 ---
 * API URL: '/campaigns'
@@ -561,31 +561,31 @@ app.endpoints.mailchimp.campaigns.get()
 * API URL: '/campaigns/{campaign_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.campaigns.{campaignId}.get()
+app.endpoints.mailchimp.campaigns.campaignId.get()
 ```
 ---
 * API URL: '/campaigns/{campaign_id}/content'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.campaigns.{campaignId}.content.get()
+app.endpoints.mailchimp.campaigns.campaignId.content.get()
 ```
 ---
 * API URL: '/campaigns/{campaign_id}/feedback'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.campaigns.{campaignId}.feedback.get()
+app.endpoints.mailchimp.campaigns.campaignId.feedback.get()
 ```
 ---
 * API URL: '/campaigns/{campaign_id}/feedback/{feedback_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.campaigns.{campaignId}.feedback.{feedbackId}.get()
+app.endpoints.mailchimp.campaigns.campaignId.feedback.feedbackId.get()
 ```
 ---
 * API URL: '/campaigns/{campaign_id}/send-checklist'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.campaigns.{campaignId}.sendChecklist.get()
+app.endpoints.mailchimp.campaigns.campaignId.sendChecklist.get()
 ```
 ---
 * API URL: '/conversations'
@@ -597,19 +597,19 @@ app.endpoints.mailchimp.conversations.get()
 * API URL: '/conversations/{conversation_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.conversations.{conversationId}.get()
+app.endpoints.mailchimp.conversations.conversationId.get()
 ```
 ---
 * API URL: '/conversations/{conversation_id}/messages'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.conversations.{conversationId}.messages.get()
+app.endpoints.mailchimp.conversations.conversationId.messages.get()
 ```
 ---
 * API URL: '/conversations/{conversation_id}/messages/{message_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.conversations.{conversationId}.messages.{messageId}.get()
+app.endpoints.mailchimp.conversations.conversationId.messages.messageId.get()
 ```
 ---
 * API URL: '/ecommerce/stores'
@@ -621,91 +621,91 @@ app.endpoints.mailchimp.ecommerce.stores.get()
 * API URL: '/ecommerce/stores/{store_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.get()
+app.endpoints.mailchimp.ecommerce.stores.storeId.get()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/carts/{cart_id}/lines'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.carts.{cartId}.lines.get()
+app.endpoints.mailchimp.ecommerce.stores.storeId.carts.cartId.lines.get()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/carts/{cart_id}/lines/{line_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.carts.{cartId}.lines.{lineId}.get()
+app.endpoints.mailchimp.ecommerce.stores.storeId.carts.cartId.lines.lineId.get()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/customers'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.customers.get()
+app.endpoints.mailchimp.ecommerce.stores.storeId.customers.get()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/customers/{customer_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.customers.{customerId}.get()
+app.endpoints.mailchimp.ecommerce.stores.storeId.customers.customerId.get()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/orders'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.orders.get()
+app.endpoints.mailchimp.ecommerce.stores.storeId.orders.get()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/orders/{order_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.orders.{orderId}.get()
+app.endpoints.mailchimp.ecommerce.stores.storeId.orders.orderId.get()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/orders/{order_id}/lines'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.orders.{orderId}.lines.get()
+app.endpoints.mailchimp.ecommerce.stores.storeId.orders.orderId.lines.get()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/orders/{order_id}/lines/{line_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.orders.{orderId}.lines.{lineId}.get()
+app.endpoints.mailchimp.ecommerce.stores.storeId.orders.orderId.lines.lineId.get()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/products'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.products.get()
+app.endpoints.mailchimp.ecommerce.stores.storeId.products.get()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/products/{product_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.products.{productId}.get()
+app.endpoints.mailchimp.ecommerce.stores.storeId.products.productId.get()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/products/{product_id}/images'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.products.{productId}.images.get()
+app.endpoints.mailchimp.ecommerce.stores.storeId.products.productId.images.get()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/products/{product_id}/images/{image_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.products.{productId}.images.{imageId}.get()
+app.endpoints.mailchimp.ecommerce.stores.storeId.products.productId.images.imageId.get()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/products/{product_id}/variants'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.products.{productId}.variants.get()
+app.endpoints.mailchimp.ecommerce.stores.storeId.products.productId.variants.get()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.products.{productId}.variants.{variantId}.get()
+app.endpoints.mailchimp.ecommerce.stores.storeId.products.productId.variants.variantId.get()
 ```
 ---
 * API URL: '/file-manager/files'
@@ -717,7 +717,7 @@ app.endpoints.mailchimp.fileManager.files.get()
 * API URL: '/file-manager/files/{file_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.fileManager.files.{fileId}.get()
+app.endpoints.mailchimp.fileManager.files.fileId.get()
 ```
 ---
 * API URL: '/file-manager/folders'
@@ -729,7 +729,7 @@ app.endpoints.mailchimp.fileManager.folders.get()
 * API URL: '/file-manager/folders/{folder_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.fileManager.folders.{folderId}.get()
+app.endpoints.mailchimp.fileManager.folders.folderId.get()
 ```
 ---
 * API URL: '/lists'
@@ -741,145 +741,145 @@ app.endpoints.mailchimp.lists.get()
 * API URL: '/lists/{list_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.get()
+app.endpoints.mailchimp.lists.listId.get()
 ```
 ---
 * API URL: '/lists/{list_id}/abuse-reports'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.abuseReports.get()
+app.endpoints.mailchimp.lists.listId.abuseReports.get()
 ```
 ---
 * API URL: '/lists/{list_id}/abuse-reports/{report_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.abuseReports.{reportId}.get()
+app.endpoints.mailchimp.lists.listId.abuseReports.reportId.get()
 ```
 ---
 * API URL: '/lists/{list_id}/activity'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.activity.get()
+app.endpoints.mailchimp.lists.listId.activity.get()
 ```
 ---
 * API URL: '/lists/{list_id}/clients'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.clients.get()
+app.endpoints.mailchimp.lists.listId.clients.get()
 ```
 ---
 * API URL: '/lists/{list_id}/growth-history'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.growthHistory.get()
+app.endpoints.mailchimp.lists.listId.growthHistory.get()
 ```
 ---
 * API URL: '/lists/{list_id}/growth-history/{month}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.growthHistory.{month}.get()
+app.endpoints.mailchimp.lists.listId.growthHistory.month.get()
 ```
 ---
 * API URL: '/lists/{list_id}/interest-categories/{interest_category_id}/interests'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.interestCategories.{interestCategoryId}.interests.get()
+app.endpoints.mailchimp.lists.listId.interestCategories.interestCategoryId.interests.get()
 ```
 ---
 * API URL: '/lists/{list_id}/interest-categories/{interest_category_id}/interests/{interest_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.interestCategories.{interestCategoryId}.interests.{interestId}.get()
+app.endpoints.mailchimp.lists.listId.interestCategories.interestCategoryId.interests.interestId.get()
 ```
 ---
 * API URL: '/lists/{list_id}/locations'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.locations.get()
+app.endpoints.mailchimp.lists.listId.locations.get()
 ```
 ---
 * API URL: '/lists/{list_id}/members'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.members.get()
+app.endpoints.mailchimp.lists.listId.members.get()
 ```
 ---
 * API URL: '/lists/{list_id}/members/{subscriber_hash}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.members.{subscriberHash}.get()
+app.endpoints.mailchimp.lists.listId.members.subscriberHash.get()
 ```
 ---
 * API URL: '/lists/{list_id}/members/{subscriber_hash}/activity'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.members.{subscriberHash}.activity.get()
+app.endpoints.mailchimp.lists.listId.members.subscriberHash.activity.get()
 ```
 ---
 * API URL: '/lists/{list_id}/members/{subscriber_hash}/goals'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.members.{subscriberHash}.goals.get()
+app.endpoints.mailchimp.lists.listId.members.subscriberHash.goals.get()
 ```
 ---
 * API URL: '/lists/{list_id}/members/{subscriber_hash}/notes'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.members.{subscriberHash}.notes.get()
+app.endpoints.mailchimp.lists.listId.members.subscriberHash.notes.get()
 ```
 ---
 * API URL: '/lists/{list_id}/members/{subscriber_hash}/notes/{note_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.members.{subscriberHash}.notes.{noteId}.get()
+app.endpoints.mailchimp.lists.listId.members.subscriberHash.notes.noteId.get()
 ```
 ---
 * API URL: '/lists/{list_id}/merge-fields'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.mergeFields.get()
+app.endpoints.mailchimp.lists.listId.mergeFields.get()
 ```
 ---
 * API URL: '/lists/{list_id}/merge-fields/{merge_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.mergeFields.{mergeId}.get()
+app.endpoints.mailchimp.lists.listId.mergeFields.mergeId.get()
 ```
 ---
 * API URL: '/lists/{list_id}/segments'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.segments.get()
+app.endpoints.mailchimp.lists.listId.segments.get()
 ```
 ---
 * API URL: '/lists/{list_id}/segments/{segment_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.segments.{segmentId}.get()
+app.endpoints.mailchimp.lists.listId.segments.segmentId.get()
 ```
 ---
 * API URL: '/lists/{list_id}/segments/{segment_id}/members'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.segments.{segmentId}.members.get()
+app.endpoints.mailchimp.lists.listId.segments.segmentId.members.get()
 ```
 ---
 * API URL: '/lists/{list_id}/signup-forms'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.signupForms.get()
+app.endpoints.mailchimp.lists.listId.signupForms.get()
 ```
 ---
 * API URL: '/lists/{list_id}/webhooks'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.webhooks.get()
+app.endpoints.mailchimp.lists.listId.webhooks.get()
 ```
 ---
 * API URL: '/lists/{list_id}/webhooks/{webhook_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.webhooks.{webhookId}.get()
+app.endpoints.mailchimp.lists.listId.webhooks.webhookId.get()
 ```
 ---
 * API URL: '/reports'
@@ -891,109 +891,109 @@ app.endpoints.mailchimp.reports.get()
 * API URL: '/reports/{campaign_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.{campaignId}.get()
+app.endpoints.mailchimp.reports.campaignId.get()
 ```
 ---
 * API URL: '/reports/{campaign_id}/abuse-reports'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.{campaignId}.abuseReports.get()
+app.endpoints.mailchimp.reports.campaignId.abuseReports.get()
 ```
 ---
 * API URL: '/reports/{campaign_id}/abuse-reports/{report_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.{campaignId}.abuseReports.{reportId}.get()
+app.endpoints.mailchimp.reports.campaignId.abuseReports.reportId.get()
 ```
 ---
 * API URL: '/reports/{campaign_id}/advice'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.{campaignId}.advice.get()
+app.endpoints.mailchimp.reports.campaignId.advice.get()
 ```
 ---
 * API URL: '/reports/{campaign_id}/click-details'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.{campaignId}.clickDetails.get()
+app.endpoints.mailchimp.reports.campaignId.clickDetails.get()
 ```
 ---
 * API URL: '/reports/{campaign_id}/click-details/{link_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.{campaignId}.clickDetails.{linkId}.get()
+app.endpoints.mailchimp.reports.campaignId.clickDetails.linkId.get()
 ```
 ---
 * API URL: '/reports/{campaign_id}/click-details/{link_id}/members'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.{campaignId}.clickDetails.{linkId}.members.get()
+app.endpoints.mailchimp.reports.campaignId.clickDetails.linkId.members.get()
 ```
 ---
 * API URL: '/reports/{campaign_id}/click-details/{link_id}/members/{subscriber_hash}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.{campaignId}.clickDetails.{linkId}.members.{subscriberHash}.get()
+app.endpoints.mailchimp.reports.campaignId.clickDetails.linkId.members.subscriberHash.get()
 ```
 ---
 * API URL: '/reports/{campaign_id}/domain-performance'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.{campaignId}.domainPerformance.get()
+app.endpoints.mailchimp.reports.campaignId.domainPerformance.get()
 ```
 ---
 * API URL: '/reports/{campaign_id}/eepurl'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.{campaignId}.eepurl.get()
+app.endpoints.mailchimp.reports.campaignId.eepurl.get()
 ```
 ---
 * API URL: '/reports/{campaign_id}/email-activity'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.{campaignId}.emailActivity.get()
+app.endpoints.mailchimp.reports.campaignId.emailActivity.get()
 ```
 ---
 * API URL: '/reports/{campaign_id}/email-activity/{subscriber_hash}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.{campaignId}.emailActivity.{subscriberHash}.get()
+app.endpoints.mailchimp.reports.campaignId.emailActivity.subscriberHash.get()
 ```
 ---
 * API URL: '/reports/{campaign_id}/locations'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.{campaignId}.locations.get()
+app.endpoints.mailchimp.reports.campaignId.locations.get()
 ```
 ---
 * API URL: '/reports/{campaign_id}/sent-to'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.{campaignId}.sentTo.get()
+app.endpoints.mailchimp.reports.campaignId.sentTo.get()
 ```
 ---
 * API URL: '/reports/{campaign_id}/sent-to/{subscriber_hash}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.{campaignId}.sentTo.{subscriberHash}.get()
+app.endpoints.mailchimp.reports.campaignId.sentTo.subscriberHash.get()
 ```
 ---
 * API URL: '/reports/{campaign_id}/sub-reports'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.{campaignId}.subReports.get()
+app.endpoints.mailchimp.reports.campaignId.subReports.get()
 ```
 ---
 * API URL: '/reports/{campaign_id}/unsubscribed'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.{campaignId}.unsubscribed.get()
+app.endpoints.mailchimp.reports.campaignId.unsubscribed.get()
 ```
 ---
 * API URL: '/reports/{campaign_id}/unsubscribed/{subscriber_hash}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.{campaignId}.unsubscribed.{subscriberHash}.get()
+app.endpoints.mailchimp.reports.campaignId.unsubscribed.subscriberHash.get()
 ```
 ---
 * API URL: '/search-campaigns'
@@ -1017,7 +1017,7 @@ app.endpoints.mailchimp.templateFolders.get()
 * API URL: '/template-folders/{folder_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.templateFolders.{folderId}.get()
+app.endpoints.mailchimp.templateFolders.folderId.get()
 ```
 ---
 * API URL: '/templates'
@@ -1029,205 +1029,205 @@ app.endpoints.mailchimp.templates.get()
 * API URL: '/templates/{template_id}'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.templates.{templateId}.get()
+app.endpoints.mailchimp.templates.templateId.get()
 ```
 ---
 * API URL: '/templates/{template_id}/default-content'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.templates.{templateId}.defaultContent.get()
+app.endpoints.mailchimp.templates.templateId.defaultContent.get()
 ```
 ---
 * API URL: '/automations/{workflow_id}/emails/{workflow_email_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.automations.{workflowId}.emails.{workflowEmailId}.delete()
+app.endpoints.mailchimp.automations.workflowId.emails.workflowEmailId.delete()
 ```
 ---
 * API URL: '/batches/{batch_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.batches.{batchId}.delete()
+app.endpoints.mailchimp.batches.batchId.delete()
 ```
 ---
 * API URL: '/batch-webhooks/{batch_webhook_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.batchWebhooks.{batchWebhookId}.delete()
+app.endpoints.mailchimp.batchWebhooks.batchWebhookId.delete()
 ```
 ---
 * API URL: '/campaign-folders/{folder_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.campaignFolders.{folderId}.delete()
+app.endpoints.mailchimp.campaignFolders.folderId.delete()
 ```
 ---
 * API URL: '/campaigns/{campaign_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.campaigns.{campaignId}.delete()
+app.endpoints.mailchimp.campaigns.campaignId.delete()
 ```
 ---
 * API URL: '/campaigns/{campaign_id}/feedback/{feedback_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.campaigns.{campaignId}.feedback.{feedbackId}.delete()
+app.endpoints.mailchimp.campaigns.campaignId.feedback.feedbackId.delete()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.delete()
+app.endpoints.mailchimp.ecommerce.stores.storeId.delete()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/carts/{cart_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.carts.{cartId}.delete()
+app.endpoints.mailchimp.ecommerce.stores.storeId.carts.cartId.delete()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/carts/{cart_id}/lines/{line_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.carts.{cartId}.lines.{lineId}.delete()
+app.endpoints.mailchimp.ecommerce.stores.storeId.carts.cartId.lines.lineId.delete()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/customers/{customer_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.customers.{customerId}.delete()
+app.endpoints.mailchimp.ecommerce.stores.storeId.customers.customerId.delete()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/orders/{order_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.orders.{orderId}.delete()
+app.endpoints.mailchimp.ecommerce.stores.storeId.orders.orderId.delete()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/orders/{order_id}/lines/{line_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.orders.{orderId}.lines.{lineId}.delete()
+app.endpoints.mailchimp.ecommerce.stores.storeId.orders.orderId.lines.lineId.delete()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/products/{product_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.products.{productId}.delete()
+app.endpoints.mailchimp.ecommerce.stores.storeId.products.productId.delete()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/products/{product_id}/images/{image_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.products.{productId}.images.{imageId}.delete()
+app.endpoints.mailchimp.ecommerce.stores.storeId.products.productId.images.imageId.delete()
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.products.{productId}.variants.{variantId}.delete()
+app.endpoints.mailchimp.ecommerce.stores.storeId.products.productId.variants.variantId.delete()
 ```
 ---
 * API URL: '/file-manager/files/{file_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.fileManager.files.{fileId}.delete()
+app.endpoints.mailchimp.fileManager.files.fileId.delete()
 ```
 ---
 * API URL: '/file-manager/folders/{folder_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.fileManager.folders.{folderId}.delete()
+app.endpoints.mailchimp.fileManager.folders.folderId.delete()
 ```
 ---
 * API URL: '/lists/{list_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.delete()
+app.endpoints.mailchimp.lists.listId.delete()
 ```
 ---
 * API URL: '/lists/{list_id}/interest-categories/{interest_category_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.interestCategories.{interestCategoryId}.delete()
+app.endpoints.mailchimp.lists.listId.interestCategories.interestCategoryId.delete()
 ```
 ---
 * API URL: '/lists/{list_id}/interest-categories/{interest_category_id}/interests/{interest_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.interestCategories.{interestCategoryId}.interests.{interestId}.delete()
+app.endpoints.mailchimp.lists.listId.interestCategories.interestCategoryId.interests.interestId.delete()
 ```
 ---
 * API URL: '/lists/{list_id}/members/{subscriber_hash}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.members.{subscriberHash}.delete()
+app.endpoints.mailchimp.lists.listId.members.subscriberHash.delete()
 ```
 ---
 * API URL: '/lists/{list_id}/members/{subscriber_hash}/notes/{note_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.members.{subscriberHash}.notes.{noteId}.delete()
+app.endpoints.mailchimp.lists.listId.members.subscriberHash.notes.noteId.delete()
 ```
 ---
 * API URL: '/lists/{list_id}/merge-fields/{merge_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.mergeFields.{mergeId}.delete()
+app.endpoints.mailchimp.lists.listId.mergeFields.mergeId.delete()
 ```
 ---
 * API URL: '/lists/{list_id}/segments/{segment_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.segments.{segmentId}.delete()
+app.endpoints.mailchimp.lists.listId.segments.segmentId.delete()
 ```
 ---
 * API URL: '/lists/{list_id}/segments/{segment_id}/members/{subscriber_hash}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.segments.{segmentId}.members.{subscriberHash}.delete()
+app.endpoints.mailchimp.lists.listId.segments.segmentId.members.subscriberHash.delete()
 ```
 ---
 * API URL: '/lists/{list_id}/webhooks/{webhook_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.webhooks.{webhookId}.delete()
+app.endpoints.mailchimp.lists.listId.webhooks.webhookId.delete()
 ```
 ---
 * API URL: '/template-folders/{folder_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.templateFolders.{folderId}.delete()
+app.endpoints.mailchimp.templateFolders.folderId.delete()
 ```
 ---
 * API URL: '/templates/{template_id}'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.mailchimp.templates.{templateId}.delete()
+app.endpoints.mailchimp.templates.templateId.delete()
 ```
 ---
 * API URL: '/campaigns/{campaign_id}/content'
 * HTTP Method: 'PUT'
 ```javascript
-app.endpoints.mailchimp.campaigns.{campaignId}.content.put(body)
+app.endpoints.mailchimp.campaigns.campaignId.content.put(body)
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/customers/{customer_id}'
 * HTTP Method: 'PUT'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.customers.{customerId}.put(body)
+app.endpoints.mailchimp.ecommerce.stores.storeId.customers.customerId.put(body)
 ```
 ---
 * API URL: '/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}'
 * HTTP Method: 'PUT'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.{storeId}.products.{productId}.variants.{variantId}.put(body)
+app.endpoints.mailchimp.ecommerce.stores.storeId.products.productId.variants.variantId.put(body)
 ```
 ---
 * API URL: '/lists/{list_id}/members/{subscriber_hash}'
 * HTTP Method: 'PUT'
 ```javascript
-app.endpoints.mailchimp.lists.{listId}.members.{subscriberHash}.put(body)
+app.endpoints.mailchimp.lists.listId.members.subscriberHash.put(body)
 ```
 ---
 
