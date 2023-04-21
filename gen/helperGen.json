@@ -1,6 +1,6 @@
 {
   "endpointName": "mailchimp",
-  "fileName": "functions_new",
+  "fileName": "functions",
   "apiDescriptors": [
     {
       "method": "PATCH",
