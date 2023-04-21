@@ -664,12 +664,12 @@ endpoint.ecommerce.stores.carts.post = function(storeId, cartId, httpOptions) {
     var url;
     switch(arguments.length){
         case 1:
-            url = parse('/ecommerce/stores/:store_id/carts', [storeId]);
-            break;
-        case 2:
-            url = parse('/ecommerce/stores/:store_id/carts/:cart_id', [storeId, cartId]);
-            break;
-        case 3:
+			url = parse('/ecommerce/stores/:store_id/carts', [storeId]);
+			break;
+		case 2:
+			url = parse('/ecommerce/stores/:store_id/carts/:cart_id', [storeId, cartId]);
+			break;
+		case 3:
             url = parse('/ecommerce/stores/:store_id/carts/:cart_id', [storeId,cartId,body]);
             break;
         default:
@@ -677,8 +677,8 @@ endpoint.ecommerce.stores.carts.post = function(storeId, cartId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] POST from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._post(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._post(options);
 };
 
 endpoint.ecommerce.stores.carts.lines.post = function(storeId, cartId, httpOptions) {
@@ -772,12 +772,12 @@ endpoint.lists.post = function(listId, httpOptions) {
     var url;
     switch(arguments.length){
         case 1:
-            url = parse('/lists');
-            break;
-        case 2:
-            url = parse('/lists/:list_id', [listId]);
-            break;
-        case 3:
+			url = parse('/lists');
+			break;
+		case 2:
+			url = parse('/lists/:list_id', [listId]);
+			break;
+		case 3:
             url = parse('/lists/:list_id', [listId,body]);
             break;
         default:
@@ -785,8 +785,8 @@ endpoint.lists.post = function(listId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] POST from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._post(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._post(options);
 };
 
 endpoint.lists.interestCategories.post = function(listId, interestCategoryId, httpOptions) {
@@ -800,12 +800,12 @@ endpoint.lists.interestCategories.post = function(listId, interestCategoryId, ht
     var url;
     switch(arguments.length){
         case 1:
-            url = parse('/lists/:list_id/interest-categories', [listId]);
-            break;
-        case 2:
-            url = parse('/lists/:list_id/interest-categories/:interest_category_id', [listId, interestCategoryId]);
-            break;
-        case 3:
+			url = parse('/lists/:list_id/interest-categories', [listId]);
+			break;
+		case 2:
+			url = parse('/lists/:list_id/interest-categories/:interest_category_id', [listId, interestCategoryId]);
+			break;
+		case 3:
             url = parse('/lists/:list_id/interest-categories/:interest_category_id', [listId,interestCategoryId,body]);
             break;
         default:
@@ -813,8 +813,8 @@ endpoint.lists.interestCategories.post = function(listId, interestCategoryId, ht
             return;
     }
     sys.logs.debug('[mailchimp] POST from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._post(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._post(options);
 };
 
 endpoint.lists.interestCategories.interests.post = function(listId, interestCategoryId, httpOptions) {
@@ -872,12 +872,12 @@ endpoint.lists.segments.post = function(listId, segmentId, httpOptions) {
     var url;
     switch(arguments.length){
         case 1:
-            url = parse('/lists/:list_id/segments', [listId]);
-            break;
-        case 2:
-            url = parse('/lists/:list_id/segments/:segment_id', [listId, segmentId]);
-            break;
-        case 3:
+			url = parse('/lists/:list_id/segments', [listId]);
+			break;
+		case 2:
+			url = parse('/lists/:list_id/segments/:segment_id', [listId, segmentId]);
+			break;
+		case 3:
             url = parse('/lists/:list_id/segments/:segment_id', [listId,segmentId,body]);
             break;
         default:
@@ -885,8 +885,8 @@ endpoint.lists.segments.post = function(listId, segmentId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] POST from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._post(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._post(options);
 };
 
 endpoint.lists.segments.members.post = function(listId, segmentId, httpOptions) {
@@ -947,12 +947,12 @@ endpoint.authorizedApps.get = function(appId, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/authorized-apps');
-            break;
-        case 1:
-            url = parse('/authorized-apps/:app_id', [appId]);
-            break;
-        case 2:
+			url = parse('/authorized-apps');
+			break;
+		case 1:
+			url = parse('/authorized-apps/:app_id', [appId]);
+			break;
+		case 2:
             url = parse('/authorized-apps/:app_id', [appId]);
             break;
         default:
@@ -960,8 +960,8 @@ endpoint.authorizedApps.get = function(appId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.automations.get = function(workflowId, httpOptions) {
@@ -975,12 +975,12 @@ endpoint.automations.get = function(workflowId, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/automations');
-            break;
-        case 1:
-            url = parse('/automations/:workflow_id', [workflowId]);
-            break;
-        case 2:
+			url = parse('/automations');
+			break;
+		case 1:
+			url = parse('/automations/:workflow_id', [workflowId]);
+			break;
+		case 2:
             url = parse('/automations/:workflow_id', [workflowId]);
             break;
         default:
@@ -988,8 +988,8 @@ endpoint.automations.get = function(workflowId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.automations.emails.get = function(workflowId, workflowEmailId, httpOptions) {
@@ -1003,12 +1003,12 @@ endpoint.automations.emails.get = function(workflowId, workflowEmailId, httpOpti
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/automations/:workflow_id/emails', [workflowId]);
-            break;
-        case 1:
-            url = parse('/automations/:workflow_id/emails/:workflow_email_id', [workflowId, workflowEmailId]);
-            break;
-        case 2:
+			url = parse('/automations/:workflow_id/emails', [workflowId]);
+			break;
+		case 1:
+			url = parse('/automations/:workflow_id/emails/:workflow_email_id', [workflowId, workflowEmailId]);
+			break;
+		case 2:
             url = parse('/automations/:workflow_id/emails/:workflow_email_id', [workflowId,workflowEmailId]);
             break;
         default:
@@ -1016,8 +1016,8 @@ endpoint.automations.emails.get = function(workflowId, workflowEmailId, httpOpti
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.automations.emails.queue.get = function(workflowId, workflowEmailId, subscriberHash, httpOptions) {
@@ -1031,12 +1031,12 @@ endpoint.automations.emails.queue.get = function(workflowId, workflowEmailId, su
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/automations/:workflow_id/emails/:workflow_email_id/queue', [workflowId, workflowEmailId]);
-            break;
-        case 1:
-            url = parse('/automations/:workflow_id/emails/:workflow_email_id/queue/:subscriber_hash', [workflowId, workflowEmailId, subscriberHash]);
-            break;
-        case 2:
+			url = parse('/automations/:workflow_id/emails/:workflow_email_id/queue', [workflowId, workflowEmailId]);
+			break;
+		case 1:
+			url = parse('/automations/:workflow_id/emails/:workflow_email_id/queue/:subscriber_hash', [workflowId, workflowEmailId, subscriberHash]);
+			break;
+		case 2:
             url = parse('/automations/:workflow_id/emails/:workflow_email_id/queue/:subscriber_hash', [workflowId,workflowEmailId,subscriberHash]);
             break;
         default:
@@ -1044,8 +1044,8 @@ endpoint.automations.emails.queue.get = function(workflowId, workflowEmailId, su
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.automations.removedSubscribers.get = function(workflowId, httpOptions) {
@@ -1070,12 +1070,12 @@ endpoint.batches.get = function(batchId, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/batches');
-            break;
-        case 1:
-            url = parse('/batches/:batch_id', [batchId]);
-            break;
-        case 2:
+			url = parse('/batches');
+			break;
+		case 1:
+			url = parse('/batches/:batch_id', [batchId]);
+			break;
+		case 2:
             url = parse('/batches/:batch_id', [batchId]);
             break;
         default:
@@ -1083,8 +1083,8 @@ endpoint.batches.get = function(batchId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.batchWebhooks.get = function(batchWebhookId, httpOptions) {
@@ -1098,12 +1098,12 @@ endpoint.batchWebhooks.get = function(batchWebhookId, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/batch-webhooks');
-            break;
-        case 1:
-            url = parse('/batch-webhooks/:batch_webhook_id', [batchWebhookId]);
-            break;
-        case 2:
+			url = parse('/batch-webhooks');
+			break;
+		case 1:
+			url = parse('/batch-webhooks/:batch_webhook_id', [batchWebhookId]);
+			break;
+		case 2:
             url = parse('/batch-webhooks/:batch_webhook_id', [batchWebhookId]);
             break;
         default:
@@ -1111,8 +1111,8 @@ endpoint.batchWebhooks.get = function(batchWebhookId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.campaignFolders.get = function(folderId, httpOptions) {
@@ -1126,12 +1126,12 @@ endpoint.campaignFolders.get = function(folderId, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/campaign-folders');
-            break;
-        case 1:
-            url = parse('/campaign-folders/:folder_id', [folderId]);
-            break;
-        case 2:
+			url = parse('/campaign-folders');
+			break;
+		case 1:
+			url = parse('/campaign-folders/:folder_id', [folderId]);
+			break;
+		case 2:
             url = parse('/campaign-folders/:folder_id', [folderId]);
             break;
         default:
@@ -1139,8 +1139,8 @@ endpoint.campaignFolders.get = function(folderId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.campaigns.get = function(campaignId, httpOptions) {
@@ -1154,12 +1154,12 @@ endpoint.campaigns.get = function(campaignId, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/campaigns');
-            break;
-        case 1:
-            url = parse('/campaigns/:campaign_id', [campaignId]);
-            break;
-        case 2:
+			url = parse('/campaigns');
+			break;
+		case 1:
+			url = parse('/campaigns/:campaign_id', [campaignId]);
+			break;
+		case 2:
             url = parse('/campaigns/:campaign_id', [campaignId]);
             break;
         default:
@@ -1167,8 +1167,8 @@ endpoint.campaigns.get = function(campaignId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.campaigns.content.get = function(campaignId, httpOptions) {
@@ -1193,12 +1193,12 @@ endpoint.campaigns.feedback.get = function(campaignId, feedbackId, httpOptions) 
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/campaigns/:campaign_id/feedback', [campaignId]);
-            break;
-        case 1:
-            url = parse('/campaigns/:campaign_id/feedback/:feedback_id', [campaignId, feedbackId]);
-            break;
-        case 2:
+			url = parse('/campaigns/:campaign_id/feedback', [campaignId]);
+			break;
+		case 1:
+			url = parse('/campaigns/:campaign_id/feedback/:feedback_id', [campaignId, feedbackId]);
+			break;
+		case 2:
             url = parse('/campaigns/:campaign_id/feedback/:feedback_id', [campaignId,feedbackId]);
             break;
         default:
@@ -1206,8 +1206,8 @@ endpoint.campaigns.feedback.get = function(campaignId, feedbackId, httpOptions) 
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.campaigns.sendChecklist.get = function(campaignId, httpOptions) {
@@ -1232,12 +1232,12 @@ endpoint.conversations.get = function(conversationId, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/conversations');
-            break;
-        case 1:
-            url = parse('/conversations/:conversation_id', [conversationId]);
-            break;
-        case 2:
+			url = parse('/conversations');
+			break;
+		case 1:
+			url = parse('/conversations/:conversation_id', [conversationId]);
+			break;
+		case 2:
             url = parse('/conversations/:conversation_id', [conversationId]);
             break;
         default:
@@ -1245,8 +1245,8 @@ endpoint.conversations.get = function(conversationId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.conversations.messages.get = function(conversationId, messageId, httpOptions) {
@@ -1260,12 +1260,12 @@ endpoint.conversations.messages.get = function(conversationId, messageId, httpOp
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/conversations/:conversation_id/messages', [conversationId]);
-            break;
-        case 1:
-            url = parse('/conversations/:conversation_id/messages/:message_id', [conversationId, messageId]);
-            break;
-        case 2:
+			url = parse('/conversations/:conversation_id/messages', [conversationId]);
+			break;
+		case 1:
+			url = parse('/conversations/:conversation_id/messages/:message_id', [conversationId, messageId]);
+			break;
+		case 2:
             url = parse('/conversations/:conversation_id/messages/:message_id', [conversationId,messageId]);
             break;
         default:
@@ -1273,8 +1273,8 @@ endpoint.conversations.messages.get = function(conversationId, messageId, httpOp
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.ecommerce.stores.get = function(storeId, httpOptions) {
@@ -1288,12 +1288,12 @@ endpoint.ecommerce.stores.get = function(storeId, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/ecommerce/stores');
-            break;
-        case 1:
-            url = parse('/ecommerce/stores/:store_id', [storeId]);
-            break;
-        case 2:
+			url = parse('/ecommerce/stores');
+			break;
+		case 1:
+			url = parse('/ecommerce/stores/:store_id', [storeId]);
+			break;
+		case 2:
             url = parse('/ecommerce/stores/:store_id', [storeId]);
             break;
         default:
@@ -1301,8 +1301,8 @@ endpoint.ecommerce.stores.get = function(storeId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.ecommerce.stores.carts.lines.get = function(storeId, cartId, lineId, httpOptions) {
@@ -1316,12 +1316,12 @@ endpoint.ecommerce.stores.carts.lines.get = function(storeId, cartId, lineId, ht
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/ecommerce/stores/:store_id/carts/:cart_id/lines', [storeId, cartId]);
-            break;
-        case 1:
-            url = parse('/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id', [storeId, cartId, lineId]);
-            break;
-        case 2:
+			url = parse('/ecommerce/stores/:store_id/carts/:cart_id/lines', [storeId, cartId]);
+			break;
+		case 1:
+			url = parse('/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id', [storeId, cartId, lineId]);
+			break;
+		case 2:
             url = parse('/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id', [storeId,cartId,lineId]);
             break;
         default:
@@ -1329,8 +1329,8 @@ endpoint.ecommerce.stores.carts.lines.get = function(storeId, cartId, lineId, ht
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.ecommerce.stores.customers.get = function(storeId, customerId, httpOptions) {
@@ -1344,12 +1344,12 @@ endpoint.ecommerce.stores.customers.get = function(storeId, customerId, httpOpti
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/ecommerce/stores/:store_id/customers', [storeId]);
-            break;
-        case 1:
-            url = parse('/ecommerce/stores/:store_id/customers/:customer_id', [storeId, customerId]);
-            break;
-        case 2:
+			url = parse('/ecommerce/stores/:store_id/customers', [storeId]);
+			break;
+		case 1:
+			url = parse('/ecommerce/stores/:store_id/customers/:customer_id', [storeId, customerId]);
+			break;
+		case 2:
             url = parse('/ecommerce/stores/:store_id/customers/:customer_id', [storeId,customerId]);
             break;
         default:
@@ -1357,8 +1357,8 @@ endpoint.ecommerce.stores.customers.get = function(storeId, customerId, httpOpti
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.ecommerce.stores.orders.get = function(storeId, orderId, httpOptions) {
@@ -1372,12 +1372,12 @@ endpoint.ecommerce.stores.orders.get = function(storeId, orderId, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/ecommerce/stores/:store_id/orders', [storeId]);
-            break;
-        case 1:
-            url = parse('/ecommerce/stores/:store_id/orders/:order_id', [storeId, orderId]);
-            break;
-        case 2:
+			url = parse('/ecommerce/stores/:store_id/orders', [storeId]);
+			break;
+		case 1:
+			url = parse('/ecommerce/stores/:store_id/orders/:order_id', [storeId, orderId]);
+			break;
+		case 2:
             url = parse('/ecommerce/stores/:store_id/orders/:order_id', [storeId,orderId]);
             break;
         default:
@@ -1385,8 +1385,8 @@ endpoint.ecommerce.stores.orders.get = function(storeId, orderId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.ecommerce.stores.orders.lines.get = function(storeId, orderId, lineId, httpOptions) {
@@ -1400,12 +1400,12 @@ endpoint.ecommerce.stores.orders.lines.get = function(storeId, orderId, lineId, 
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/ecommerce/stores/:store_id/orders/:order_id/lines', [storeId, orderId]);
-            break;
-        case 1:
-            url = parse('/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id', [storeId, orderId, lineId]);
-            break;
-        case 2:
+			url = parse('/ecommerce/stores/:store_id/orders/:order_id/lines', [storeId, orderId]);
+			break;
+		case 1:
+			url = parse('/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id', [storeId, orderId, lineId]);
+			break;
+		case 2:
             url = parse('/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id', [storeId,orderId,lineId]);
             break;
         default:
@@ -1413,8 +1413,8 @@ endpoint.ecommerce.stores.orders.lines.get = function(storeId, orderId, lineId, 
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.ecommerce.stores.products.get = function(storeId, productId, httpOptions) {
@@ -1428,12 +1428,12 @@ endpoint.ecommerce.stores.products.get = function(storeId, productId, httpOption
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/ecommerce/stores/:store_id/products', [storeId]);
-            break;
-        case 1:
-            url = parse('/ecommerce/stores/:store_id/products/:product_id', [storeId, productId]);
-            break;
-        case 2:
+			url = parse('/ecommerce/stores/:store_id/products', [storeId]);
+			break;
+		case 1:
+			url = parse('/ecommerce/stores/:store_id/products/:product_id', [storeId, productId]);
+			break;
+		case 2:
             url = parse('/ecommerce/stores/:store_id/products/:product_id', [storeId,productId]);
             break;
         default:
@@ -1441,8 +1441,8 @@ endpoint.ecommerce.stores.products.get = function(storeId, productId, httpOption
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.ecommerce.stores.products.images.get = function(storeId, productId, imageId, httpOptions) {
@@ -1456,12 +1456,12 @@ endpoint.ecommerce.stores.products.images.get = function(storeId, productId, ima
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/ecommerce/stores/:store_id/products/:product_id/images', [storeId, productId]);
-            break;
-        case 1:
-            url = parse('/ecommerce/stores/:store_id/products/:product_id/images/:image_id', [storeId, productId, imageId]);
-            break;
-        case 2:
+			url = parse('/ecommerce/stores/:store_id/products/:product_id/images', [storeId, productId]);
+			break;
+		case 1:
+			url = parse('/ecommerce/stores/:store_id/products/:product_id/images/:image_id', [storeId, productId, imageId]);
+			break;
+		case 2:
             url = parse('/ecommerce/stores/:store_id/products/:product_id/images/:image_id', [storeId,productId,imageId]);
             break;
         default:
@@ -1469,8 +1469,8 @@ endpoint.ecommerce.stores.products.images.get = function(storeId, productId, ima
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.ecommerce.stores.products.variants.get = function(storeId, productId, variantId, httpOptions) {
@@ -1484,12 +1484,12 @@ endpoint.ecommerce.stores.products.variants.get = function(storeId, productId, v
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/ecommerce/stores/:store_id/products/:product_id/variants', [storeId, productId]);
-            break;
-        case 1:
-            url = parse('/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id', [storeId, productId, variantId]);
-            break;
-        case 2:
+			url = parse('/ecommerce/stores/:store_id/products/:product_id/variants', [storeId, productId]);
+			break;
+		case 1:
+			url = parse('/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id', [storeId, productId, variantId]);
+			break;
+		case 2:
             url = parse('/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id', [storeId,productId,variantId]);
             break;
         default:
@@ -1497,8 +1497,8 @@ endpoint.ecommerce.stores.products.variants.get = function(storeId, productId, v
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.fileManager.files.get = function(fileId, httpOptions) {
@@ -1512,12 +1512,12 @@ endpoint.fileManager.files.get = function(fileId, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/file-manager/files');
-            break;
-        case 1:
-            url = parse('/file-manager/files/:file_id', [fileId]);
-            break;
-        case 2:
+			url = parse('/file-manager/files');
+			break;
+		case 1:
+			url = parse('/file-manager/files/:file_id', [fileId]);
+			break;
+		case 2:
             url = parse('/file-manager/files/:file_id', [fileId]);
             break;
         default:
@@ -1525,8 +1525,8 @@ endpoint.fileManager.files.get = function(fileId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.fileManager.folders.get = function(folderId, httpOptions) {
@@ -1540,12 +1540,12 @@ endpoint.fileManager.folders.get = function(folderId, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/file-manager/folders');
-            break;
-        case 1:
-            url = parse('/file-manager/folders/:folder_id', [folderId]);
-            break;
-        case 2:
+			url = parse('/file-manager/folders');
+			break;
+		case 1:
+			url = parse('/file-manager/folders/:folder_id', [folderId]);
+			break;
+		case 2:
             url = parse('/file-manager/folders/:folder_id', [folderId]);
             break;
         default:
@@ -1553,8 +1553,8 @@ endpoint.fileManager.folders.get = function(folderId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.lists.get = function(listId, httpOptions) {
@@ -1568,12 +1568,12 @@ endpoint.lists.get = function(listId, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/lists');
-            break;
-        case 1:
-            url = parse('/lists/:list_id', [listId]);
-            break;
-        case 2:
+			url = parse('/lists');
+			break;
+		case 1:
+			url = parse('/lists/:list_id', [listId]);
+			break;
+		case 2:
             url = parse('/lists/:list_id', [listId]);
             break;
         default:
@@ -1581,8 +1581,8 @@ endpoint.lists.get = function(listId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.lists.abuseReports.get = function(listId, reportId, httpOptions) {
@@ -1596,12 +1596,12 @@ endpoint.lists.abuseReports.get = function(listId, reportId, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/lists/:list_id/abuse-reports', [listId]);
-            break;
-        case 1:
-            url = parse('/lists/:list_id/abuse-reports/:report_id', [listId, reportId]);
-            break;
-        case 2:
+			url = parse('/lists/:list_id/abuse-reports', [listId]);
+			break;
+		case 1:
+			url = parse('/lists/:list_id/abuse-reports/:report_id', [listId, reportId]);
+			break;
+		case 2:
             url = parse('/lists/:list_id/abuse-reports/:report_id', [listId,reportId]);
             break;
         default:
@@ -1609,8 +1609,8 @@ endpoint.lists.abuseReports.get = function(listId, reportId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.lists.activity.get = function(listId, httpOptions) {
@@ -1646,12 +1646,12 @@ endpoint.lists.growthHistory.get = function(listId, month, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/lists/:list_id/growth-history', [listId]);
-            break;
-        case 1:
-            url = parse('/lists/:list_id/growth-history/:month', [listId, month]);
-            break;
-        case 2:
+			url = parse('/lists/:list_id/growth-history', [listId]);
+			break;
+		case 1:
+			url = parse('/lists/:list_id/growth-history/:month', [listId, month]);
+			break;
+		case 2:
             url = parse('/lists/:list_id/growth-history/:month', [listId,month]);
             break;
         default:
@@ -1659,8 +1659,8 @@ endpoint.lists.growthHistory.get = function(listId, month, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.lists.interestCategories.interests.get = function(listId, interestCategoryId, interestId, httpOptions) {
@@ -1674,12 +1674,12 @@ endpoint.lists.interestCategories.interests.get = function(listId, interestCateg
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/lists/:list_id/interest-categories/:interest_category_id/interests', [listId, interestCategoryId]);
-            break;
-        case 1:
-            url = parse('/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id', [listId, interestCategoryId, interestId]);
-            break;
-        case 2:
+			url = parse('/lists/:list_id/interest-categories/:interest_category_id/interests', [listId, interestCategoryId]);
+			break;
+		case 1:
+			url = parse('/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id', [listId, interestCategoryId, interestId]);
+			break;
+		case 2:
             url = parse('/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id', [listId,interestCategoryId,interestId]);
             break;
         default:
@@ -1687,8 +1687,8 @@ endpoint.lists.interestCategories.interests.get = function(listId, interestCateg
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.lists.locations.get = function(listId, httpOptions) {
@@ -1713,12 +1713,12 @@ endpoint.lists.members.get = function(listId, subscriberHash, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/lists/:list_id/members', [listId]);
-            break;
-        case 1:
-            url = parse('/lists/:list_id/members/:subscriber_hash', [listId, subscriberHash]);
-            break;
-        case 2:
+			url = parse('/lists/:list_id/members', [listId]);
+			break;
+		case 1:
+			url = parse('/lists/:list_id/members/:subscriber_hash', [listId, subscriberHash]);
+			break;
+		case 2:
             url = parse('/lists/:list_id/members/:subscriber_hash', [listId,subscriberHash]);
             break;
         default:
@@ -1726,8 +1726,8 @@ endpoint.lists.members.get = function(listId, subscriberHash, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.lists.members.activity.get = function(listId, subscriberHash, httpOptions) {
@@ -1763,12 +1763,12 @@ endpoint.lists.members.notes.get = function(listId, subscriberHash, noteId, http
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/lists/:list_id/members/:subscriber_hash/notes', [listId, subscriberHash]);
-            break;
-        case 1:
-            url = parse('/lists/:list_id/members/:subscriber_hash/notes/:note_id', [listId, subscriberHash, noteId]);
-            break;
-        case 2:
+			url = parse('/lists/:list_id/members/:subscriber_hash/notes', [listId, subscriberHash]);
+			break;
+		case 1:
+			url = parse('/lists/:list_id/members/:subscriber_hash/notes/:note_id', [listId, subscriberHash, noteId]);
+			break;
+		case 2:
             url = parse('/lists/:list_id/members/:subscriber_hash/notes/:note_id', [listId,subscriberHash,noteId]);
             break;
         default:
@@ -1776,8 +1776,8 @@ endpoint.lists.members.notes.get = function(listId, subscriberHash, noteId, http
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.lists.mergeFields.get = function(listId, mergeId, httpOptions) {
@@ -1791,12 +1791,12 @@ endpoint.lists.mergeFields.get = function(listId, mergeId, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/lists/:list_id/merge-fields', [listId]);
-            break;
-        case 1:
-            url = parse('/lists/:list_id/merge-fields/:merge_id', [listId, mergeId]);
-            break;
-        case 2:
+			url = parse('/lists/:list_id/merge-fields', [listId]);
+			break;
+		case 1:
+			url = parse('/lists/:list_id/merge-fields/:merge_id', [listId, mergeId]);
+			break;
+		case 2:
             url = parse('/lists/:list_id/merge-fields/:merge_id', [listId,mergeId]);
             break;
         default:
@@ -1804,8 +1804,8 @@ endpoint.lists.mergeFields.get = function(listId, mergeId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.lists.segments.get = function(listId, segmentId, httpOptions) {
@@ -1819,12 +1819,12 @@ endpoint.lists.segments.get = function(listId, segmentId, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/lists/:list_id/segments', [listId]);
-            break;
-        case 1:
-            url = parse('/lists/:list_id/segments/:segment_id', [listId, segmentId]);
-            break;
-        case 2:
+			url = parse('/lists/:list_id/segments', [listId]);
+			break;
+		case 1:
+			url = parse('/lists/:list_id/segments/:segment_id', [listId, segmentId]);
+			break;
+		case 2:
             url = parse('/lists/:list_id/segments/:segment_id', [listId,segmentId]);
             break;
         default:
@@ -1832,8 +1832,8 @@ endpoint.lists.segments.get = function(listId, segmentId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.lists.segments.members.get = function(listId, segmentId, httpOptions) {
@@ -1869,12 +1869,12 @@ endpoint.lists.webhooks.get = function(listId, webhookId, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/lists/:list_id/webhooks', [listId]);
-            break;
-        case 1:
-            url = parse('/lists/:list_id/webhooks/:webhook_id', [listId, webhookId]);
-            break;
-        case 2:
+			url = parse('/lists/:list_id/webhooks', [listId]);
+			break;
+		case 1:
+			url = parse('/lists/:list_id/webhooks/:webhook_id', [listId, webhookId]);
+			break;
+		case 2:
             url = parse('/lists/:list_id/webhooks/:webhook_id', [listId,webhookId]);
             break;
         default:
@@ -1882,8 +1882,8 @@ endpoint.lists.webhooks.get = function(listId, webhookId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.reports.get = function(campaignId, httpOptions) {
@@ -1897,12 +1897,12 @@ endpoint.reports.get = function(campaignId, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/reports');
-            break;
-        case 1:
-            url = parse('/reports/:campaign_id', [campaignId]);
-            break;
-        case 2:
+			url = parse('/reports');
+			break;
+		case 1:
+			url = parse('/reports/:campaign_id', [campaignId]);
+			break;
+		case 2:
             url = parse('/reports/:campaign_id', [campaignId]);
             break;
         default:
@@ -1910,8 +1910,8 @@ endpoint.reports.get = function(campaignId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.reports.abuseReports.get = function(campaignId, reportId, httpOptions) {
@@ -1925,12 +1925,12 @@ endpoint.reports.abuseReports.get = function(campaignId, reportId, httpOptions) 
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/reports/:campaign_id/abuse-reports', [campaignId]);
-            break;
-        case 1:
-            url = parse('/reports/:campaign_id/abuse-reports/:report_id', [campaignId, reportId]);
-            break;
-        case 2:
+			url = parse('/reports/:campaign_id/abuse-reports', [campaignId]);
+			break;
+		case 1:
+			url = parse('/reports/:campaign_id/abuse-reports/:report_id', [campaignId, reportId]);
+			break;
+		case 2:
             url = parse('/reports/:campaign_id/abuse-reports/:report_id', [campaignId,reportId]);
             break;
         default:
@@ -1938,8 +1938,8 @@ endpoint.reports.abuseReports.get = function(campaignId, reportId, httpOptions) 
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.reports.advice.get = function(campaignId, httpOptions) {
@@ -1964,12 +1964,12 @@ endpoint.reports.clickDetails.get = function(campaignId, linkId, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/reports/:campaign_id/click-details', [campaignId]);
-            break;
-        case 1:
-            url = parse('/reports/:campaign_id/click-details/:link_id', [campaignId, linkId]);
-            break;
-        case 2:
+			url = parse('/reports/:campaign_id/click-details', [campaignId]);
+			break;
+		case 1:
+			url = parse('/reports/:campaign_id/click-details/:link_id', [campaignId, linkId]);
+			break;
+		case 2:
             url = parse('/reports/:campaign_id/click-details/:link_id', [campaignId,linkId]);
             break;
         default:
@@ -1977,8 +1977,8 @@ endpoint.reports.clickDetails.get = function(campaignId, linkId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.reports.clickDetails.members.get = function(campaignId, linkId, subscriberHash, httpOptions) {
@@ -1992,12 +1992,12 @@ endpoint.reports.clickDetails.members.get = function(campaignId, linkId, subscri
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/reports/:campaign_id/click-details/:link_id/members', [campaignId, linkId]);
-            break;
-        case 1:
-            url = parse('/reports/:campaign_id/click-details/:link_id/members/:subscriber_hash', [campaignId, linkId, subscriberHash]);
-            break;
-        case 2:
+			url = parse('/reports/:campaign_id/click-details/:link_id/members', [campaignId, linkId]);
+			break;
+		case 1:
+			url = parse('/reports/:campaign_id/click-details/:link_id/members/:subscriber_hash', [campaignId, linkId, subscriberHash]);
+			break;
+		case 2:
             url = parse('/reports/:campaign_id/click-details/:link_id/members/:subscriber_hash', [campaignId,linkId,subscriberHash]);
             break;
         default:
@@ -2005,8 +2005,8 @@ endpoint.reports.clickDetails.members.get = function(campaignId, linkId, subscri
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.reports.domainPerformance.get = function(campaignId, httpOptions) {
@@ -2042,12 +2042,12 @@ endpoint.reports.emailActivity.get = function(campaignId, subscriberHash, httpOp
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/reports/:campaign_id/email-activity', [campaignId]);
-            break;
-        case 1:
-            url = parse('/reports/:campaign_id/email-activity/:subscriber_hash', [campaignId, subscriberHash]);
-            break;
-        case 2:
+			url = parse('/reports/:campaign_id/email-activity', [campaignId]);
+			break;
+		case 1:
+			url = parse('/reports/:campaign_id/email-activity/:subscriber_hash', [campaignId, subscriberHash]);
+			break;
+		case 2:
             url = parse('/reports/:campaign_id/email-activity/:subscriber_hash', [campaignId,subscriberHash]);
             break;
         default:
@@ -2055,8 +2055,8 @@ endpoint.reports.emailActivity.get = function(campaignId, subscriberHash, httpOp
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.reports.locations.get = function(campaignId, httpOptions) {
@@ -2081,12 +2081,12 @@ endpoint.reports.sentTo.get = function(campaignId, subscriberHash, httpOptions) 
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/reports/:campaign_id/sent-to', [campaignId]);
-            break;
-        case 1:
-            url = parse('/reports/:campaign_id/sent-to/:subscriber_hash', [campaignId, subscriberHash]);
-            break;
-        case 2:
+			url = parse('/reports/:campaign_id/sent-to', [campaignId]);
+			break;
+		case 1:
+			url = parse('/reports/:campaign_id/sent-to/:subscriber_hash', [campaignId, subscriberHash]);
+			break;
+		case 2:
             url = parse('/reports/:campaign_id/sent-to/:subscriber_hash', [campaignId,subscriberHash]);
             break;
         default:
@@ -2094,8 +2094,8 @@ endpoint.reports.sentTo.get = function(campaignId, subscriberHash, httpOptions) 
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.reports.subReports.get = function(campaignId, httpOptions) {
@@ -2120,12 +2120,12 @@ endpoint.reports.unsubscribed.get = function(campaignId, subscriberHash, httpOpt
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/reports/:campaign_id/unsubscribed', [campaignId]);
-            break;
-        case 1:
-            url = parse('/reports/:campaign_id/unsubscribed/:subscriber_hash', [campaignId, subscriberHash]);
-            break;
-        case 2:
+			url = parse('/reports/:campaign_id/unsubscribed', [campaignId]);
+			break;
+		case 1:
+			url = parse('/reports/:campaign_id/unsubscribed/:subscriber_hash', [campaignId, subscriberHash]);
+			break;
+		case 2:
             url = parse('/reports/:campaign_id/unsubscribed/:subscriber_hash', [campaignId,subscriberHash]);
             break;
         default:
@@ -2133,8 +2133,8 @@ endpoint.reports.unsubscribed.get = function(campaignId, subscriberHash, httpOpt
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.searchCampaigns.get = function(httpOptions) {
@@ -2162,12 +2162,12 @@ endpoint.templateFolders.get = function(folderId, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/template-folders');
-            break;
-        case 1:
-            url = parse('/template-folders/:folder_id', [folderId]);
-            break;
-        case 2:
+			url = parse('/template-folders');
+			break;
+		case 1:
+			url = parse('/template-folders/:folder_id', [folderId]);
+			break;
+		case 2:
             url = parse('/template-folders/:folder_id', [folderId]);
             break;
         default:
@@ -2175,8 +2175,8 @@ endpoint.templateFolders.get = function(folderId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.templates.get = function(templateId, httpOptions) {
@@ -2190,12 +2190,12 @@ endpoint.templates.get = function(templateId, httpOptions) {
     var url;
     switch(arguments.length){
         case 0:
-            url = parse('/templates');
-            break;
-        case 1:
-            url = parse('/templates/:template_id', [templateId]);
-            break;
-        case 2:
+			url = parse('/templates');
+			break;
+		case 1:
+			url = parse('/templates/:template_id', [templateId]);
+			break;
+		case 2:
             url = parse('/templates/:template_id', [templateId]);
             break;
         default:
@@ -2203,8 +2203,8 @@ endpoint.templates.get = function(templateId, httpOptions) {
             return;
     }
     sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
+	var options = checkHttpOptions(url, httpOptions);
+	return endpoint._get(options);
 };
 
 endpoint.templates.defaultContent.get = function(templateId, httpOptions) {
@@ -2610,7 +2610,7 @@ endpoint.options = function(url, httpOptions, callbackData, callbacks) {
 };
 
 endpoint.utils = {};
-
+            
 endpoint.utils.parseTimestamp = function(dateString) {
     if (!dateString) {
         return null;

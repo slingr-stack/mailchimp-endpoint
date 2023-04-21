@@ -9,14 +9,14 @@ The Javascript API of the mailchimp endpoint has three pieces:
 ## HTTP requests
 You can make `PATCH`,`POST`,`GET`,`DELETE`,`PUT` requests to the [mailchimp API](API_URL_HERE) like this:
 ```javascript
-var response = app.endpoints.mailchimp.patch('/batch-webhooks/:batch_webhook_id', body)
-var response = app.endpoints.mailchimp.patch('/batch-webhooks/:batch_webhook_id')
-var response = app.endpoints.mailchimp.post('/batch-webhooks', body)
-var response = app.endpoints.mailchimp.post('/batch-webhooks')
-var response = app.endpoints.mailchimp.get('/campaigns/:campaign_id/feedback/:feedback_id')
-var response = app.endpoints.mailchimp.delete('/lists/:list_id/merge-fields/:merge_id')
-var response = app.endpoints.mailchimp.put('/campaigns/:campaign_id/content', body)
-var response = app.endpoints.mailchimp.put('/campaigns/:campaign_id/content')
+var response = app.endpoints.mailchimp.patch('/lists/:list_id/webhooks/:webhook_id', body)
+var response = app.endpoints.mailchimp.patch('/lists/:list_id/webhooks/:webhook_id')
+var response = app.endpoints.mailchimp.post('/lists/:list_id/interest-categories/:interest_category_id', body)
+var response = app.endpoints.mailchimp.post('/lists/:list_id/interest-categories/:interest_category_id')
+var response = app.endpoints.mailchimp.get('/file-manager/files/:file_id')
+var response = app.endpoints.mailchimp.delete('/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id')
+var response = app.endpoints.mailchimp.put('/ecommerce/stores/:store_id/customers/:customer_id', body)
+var response = app.endpoints.mailchimp.put('/ecommerce/stores/:store_id/customers/:customer_id')
 ```
 
 Please take a look at the documentation of the [HTTP endpoint](https://github.com/slingr-stack/http-endpoint#javascript-api)
