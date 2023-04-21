@@ -10,410 +10,426 @@
 
 endpoint.batchWebhooks = {};
 
-endpoint.batchWebhooks.batchWebhookId = {};
-
 endpoint.campaignFolders = {};
-
-endpoint.campaignFolders.folderId = {};
 
 endpoint.campaigns = {};
 
-endpoint.campaigns.campaignId = {};
-
-endpoint.campaigns.campaignId.feedback = {};
-
-endpoint.campaigns.campaignId.feedback.feedbackId = {};
+endpoint.campaigns.feedback = {};
 
 endpoint.ecommerce = {};
 
 endpoint.ecommerce.stores = {};
 
-endpoint.ecommerce.stores.storeId = {};
+endpoint.ecommerce.stores.carts = {};
 
-endpoint.ecommerce.stores.storeId.carts = {};
+endpoint.ecommerce.stores.carts.lines = {};
 
-endpoint.ecommerce.stores.storeId.carts.cartId = {};
+endpoint.ecommerce.stores.customers = {};
 
-endpoint.ecommerce.stores.storeId.carts.cartId.lines = {};
+endpoint.ecommerce.stores.orders = {};
 
-endpoint.ecommerce.stores.storeId.carts.cartId.lines.lineId = {};
+endpoint.ecommerce.stores.orders.lines = {};
 
-endpoint.ecommerce.stores.storeId.customers = {};
+endpoint.ecommerce.stores.products = {};
 
-endpoint.ecommerce.stores.storeId.customers.customerId = {};
+endpoint.ecommerce.stores.products.images = {};
 
-endpoint.ecommerce.stores.storeId.orders = {};
-
-endpoint.ecommerce.stores.storeId.orders.orderId = {};
-
-endpoint.ecommerce.stores.storeId.orders.orderId.lines = {};
-
-endpoint.ecommerce.stores.storeId.orders.orderId.lines.lineId = {};
-
-endpoint.ecommerce.stores.storeId.products = {};
-
-endpoint.ecommerce.stores.storeId.products.productId = {};
-
-endpoint.ecommerce.stores.storeId.products.productId.images = {};
-
-endpoint.ecommerce.stores.storeId.products.productId.images.imageId = {};
-
-endpoint.ecommerce.stores.storeId.products.productId.variants = {};
-
-endpoint.ecommerce.stores.storeId.products.productId.variants.variantId = {};
+endpoint.ecommerce.stores.products.variants = {};
 
 endpoint.fileManager = {};
 
 endpoint.fileManager.files = {};
 
-endpoint.fileManager.files.fileId = {};
-
 endpoint.fileManager.folders = {};
-
-endpoint.fileManager.folders.folderId = {};
 
 endpoint.lists = {};
 
-endpoint.lists.listId = {};
+endpoint.lists.interestCategories = {};
 
-endpoint.lists.listId.interestCategories = {};
+endpoint.lists.interestCategories.interests = {};
 
-endpoint.lists.listId.interestCategories.interestCategoryId = {};
+endpoint.lists.members = {};
 
-endpoint.lists.listId.interestCategories.interestCategoryId.interests = {};
+endpoint.lists.members.notes = {};
 
-endpoint.lists.listId.interestCategories.interestCategoryId.interests.interestId = {};
+endpoint.lists.mergeFields = {};
 
-endpoint.lists.listId.members = {};
+endpoint.lists.segments = {};
 
-endpoint.lists.listId.members.subscriberHash = {};
-
-endpoint.lists.listId.members.subscriberHash.notes = {};
-
-endpoint.lists.listId.members.subscriberHash.notes.noteId = {};
-
-endpoint.lists.listId.mergeFields = {};
-
-endpoint.lists.listId.mergeFields.mergeId = {};
-
-endpoint.lists.listId.segments = {};
-
-endpoint.lists.listId.segments.segmentId = {};
-
-endpoint.lists.listId.webhooks = {};
-
-endpoint.lists.listId.webhooks.webhookId = {};
+endpoint.lists.webhooks = {};
 
 endpoint.templateFolders = {};
 
-endpoint.templateFolders.folderId = {};
-
 endpoint.templates = {};
-
-endpoint.templates.templateId = {};
 
 endpoint.authorizedApps = {};
 
 endpoint.automations = {};
 
-endpoint.automations.workflowId = {};
+endpoint.automations.actions = {};
 
-endpoint.automations.workflowId.actions = {};
+endpoint.automations.actions.pauseAllEmails = {};
 
-endpoint.automations.workflowId.actions.pauseAllEmails = {};
+endpoint.automations.actions.startAllEmails = {};
 
-endpoint.automations.workflowId.actions.startAllEmails = {};
+endpoint.automations.emails = {};
 
-endpoint.automations.workflowId.emails = {};
+endpoint.automations.emails.actions = {};
 
-endpoint.automations.workflowId.emails.workflowEmailId = {};
+endpoint.automations.emails.actions.pause = {};
 
-endpoint.automations.workflowId.emails.workflowEmailId.actions = {};
+endpoint.automations.emails.actions.start = {};
 
-endpoint.automations.workflowId.emails.workflowEmailId.actions.pause = {};
+endpoint.automations.emails.queue = {};
 
-endpoint.automations.workflowId.emails.workflowEmailId.actions.start = {};
-
-endpoint.automations.workflowId.emails.workflowEmailId.queue = {};
-
-endpoint.automations.workflowId.removedSubscribers = {};
+endpoint.automations.removedSubscribers = {};
 
 endpoint.batches = {};
 
-endpoint.campaigns.campaignId.actions = {};
+endpoint.campaigns.actions = {};
 
-endpoint.campaigns.campaignId.actions.cancelSend = {};
+endpoint.campaigns.actions.cancelSend = {};
 
-endpoint.campaigns.campaignId.actions.pause = {};
+endpoint.campaigns.actions.pause = {};
 
-endpoint.campaigns.campaignId.actions.replicate = {};
+endpoint.campaigns.actions.replicate = {};
 
-endpoint.campaigns.campaignId.actions.resume = {};
+endpoint.campaigns.actions.resume = {};
 
-endpoint.campaigns.campaignId.actions.schedule = {};
+endpoint.campaigns.actions.schedule = {};
 
-endpoint.campaigns.campaignId.actions.send = {};
+endpoint.campaigns.actions.send = {};
 
-endpoint.campaigns.campaignId.actions.test = {};
+endpoint.campaigns.actions.test = {};
 
-endpoint.campaigns.campaignId.actions.unschedule = {};
+endpoint.campaigns.actions.unschedule = {};
 
 endpoint.conversations = {};
 
-endpoint.conversations.conversationId = {};
+endpoint.conversations.messages = {};
 
-endpoint.conversations.conversationId.messages = {};
+endpoint.lists.segments.members = {};
 
-endpoint.lists.listId.segments.segmentId.members = {};
+endpoint.lists.signupForms = {};
 
-endpoint.lists.listId.signupForms = {};
+endpoint.campaigns.content = {};
 
-endpoint.authorizedApps.appId = {};
+endpoint.campaigns.sendChecklist = {};
 
-endpoint.automations.workflowId.emails.workflowEmailId.queue.subscriberHash = {};
+endpoint.lists.abuseReports = {};
 
-endpoint.batches.batchId = {};
+endpoint.lists.activity = {};
 
-endpoint.campaigns.campaignId.content = {};
+endpoint.lists.clients = {};
 
-endpoint.campaigns.campaignId.sendChecklist = {};
+endpoint.lists.growthHistory = {};
 
-endpoint.conversations.conversationId.messages.messageId = {};
+endpoint.lists.locations = {};
 
-endpoint.lists.listId.abuseReports = {};
+endpoint.lists.members.activity = {};
 
-endpoint.lists.listId.abuseReports.reportId = {};
-
-endpoint.lists.listId.activity = {};
-
-endpoint.lists.listId.clients = {};
-
-endpoint.lists.listId.growthHistory = {};
-
-endpoint.lists.listId.growthHistory.month = {};
-
-endpoint.lists.listId.locations = {};
-
-endpoint.lists.listId.members.subscriberHash.activity = {};
-
-endpoint.lists.listId.members.subscriberHash.goals = {};
+endpoint.lists.members.goals = {};
 
 endpoint.reports = {};
 
-endpoint.reports.campaignId = {};
+endpoint.reports.abuseReports = {};
 
-endpoint.reports.campaignId.abuseReports = {};
+endpoint.reports.advice = {};
 
-endpoint.reports.campaignId.abuseReports.reportId = {};
+endpoint.reports.clickDetails = {};
 
-endpoint.reports.campaignId.advice = {};
+endpoint.reports.clickDetails.members = {};
 
-endpoint.reports.campaignId.clickDetails = {};
+endpoint.reports.domainPerformance = {};
 
-endpoint.reports.campaignId.clickDetails.linkId = {};
+endpoint.reports.eepurl = {};
 
-endpoint.reports.campaignId.clickDetails.linkId.members = {};
+endpoint.reports.emailActivity = {};
 
-endpoint.reports.campaignId.clickDetails.linkId.members.subscriberHash = {};
+endpoint.reports.locations = {};
 
-endpoint.reports.campaignId.domainPerformance = {};
+endpoint.reports.sentTo = {};
 
-endpoint.reports.campaignId.eepurl = {};
+endpoint.reports.subReports = {};
 
-endpoint.reports.campaignId.emailActivity = {};
-
-endpoint.reports.campaignId.emailActivity.subscriberHash = {};
-
-endpoint.reports.campaignId.locations = {};
-
-endpoint.reports.campaignId.sentTo = {};
-
-endpoint.reports.campaignId.sentTo.subscriberHash = {};
-
-endpoint.reports.campaignId.subReports = {};
-
-endpoint.reports.campaignId.unsubscribed = {};
-
-endpoint.reports.campaignId.unsubscribed.subscriberHash = {};
+endpoint.reports.unsubscribed = {};
 
 endpoint.searchCampaigns = {};
 
 endpoint.searchMembers = {};
 
-endpoint.templates.templateId.defaultContent = {};
+endpoint.templates.defaultContent = {};
 
-endpoint.lists.listId.segments.segmentId.members.subscriberHash = {};
-
-endpoint.batchWebhooks.batchWebhookId.patch = function(httpOptions) {
-    var url = parse('/batch-webhooks/{batch_webhook_id}');
+endpoint.batchWebhooks.patch = function(batchWebhookId, httpOptions) {
+    if (!batchWebhookId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [batchWebhookId].');
+        return;
+    }
+    var url = parse('/batch-webhooks/:batch_webhook_id', [batchWebhookId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.campaignFolders.folderId.patch = function(httpOptions) {
-    var url = parse('/campaign-folders/{folder_id}');
+endpoint.campaignFolders.patch = function(folderId, httpOptions) {
+    if (!folderId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [folderId].');
+        return;
+    }
+    var url = parse('/campaign-folders/:folder_id', [folderId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.campaigns.campaignId.patch = function(httpOptions) {
-    var url = parse('/campaigns/{campaign_id}');
+endpoint.campaigns.patch = function(campaignId, httpOptions) {
+    if (!campaignId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId].');
+        return;
+    }
+    var url = parse('/campaigns/:campaign_id', [campaignId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.campaigns.campaignId.feedback.feedbackId.patch = function(httpOptions) {
-    var url = parse('/campaigns/{campaign_id}/feedback/{feedback_id}');
+endpoint.campaigns.feedback.patch = function(campaignId, feedbackId, httpOptions) {
+    if (!campaignId || !feedbackId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId,feedbackId].');
+        return;
+    }
+    var url = parse('/campaigns/:campaign_id/feedback/:feedback_id', [campaignId, feedbackId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.ecommerce.stores.storeId.patch = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}');
+endpoint.ecommerce.stores.patch = function(storeId, httpOptions) {
+    if (!storeId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id', [storeId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.ecommerce.stores.storeId.carts.cartId.patch = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/carts/{cart_id}');
+endpoint.ecommerce.stores.carts.patch = function(storeId, cartId, httpOptions) {
+    if (!storeId || !cartId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,cartId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/carts/:cart_id', [storeId, cartId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.ecommerce.stores.storeId.carts.cartId.lines.lineId.patch = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/carts/{cart_id}/lines/{line_id}');
+endpoint.ecommerce.stores.carts.lines.patch = function(storeId, cartId, lineId, httpOptions) {
+    if (!storeId || !cartId || !lineId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,cartId,lineId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id', [storeId, cartId, lineId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.ecommerce.stores.storeId.customers.customerId.patch = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/customers/{customer_id}');
+endpoint.ecommerce.stores.customers.patch = function(storeId, customerId, httpOptions) {
+    if (!storeId || !customerId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,customerId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/customers/:customer_id', [storeId, customerId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.ecommerce.stores.storeId.orders.orderId.patch = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/orders/{order_id}');
+endpoint.ecommerce.stores.orders.patch = function(storeId, orderId, httpOptions) {
+    if (!storeId || !orderId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,orderId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/orders/:order_id', [storeId, orderId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.ecommerce.stores.storeId.orders.orderId.lines.lineId.patch = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/orders/{order_id}/lines/{line_id}');
+endpoint.ecommerce.stores.orders.lines.patch = function(storeId, orderId, lineId, httpOptions) {
+    if (!storeId || !orderId || !lineId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,orderId,lineId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id', [storeId, orderId, lineId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.ecommerce.stores.storeId.products.productId.patch = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/products/{product_id}');
+endpoint.ecommerce.stores.products.patch = function(storeId, productId, httpOptions) {
+    if (!storeId || !productId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,productId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/products/:product_id', [storeId, productId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.ecommerce.stores.storeId.products.productId.images.imageId.patch = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/products/{product_id}/images/{image_id}');
+endpoint.ecommerce.stores.products.images.patch = function(storeId, productId, imageId, httpOptions) {
+    if (!storeId || !productId || !imageId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,productId,imageId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/products/:product_id/images/:image_id', [storeId, productId, imageId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.ecommerce.stores.storeId.products.productId.variants.variantId.patch = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}');
+endpoint.ecommerce.stores.products.variants.patch = function(storeId, productId, variantId, httpOptions) {
+    if (!storeId || !productId || !variantId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,productId,variantId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id', [storeId, productId, variantId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.fileManager.files.fileId.patch = function(httpOptions) {
-    var url = parse('/file-manager/files/{file_id}');
+endpoint.fileManager.files.patch = function(fileId, httpOptions) {
+    if (!fileId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [fileId].');
+        return;
+    }
+    var url = parse('/file-manager/files/:file_id', [fileId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.fileManager.folders.folderId.patch = function(httpOptions) {
-    var url = parse('/file-manager/folders/{folder_id}');
+endpoint.fileManager.folders.patch = function(folderId, httpOptions) {
+    if (!folderId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [folderId].');
+        return;
+    }
+    var url = parse('/file-manager/folders/:folder_id', [folderId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.lists.listId.patch = function(httpOptions) {
-    var url = parse('/lists/{list_id}');
+endpoint.lists.patch = function(listId, httpOptions) {
+    if (!listId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId].');
+        return;
+    }
+    var url = parse('/lists/:list_id', [listId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.lists.listId.interestCategories.interestCategoryId.patch = function(httpOptions) {
-    var url = parse('/lists/{list_id}/interest-categories/{interest_category_id}');
+endpoint.lists.interestCategories.patch = function(listId, interestCategoryId, httpOptions) {
+    if (!listId || !interestCategoryId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,interestCategoryId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/interest-categories/:interest_category_id', [listId, interestCategoryId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.lists.listId.interestCategories.interestCategoryId.interests.interestId.patch = function(httpOptions) {
-    var url = parse('/lists/{list_id}/interest-categories/{interest_category_id}/interests/{interest_id}');
+endpoint.lists.interestCategories.interests.patch = function(listId, interestCategoryId, interestId, httpOptions) {
+    if (!listId || !interestCategoryId || !interestId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,interestCategoryId,interestId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id', [listId, interestCategoryId, interestId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.lists.listId.members.subscriberHash.patch = function(httpOptions) {
-    var url = parse('/lists/{list_id}/members/{subscriber_hash}');
+endpoint.lists.members.patch = function(listId, subscriberHash, httpOptions) {
+    if (!listId || !subscriberHash) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,subscriberHash].');
+        return;
+    }
+    var url = parse('/lists/:list_id/members/:subscriber_hash', [listId, subscriberHash]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.lists.listId.members.subscriberHash.notes.noteId.patch = function(httpOptions) {
-    var url = parse('/lists/{list_id}/members/{subscriber_hash}/notes/{note_id}');
+endpoint.lists.members.notes.patch = function(listId, subscriberHash, noteId, httpOptions) {
+    if (!listId || !subscriberHash || !noteId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,subscriberHash,noteId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/members/:subscriber_hash/notes/:note_id', [listId, subscriberHash, noteId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.lists.listId.mergeFields.mergeId.patch = function(httpOptions) {
-    var url = parse('/lists/{list_id}/merge-fields/{merge_id}');
+endpoint.lists.mergeFields.patch = function(listId, mergeId, httpOptions) {
+    if (!listId || !mergeId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,mergeId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/merge-fields/:merge_id', [listId, mergeId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.lists.listId.segments.segmentId.patch = function(httpOptions) {
-    var url = parse('/lists/{list_id}/segments/{segment_id}');
+endpoint.lists.segments.patch = function(listId, segmentId, httpOptions) {
+    if (!listId || !segmentId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,segmentId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/segments/:segment_id', [listId, segmentId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.lists.listId.webhooks.webhookId.patch = function(httpOptions) {
-    var url = parse('/lists/{list_id}/webhooks/{webhook_id}');
+endpoint.lists.webhooks.patch = function(listId, webhookId, httpOptions) {
+    if (!listId || !webhookId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,webhookId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/webhooks/:webhook_id', [listId, webhookId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.templateFolders.folderId.patch = function(httpOptions) {
-    var url = parse('/template-folders/{folder_id}');
+endpoint.templateFolders.patch = function(folderId, httpOptions) {
+    if (!folderId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [folderId].');
+        return;
+    }
+    var url = parse('/template-folders/:folder_id', [folderId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
 };
 
-endpoint.templates.templateId.patch = function(httpOptions) {
-    var url = parse('/templates/{template_id}');
+endpoint.templates.patch = function(templateId, httpOptions) {
+    if (!templateId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [templateId].');
+        return;
+    }
+    var url = parse('/templates/:template_id', [templateId]);
     sys.logs.debug('[mailchimp] PATCH from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._patch(options);
@@ -426,43 +442,67 @@ endpoint.authorizedApps.post = function(httpOptions) {
     return endpoint._post(options);
 };
 
-endpoint.automations.workflowId.actions.pauseAllEmails.post = function(httpOptions) {
-    var url = parse('/automations/{workflow_id}/actions/pause-all-emails');
+endpoint.automations.actions.pauseAllEmails.post = function(workflowId, httpOptions) {
+    if (!workflowId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [workflowId].');
+        return;
+    }
+    var url = parse('/automations/:workflow_id/actions/pause-all-emails', [workflowId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.automations.workflowId.actions.startAllEmails.post = function(httpOptions) {
-    var url = parse('/automations/{workflow_id}/actions/start-all-emails');
+endpoint.automations.actions.startAllEmails.post = function(workflowId, httpOptions) {
+    if (!workflowId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [workflowId].');
+        return;
+    }
+    var url = parse('/automations/:workflow_id/actions/start-all-emails', [workflowId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.automations.workflowId.emails.workflowEmailId.actions.pause.post = function(httpOptions) {
-    var url = parse('/automations/{workflow_id}/emails/{workflow_email_id}/actions/pause');
+endpoint.automations.emails.actions.pause.post = function(workflowId, workflowEmailId, httpOptions) {
+    if (!workflowId || !workflowEmailId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [workflowId,workflowEmailId].');
+        return;
+    }
+    var url = parse('/automations/:workflow_id/emails/:workflow_email_id/actions/pause', [workflowId, workflowEmailId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.automations.workflowId.emails.workflowEmailId.actions.start.post = function(httpOptions) {
-    var url = parse('/automations/{workflow_id}/emails/{workflow_email_id}/actions/start');
+endpoint.automations.emails.actions.start.post = function(workflowId, workflowEmailId, httpOptions) {
+    if (!workflowId || !workflowEmailId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [workflowId,workflowEmailId].');
+        return;
+    }
+    var url = parse('/automations/:workflow_id/emails/:workflow_email_id/actions/start', [workflowId, workflowEmailId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.automations.workflowId.emails.workflowEmailId.queue.post = function(httpOptions) {
-    var url = parse('/automations/{workflow_id}/emails/{workflow_email_id}/queue');
+endpoint.automations.emails.queue.post = function(workflowId, workflowEmailId, httpOptions) {
+    if (!workflowId || !workflowEmailId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [workflowId,workflowEmailId].');
+        return;
+    }
+    var url = parse('/automations/:workflow_id/emails/:workflow_email_id/queue', [workflowId, workflowEmailId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.automations.workflowId.removedSubscribers.post = function(httpOptions) {
-    var url = parse('/automations/{workflow_id}/removed-subscribers');
+endpoint.automations.removedSubscribers.post = function(workflowId, httpOptions) {
+    if (!workflowId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [workflowId].');
+        return;
+    }
+    var url = parse('/automations/:workflow_id/removed-subscribers', [workflowId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
@@ -496,71 +536,111 @@ endpoint.campaigns.post = function(httpOptions) {
     return endpoint._post(options);
 };
 
-endpoint.campaigns.campaignId.actions.cancelSend.post = function(httpOptions) {
-    var url = parse('/campaigns/{campaign_id}/actions/cancel-send');
+endpoint.campaigns.actions.cancelSend.post = function(campaignId, httpOptions) {
+    if (!campaignId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId].');
+        return;
+    }
+    var url = parse('/campaigns/:campaign_id/actions/cancel-send', [campaignId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.campaigns.campaignId.actions.pause.post = function(httpOptions) {
-    var url = parse('/campaigns/{campaign_id}/actions/pause');
+endpoint.campaigns.actions.pause.post = function(campaignId, httpOptions) {
+    if (!campaignId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId].');
+        return;
+    }
+    var url = parse('/campaigns/:campaign_id/actions/pause', [campaignId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.campaigns.campaignId.actions.replicate.post = function(httpOptions) {
-    var url = parse('/campaigns/{campaign_id}/actions/replicate');
+endpoint.campaigns.actions.replicate.post = function(campaignId, httpOptions) {
+    if (!campaignId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId].');
+        return;
+    }
+    var url = parse('/campaigns/:campaign_id/actions/replicate', [campaignId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.campaigns.campaignId.actions.resume.post = function(httpOptions) {
-    var url = parse('/campaigns/{campaign_id}/actions/resume');
+endpoint.campaigns.actions.resume.post = function(campaignId, httpOptions) {
+    if (!campaignId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId].');
+        return;
+    }
+    var url = parse('/campaigns/:campaign_id/actions/resume', [campaignId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.campaigns.campaignId.actions.schedule.post = function(httpOptions) {
-    var url = parse('/campaigns/{campaign_id}/actions/schedule');
+endpoint.campaigns.actions.schedule.post = function(campaignId, httpOptions) {
+    if (!campaignId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId].');
+        return;
+    }
+    var url = parse('/campaigns/:campaign_id/actions/schedule', [campaignId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.campaigns.campaignId.actions.send.post = function(httpOptions) {
-    var url = parse('/campaigns/{campaign_id}/actions/send');
+endpoint.campaigns.actions.send.post = function(campaignId, httpOptions) {
+    if (!campaignId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId].');
+        return;
+    }
+    var url = parse('/campaigns/:campaign_id/actions/send', [campaignId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.campaigns.campaignId.actions.test.post = function(httpOptions) {
-    var url = parse('/campaigns/{campaign_id}/actions/test');
+endpoint.campaigns.actions.test.post = function(campaignId, httpOptions) {
+    if (!campaignId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId].');
+        return;
+    }
+    var url = parse('/campaigns/:campaign_id/actions/test', [campaignId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.campaigns.campaignId.actions.unschedule.post = function(httpOptions) {
-    var url = parse('/campaigns/{campaign_id}/actions/unschedule');
+endpoint.campaigns.actions.unschedule.post = function(campaignId, httpOptions) {
+    if (!campaignId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId].');
+        return;
+    }
+    var url = parse('/campaigns/:campaign_id/actions/unschedule', [campaignId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.campaigns.campaignId.feedback.post = function(httpOptions) {
-    var url = parse('/campaigns/{campaign_id}/feedback');
+endpoint.campaigns.feedback.post = function(campaignId, httpOptions) {
+    if (!campaignId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId].');
+        return;
+    }
+    var url = parse('/campaigns/:campaign_id/feedback', [campaignId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.conversations.conversationId.messages.post = function(httpOptions) {
-    var url = parse('/conversations/{conversation_id}/messages');
+endpoint.conversations.messages.post = function(conversationId, httpOptions) {
+    if (!conversationId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [conversationId].');
+        return;
+    }
+    var url = parse('/conversations/:conversation_id/messages', [conversationId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
@@ -573,57 +653,95 @@ endpoint.ecommerce.stores.post = function(httpOptions) {
     return endpoint._post(options);
 };
 
-endpoint.ecommerce.stores.storeId.carts.post = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/carts');
+endpoint.ecommerce.stores.carts.post = function(storeId, cartId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 1:
+            url = parse('/ecommerce/stores/:store_id/carts', [storeId]);
+            break;
+        case 2:
+            url = parse('/ecommerce/stores/:store_id/carts/:cart_id', [storeId, cartId]);
+            break;
+        case 3:
+            url = parse('/ecommerce/stores/:store_id/carts/:cart_id', [storeId,cartId,body]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.ecommerce.stores.storeId.carts.cartId.post = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/carts/{cart_id}');
+endpoint.ecommerce.stores.carts.lines.post = function(storeId, cartId, httpOptions) {
+    if (!storeId || !cartId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,cartId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/carts/:cart_id/lines', [storeId, cartId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.ecommerce.stores.storeId.carts.cartId.lines.post = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/carts/{cart_id}/lines');
+endpoint.ecommerce.stores.customers.post = function(storeId, httpOptions) {
+    if (!storeId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/customers', [storeId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.ecommerce.stores.storeId.customers.post = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/customers');
+endpoint.ecommerce.stores.orders.post = function(storeId, httpOptions) {
+    if (!storeId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/orders', [storeId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.ecommerce.stores.storeId.orders.post = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/orders');
+endpoint.ecommerce.stores.products.post = function(storeId, httpOptions) {
+    if (!storeId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/products', [storeId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.ecommerce.stores.storeId.products.post = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/products');
+endpoint.ecommerce.stores.products.images.post = function(storeId, productId, httpOptions) {
+    if (!storeId || !productId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,productId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/products/:product_id/images', [storeId, productId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.ecommerce.stores.storeId.products.productId.images.post = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/products/{product_id}/images');
-    sys.logs.debug('[mailchimp] POST from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._post(options);
-};
-
-endpoint.ecommerce.stores.storeId.products.productId.variants.post = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/products/{product_id}/variants');
+endpoint.ecommerce.stores.products.variants.post = function(storeId, productId, httpOptions) {
+    if (!storeId || !productId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,productId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/products/:product_id/variants', [storeId, productId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
@@ -643,92 +761,162 @@ endpoint.fileManager.folders.post = function(httpOptions) {
     return endpoint._post(options);
 };
 
-endpoint.lists.post = function(httpOptions) {
-    var url = parse('/lists');
+endpoint.lists.post = function(listId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 1:
+            url = parse('/lists');
+            break;
+        case 2:
+            url = parse('/lists/:list_id', [listId]);
+            break;
+        case 3:
+            url = parse('/lists/:list_id', [listId,body]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.lists.listId.post = function(httpOptions) {
-    var url = parse('/lists/{list_id}');
+endpoint.lists.interestCategories.post = function(listId, interestCategoryId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 1:
+            url = parse('/lists/:list_id/interest-categories', [listId]);
+            break;
+        case 2:
+            url = parse('/lists/:list_id/interest-categories/:interest_category_id', [listId, interestCategoryId]);
+            break;
+        case 3:
+            url = parse('/lists/:list_id/interest-categories/:interest_category_id', [listId,interestCategoryId,body]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.lists.listId.interestCategories.post = function(httpOptions) {
-    var url = parse('/lists/{list_id}/interest-categories');
+endpoint.lists.interestCategories.interests.post = function(listId, interestCategoryId, httpOptions) {
+    if (!listId || !interestCategoryId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,interestCategoryId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/interest-categories/:interest_category_id/interests', [listId, interestCategoryId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.lists.listId.interestCategories.interestCategoryId.post = function(httpOptions) {
-    var url = parse('/lists/{list_id}/interest-categories/{interest_category_id}');
+endpoint.lists.members.post = function(listId, httpOptions) {
+    if (!listId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/members', [listId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.lists.listId.interestCategories.interestCategoryId.interests.post = function(httpOptions) {
-    var url = parse('/lists/{list_id}/interest-categories/{interest_category_id}/interests');
+endpoint.lists.members.notes.post = function(listId, subscriberHash, httpOptions) {
+    if (!listId || !subscriberHash) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,subscriberHash].');
+        return;
+    }
+    var url = parse('/lists/:list_id/members/:subscriber_hash/notes', [listId, subscriberHash]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.lists.listId.members.post = function(httpOptions) {
-    var url = parse('/lists/{list_id}/members');
+endpoint.lists.mergeFields.post = function(listId, httpOptions) {
+    if (!listId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/merge-fields', [listId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.lists.listId.members.subscriberHash.notes.post = function(httpOptions) {
-    var url = parse('/lists/{list_id}/members/{subscriber_hash}/notes');
+endpoint.lists.segments.post = function(listId, segmentId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 1:
+            url = parse('/lists/:list_id/segments', [listId]);
+            break;
+        case 2:
+            url = parse('/lists/:list_id/segments/:segment_id', [listId, segmentId]);
+            break;
+        case 3:
+            url = parse('/lists/:list_id/segments/:segment_id', [listId,segmentId,body]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.lists.listId.mergeFields.post = function(httpOptions) {
-    var url = parse('/lists/{list_id}/merge-fields');
+endpoint.lists.segments.members.post = function(listId, segmentId, httpOptions) {
+    if (!listId || !segmentId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,segmentId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/segments/:segment_id/members', [listId, segmentId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.lists.listId.segments.post = function(httpOptions) {
-    var url = parse('/lists/{list_id}/segments');
+endpoint.lists.signupForms.post = function(listId, httpOptions) {
+    if (!listId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/signup-forms', [listId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
 
-endpoint.lists.listId.segments.segmentId.post = function(httpOptions) {
-    var url = parse('/lists/{list_id}/segments/{segment_id}');
-    sys.logs.debug('[mailchimp] POST from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._post(options);
-};
-
-endpoint.lists.listId.segments.segmentId.members.post = function(httpOptions) {
-    var url = parse('/lists/{list_id}/segments/{segment_id}/members');
-    sys.logs.debug('[mailchimp] POST from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._post(options);
-};
-
-endpoint.lists.listId.signupForms.post = function(httpOptions) {
-    var url = parse('/lists/{list_id}/signup-forms');
-    sys.logs.debug('[mailchimp] POST from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._post(options);
-};
-
-endpoint.lists.listId.webhooks.post = function(httpOptions) {
-    var url = parse('/lists/{list_id}/webhooks');
+endpoint.lists.webhooks.post = function(listId, httpOptions) {
+    if (!listId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/webhooks', [listId]);
     sys.logs.debug('[mailchimp] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
@@ -748,624 +936,1202 @@ endpoint.templates.post = function(httpOptions) {
     return endpoint._post(options);
 };
 
-endpoint.authorizedApps.get = function(httpOptions) {
-    var url = parse('/authorized-apps');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.authorizedApps.appId.get = function(httpOptions) {
-    var url = parse('/authorized-apps/{app_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.automations.get = function(httpOptions) {
-    var url = parse('/automations');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.automations.workflowId.get = function(httpOptions) {
-    var url = parse('/automations/{workflow_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.automations.workflowId.emails.get = function(httpOptions) {
-    var url = parse('/automations/{workflow_id}/emails');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.automations.workflowId.emails.workflowEmailId.get = function(httpOptions) {
-    var url = parse('/automations/{workflow_id}/emails/{workflow_email_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.automations.workflowId.emails.workflowEmailId.queue.get = function(httpOptions) {
-    var url = parse('/automations/{workflow_id}/emails/{workflow_email_id}/queue');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.automations.workflowId.emails.workflowEmailId.queue.subscriberHash.get = function(httpOptions) {
-    var url = parse('/automations/{workflow_id}/emails/{workflow_email_id}/queue/{subscriber_hash}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.automations.workflowId.removedSubscribers.get = function(httpOptions) {
-    var url = parse('/automations/{workflow_id}/removed-subscribers');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.batches.get = function(httpOptions) {
-    var url = parse('/batches');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.batches.batchId.get = function(httpOptions) {
-    var url = parse('/batches/{batch_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.batchWebhooks.get = function(httpOptions) {
-    var url = parse('/batch-webhooks');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.batchWebhooks.batchWebhookId.get = function(httpOptions) {
-    var url = parse('/batch-webhooks/{batch_webhook_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.campaignFolders.get = function(httpOptions) {
-    var url = parse('/campaign-folders');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.campaignFolders.folderId.get = function(httpOptions) {
-    var url = parse('/campaign-folders/{folder_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.campaigns.get = function(httpOptions) {
-    var url = parse('/campaigns');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.campaigns.campaignId.get = function(httpOptions) {
-    var url = parse('/campaigns/{campaign_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.campaigns.campaignId.content.get = function(httpOptions) {
-    var url = parse('/campaigns/{campaign_id}/content');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.campaigns.campaignId.feedback.get = function(httpOptions) {
-    var url = parse('/campaigns/{campaign_id}/feedback');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.campaigns.campaignId.feedback.feedbackId.get = function(httpOptions) {
-    var url = parse('/campaigns/{campaign_id}/feedback/{feedback_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.campaigns.campaignId.sendChecklist.get = function(httpOptions) {
-    var url = parse('/campaigns/{campaign_id}/send-checklist');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.conversations.get = function(httpOptions) {
-    var url = parse('/conversations');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.conversations.conversationId.get = function(httpOptions) {
-    var url = parse('/conversations/{conversation_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.conversations.conversationId.messages.get = function(httpOptions) {
-    var url = parse('/conversations/{conversation_id}/messages');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.conversations.conversationId.messages.messageId.get = function(httpOptions) {
-    var url = parse('/conversations/{conversation_id}/messages/{message_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.ecommerce.stores.get = function(httpOptions) {
-    var url = parse('/ecommerce/stores');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.ecommerce.stores.storeId.get = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.ecommerce.stores.storeId.carts.cartId.lines.get = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/carts/{cart_id}/lines');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.ecommerce.stores.storeId.carts.cartId.lines.lineId.get = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/carts/{cart_id}/lines/{line_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.ecommerce.stores.storeId.customers.get = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/customers');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.ecommerce.stores.storeId.customers.customerId.get = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/customers/{customer_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.ecommerce.stores.storeId.orders.get = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/orders');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.ecommerce.stores.storeId.orders.orderId.get = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/orders/{order_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.ecommerce.stores.storeId.orders.orderId.lines.get = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/orders/{order_id}/lines');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.ecommerce.stores.storeId.orders.orderId.lines.lineId.get = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/orders/{order_id}/lines/{line_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.ecommerce.stores.storeId.products.get = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/products');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.ecommerce.stores.storeId.products.productId.get = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/products/{product_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.ecommerce.stores.storeId.products.productId.images.get = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/products/{product_id}/images');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.ecommerce.stores.storeId.products.productId.images.imageId.get = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/products/{product_id}/images/{image_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.ecommerce.stores.storeId.products.productId.variants.get = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/products/{product_id}/variants');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.ecommerce.stores.storeId.products.productId.variants.variantId.get = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.fileManager.files.get = function(httpOptions) {
-    var url = parse('/file-manager/files');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.fileManager.files.fileId.get = function(httpOptions) {
-    var url = parse('/file-manager/files/{file_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.fileManager.folders.get = function(httpOptions) {
-    var url = parse('/file-manager/folders');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.fileManager.folders.folderId.get = function(httpOptions) {
-    var url = parse('/file-manager/folders/{folder_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.get = function(httpOptions) {
-    var url = parse('/lists');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.abuseReports.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/abuse-reports');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.abuseReports.reportId.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/abuse-reports/{report_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.activity.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/activity');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.clients.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/clients');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.growthHistory.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/growth-history');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.growthHistory.month.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/growth-history/{month}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.interestCategories.interestCategoryId.interests.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/interest-categories/{interest_category_id}/interests');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.interestCategories.interestCategoryId.interests.interestId.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/interest-categories/{interest_category_id}/interests/{interest_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.locations.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/locations');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.members.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/members');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.members.subscriberHash.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/members/{subscriber_hash}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.members.subscriberHash.activity.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/members/{subscriber_hash}/activity');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.members.subscriberHash.goals.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/members/{subscriber_hash}/goals');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.members.subscriberHash.notes.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/members/{subscriber_hash}/notes');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.members.subscriberHash.notes.noteId.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/members/{subscriber_hash}/notes/{note_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.mergeFields.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/merge-fields');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.mergeFields.mergeId.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/merge-fields/{merge_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.segments.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/segments');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.segments.segmentId.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/segments/{segment_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.segments.segmentId.members.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/segments/{segment_id}/members');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.signupForms.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/signup-forms');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.webhooks.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/webhooks');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.lists.listId.webhooks.webhookId.get = function(httpOptions) {
-    var url = parse('/lists/{list_id}/webhooks/{webhook_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.reports.get = function(httpOptions) {
-    var url = parse('/reports');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.reports.campaignId.get = function(httpOptions) {
-    var url = parse('/reports/{campaign_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.reports.campaignId.abuseReports.get = function(httpOptions) {
-    var url = parse('/reports/{campaign_id}/abuse-reports');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.reports.campaignId.abuseReports.reportId.get = function(httpOptions) {
-    var url = parse('/reports/{campaign_id}/abuse-reports/{report_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.reports.campaignId.advice.get = function(httpOptions) {
-    var url = parse('/reports/{campaign_id}/advice');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.reports.campaignId.clickDetails.get = function(httpOptions) {
-    var url = parse('/reports/{campaign_id}/click-details');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.reports.campaignId.clickDetails.linkId.get = function(httpOptions) {
-    var url = parse('/reports/{campaign_id}/click-details/{link_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.reports.campaignId.clickDetails.linkId.members.get = function(httpOptions) {
-    var url = parse('/reports/{campaign_id}/click-details/{link_id}/members');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.reports.campaignId.clickDetails.linkId.members.subscriberHash.get = function(httpOptions) {
-    var url = parse('/reports/{campaign_id}/click-details/{link_id}/members/{subscriber_hash}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.reports.campaignId.domainPerformance.get = function(httpOptions) {
-    var url = parse('/reports/{campaign_id}/domain-performance');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.reports.campaignId.eepurl.get = function(httpOptions) {
-    var url = parse('/reports/{campaign_id}/eepurl');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.reports.campaignId.emailActivity.get = function(httpOptions) {
-    var url = parse('/reports/{campaign_id}/email-activity');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.reports.campaignId.emailActivity.subscriberHash.get = function(httpOptions) {
-    var url = parse('/reports/{campaign_id}/email-activity/{subscriber_hash}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.reports.campaignId.locations.get = function(httpOptions) {
-    var url = parse('/reports/{campaign_id}/locations');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.reports.campaignId.sentTo.get = function(httpOptions) {
-    var url = parse('/reports/{campaign_id}/sent-to');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.reports.campaignId.sentTo.subscriberHash.get = function(httpOptions) {
-    var url = parse('/reports/{campaign_id}/sent-to/{subscriber_hash}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.reports.campaignId.subReports.get = function(httpOptions) {
-    var url = parse('/reports/{campaign_id}/sub-reports');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.reports.campaignId.unsubscribed.get = function(httpOptions) {
-    var url = parse('/reports/{campaign_id}/unsubscribed');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.reports.campaignId.unsubscribed.subscriberHash.get = function(httpOptions) {
-    var url = parse('/reports/{campaign_id}/unsubscribed/{subscriber_hash}');
+endpoint.authorizedApps.get = function(appId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/authorized-apps');
+            break;
+        case 1:
+            url = parse('/authorized-apps/:app_id', [appId]);
+            break;
+        case 2:
+            url = parse('/authorized-apps/:app_id', [appId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.automations.get = function(workflowId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/automations');
+            break;
+        case 1:
+            url = parse('/automations/:workflow_id', [workflowId]);
+            break;
+        case 2:
+            url = parse('/automations/:workflow_id', [workflowId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.automations.emails.get = function(workflowId, workflowEmailId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/automations/:workflow_id/emails', [workflowId]);
+            break;
+        case 1:
+            url = parse('/automations/:workflow_id/emails/:workflow_email_id', [workflowId, workflowEmailId]);
+            break;
+        case 2:
+            url = parse('/automations/:workflow_id/emails/:workflow_email_id', [workflowId,workflowEmailId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.automations.emails.queue.get = function(workflowId, workflowEmailId, subscriberHash, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/automations/:workflow_id/emails/:workflow_email_id/queue', [workflowId, workflowEmailId]);
+            break;
+        case 1:
+            url = parse('/automations/:workflow_id/emails/:workflow_email_id/queue/:subscriber_hash', [workflowId, workflowEmailId, subscriberHash]);
+            break;
+        case 2:
+            url = parse('/automations/:workflow_id/emails/:workflow_email_id/queue/:subscriber_hash', [workflowId,workflowEmailId,subscriberHash]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.automations.removedSubscribers.get = function(workflowId, httpOptions) {
+    if (!workflowId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [workflowId].');
+        return;
+    }
+    var url = parse('/automations/:workflow_id/removed-subscribers', [workflowId]);
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.batches.get = function(batchId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/batches');
+            break;
+        case 1:
+            url = parse('/batches/:batch_id', [batchId]);
+            break;
+        case 2:
+            url = parse('/batches/:batch_id', [batchId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.batchWebhooks.get = function(batchWebhookId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/batch-webhooks');
+            break;
+        case 1:
+            url = parse('/batch-webhooks/:batch_webhook_id', [batchWebhookId]);
+            break;
+        case 2:
+            url = parse('/batch-webhooks/:batch_webhook_id', [batchWebhookId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.campaignFolders.get = function(folderId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/campaign-folders');
+            break;
+        case 1:
+            url = parse('/campaign-folders/:folder_id', [folderId]);
+            break;
+        case 2:
+            url = parse('/campaign-folders/:folder_id', [folderId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.campaigns.get = function(campaignId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/campaigns');
+            break;
+        case 1:
+            url = parse('/campaigns/:campaign_id', [campaignId]);
+            break;
+        case 2:
+            url = parse('/campaigns/:campaign_id', [campaignId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.campaigns.content.get = function(campaignId, httpOptions) {
+    if (!campaignId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId].');
+        return;
+    }
+    var url = parse('/campaigns/:campaign_id/content', [campaignId]);
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.campaigns.feedback.get = function(campaignId, feedbackId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/campaigns/:campaign_id/feedback', [campaignId]);
+            break;
+        case 1:
+            url = parse('/campaigns/:campaign_id/feedback/:feedback_id', [campaignId, feedbackId]);
+            break;
+        case 2:
+            url = parse('/campaigns/:campaign_id/feedback/:feedback_id', [campaignId,feedbackId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.campaigns.sendChecklist.get = function(campaignId, httpOptions) {
+    if (!campaignId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId].');
+        return;
+    }
+    var url = parse('/campaigns/:campaign_id/send-checklist', [campaignId]);
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.conversations.get = function(conversationId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/conversations');
+            break;
+        case 1:
+            url = parse('/conversations/:conversation_id', [conversationId]);
+            break;
+        case 2:
+            url = parse('/conversations/:conversation_id', [conversationId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.conversations.messages.get = function(conversationId, messageId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/conversations/:conversation_id/messages', [conversationId]);
+            break;
+        case 1:
+            url = parse('/conversations/:conversation_id/messages/:message_id', [conversationId, messageId]);
+            break;
+        case 2:
+            url = parse('/conversations/:conversation_id/messages/:message_id', [conversationId,messageId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.ecommerce.stores.get = function(storeId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/ecommerce/stores');
+            break;
+        case 1:
+            url = parse('/ecommerce/stores/:store_id', [storeId]);
+            break;
+        case 2:
+            url = parse('/ecommerce/stores/:store_id', [storeId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.ecommerce.stores.carts.lines.get = function(storeId, cartId, lineId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/ecommerce/stores/:store_id/carts/:cart_id/lines', [storeId, cartId]);
+            break;
+        case 1:
+            url = parse('/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id', [storeId, cartId, lineId]);
+            break;
+        case 2:
+            url = parse('/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id', [storeId,cartId,lineId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.ecommerce.stores.customers.get = function(storeId, customerId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/ecommerce/stores/:store_id/customers', [storeId]);
+            break;
+        case 1:
+            url = parse('/ecommerce/stores/:store_id/customers/:customer_id', [storeId, customerId]);
+            break;
+        case 2:
+            url = parse('/ecommerce/stores/:store_id/customers/:customer_id', [storeId,customerId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.ecommerce.stores.orders.get = function(storeId, orderId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/ecommerce/stores/:store_id/orders', [storeId]);
+            break;
+        case 1:
+            url = parse('/ecommerce/stores/:store_id/orders/:order_id', [storeId, orderId]);
+            break;
+        case 2:
+            url = parse('/ecommerce/stores/:store_id/orders/:order_id', [storeId,orderId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.ecommerce.stores.orders.lines.get = function(storeId, orderId, lineId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/ecommerce/stores/:store_id/orders/:order_id/lines', [storeId, orderId]);
+            break;
+        case 1:
+            url = parse('/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id', [storeId, orderId, lineId]);
+            break;
+        case 2:
+            url = parse('/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id', [storeId,orderId,lineId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.ecommerce.stores.products.get = function(storeId, productId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/ecommerce/stores/:store_id/products', [storeId]);
+            break;
+        case 1:
+            url = parse('/ecommerce/stores/:store_id/products/:product_id', [storeId, productId]);
+            break;
+        case 2:
+            url = parse('/ecommerce/stores/:store_id/products/:product_id', [storeId,productId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.ecommerce.stores.products.images.get = function(storeId, productId, imageId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/ecommerce/stores/:store_id/products/:product_id/images', [storeId, productId]);
+            break;
+        case 1:
+            url = parse('/ecommerce/stores/:store_id/products/:product_id/images/:image_id', [storeId, productId, imageId]);
+            break;
+        case 2:
+            url = parse('/ecommerce/stores/:store_id/products/:product_id/images/:image_id', [storeId,productId,imageId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.ecommerce.stores.products.variants.get = function(storeId, productId, variantId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/ecommerce/stores/:store_id/products/:product_id/variants', [storeId, productId]);
+            break;
+        case 1:
+            url = parse('/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id', [storeId, productId, variantId]);
+            break;
+        case 2:
+            url = parse('/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id', [storeId,productId,variantId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.fileManager.files.get = function(fileId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/file-manager/files');
+            break;
+        case 1:
+            url = parse('/file-manager/files/:file_id', [fileId]);
+            break;
+        case 2:
+            url = parse('/file-manager/files/:file_id', [fileId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.fileManager.folders.get = function(folderId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/file-manager/folders');
+            break;
+        case 1:
+            url = parse('/file-manager/folders/:folder_id', [folderId]);
+            break;
+        case 2:
+            url = parse('/file-manager/folders/:folder_id', [folderId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.lists.get = function(listId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/lists');
+            break;
+        case 1:
+            url = parse('/lists/:list_id', [listId]);
+            break;
+        case 2:
+            url = parse('/lists/:list_id', [listId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.lists.abuseReports.get = function(listId, reportId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/lists/:list_id/abuse-reports', [listId]);
+            break;
+        case 1:
+            url = parse('/lists/:list_id/abuse-reports/:report_id', [listId, reportId]);
+            break;
+        case 2:
+            url = parse('/lists/:list_id/abuse-reports/:report_id', [listId,reportId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.lists.activity.get = function(listId, httpOptions) {
+    if (!listId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/activity', [listId]);
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.lists.clients.get = function(listId, httpOptions) {
+    if (!listId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/clients', [listId]);
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.lists.growthHistory.get = function(listId, month, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/lists/:list_id/growth-history', [listId]);
+            break;
+        case 1:
+            url = parse('/lists/:list_id/growth-history/:month', [listId, month]);
+            break;
+        case 2:
+            url = parse('/lists/:list_id/growth-history/:month', [listId,month]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.lists.interestCategories.interests.get = function(listId, interestCategoryId, interestId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/lists/:list_id/interest-categories/:interest_category_id/interests', [listId, interestCategoryId]);
+            break;
+        case 1:
+            url = parse('/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id', [listId, interestCategoryId, interestId]);
+            break;
+        case 2:
+            url = parse('/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id', [listId,interestCategoryId,interestId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.lists.locations.get = function(listId, httpOptions) {
+    if (!listId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/locations', [listId]);
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.lists.members.get = function(listId, subscriberHash, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/lists/:list_id/members', [listId]);
+            break;
+        case 1:
+            url = parse('/lists/:list_id/members/:subscriber_hash', [listId, subscriberHash]);
+            break;
+        case 2:
+            url = parse('/lists/:list_id/members/:subscriber_hash', [listId,subscriberHash]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.lists.members.activity.get = function(listId, subscriberHash, httpOptions) {
+    if (!listId || !subscriberHash) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,subscriberHash].');
+        return;
+    }
+    var url = parse('/lists/:list_id/members/:subscriber_hash/activity', [listId, subscriberHash]);
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.lists.members.goals.get = function(listId, subscriberHash, httpOptions) {
+    if (!listId || !subscriberHash) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,subscriberHash].');
+        return;
+    }
+    var url = parse('/lists/:list_id/members/:subscriber_hash/goals', [listId, subscriberHash]);
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.lists.members.notes.get = function(listId, subscriberHash, noteId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/lists/:list_id/members/:subscriber_hash/notes', [listId, subscriberHash]);
+            break;
+        case 1:
+            url = parse('/lists/:list_id/members/:subscriber_hash/notes/:note_id', [listId, subscriberHash, noteId]);
+            break;
+        case 2:
+            url = parse('/lists/:list_id/members/:subscriber_hash/notes/:note_id', [listId,subscriberHash,noteId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.lists.mergeFields.get = function(listId, mergeId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/lists/:list_id/merge-fields', [listId]);
+            break;
+        case 1:
+            url = parse('/lists/:list_id/merge-fields/:merge_id', [listId, mergeId]);
+            break;
+        case 2:
+            url = parse('/lists/:list_id/merge-fields/:merge_id', [listId,mergeId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.lists.segments.get = function(listId, segmentId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/lists/:list_id/segments', [listId]);
+            break;
+        case 1:
+            url = parse('/lists/:list_id/segments/:segment_id', [listId, segmentId]);
+            break;
+        case 2:
+            url = parse('/lists/:list_id/segments/:segment_id', [listId,segmentId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.lists.segments.members.get = function(listId, segmentId, httpOptions) {
+    if (!listId || !segmentId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,segmentId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/segments/:segment_id/members', [listId, segmentId]);
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.lists.signupForms.get = function(listId, httpOptions) {
+    if (!listId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/signup-forms', [listId]);
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.lists.webhooks.get = function(listId, webhookId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/lists/:list_id/webhooks', [listId]);
+            break;
+        case 1:
+            url = parse('/lists/:list_id/webhooks/:webhook_id', [listId, webhookId]);
+            break;
+        case 2:
+            url = parse('/lists/:list_id/webhooks/:webhook_id', [listId,webhookId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.reports.get = function(campaignId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/reports');
+            break;
+        case 1:
+            url = parse('/reports/:campaign_id', [campaignId]);
+            break;
+        case 2:
+            url = parse('/reports/:campaign_id', [campaignId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.reports.abuseReports.get = function(campaignId, reportId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/reports/:campaign_id/abuse-reports', [campaignId]);
+            break;
+        case 1:
+            url = parse('/reports/:campaign_id/abuse-reports/:report_id', [campaignId, reportId]);
+            break;
+        case 2:
+            url = parse('/reports/:campaign_id/abuse-reports/:report_id', [campaignId,reportId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.reports.advice.get = function(campaignId, httpOptions) {
+    if (!campaignId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId].');
+        return;
+    }
+    var url = parse('/reports/:campaign_id/advice', [campaignId]);
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.reports.clickDetails.get = function(campaignId, linkId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/reports/:campaign_id/click-details', [campaignId]);
+            break;
+        case 1:
+            url = parse('/reports/:campaign_id/click-details/:link_id', [campaignId, linkId]);
+            break;
+        case 2:
+            url = parse('/reports/:campaign_id/click-details/:link_id', [campaignId,linkId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.reports.clickDetails.members.get = function(campaignId, linkId, subscriberHash, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/reports/:campaign_id/click-details/:link_id/members', [campaignId, linkId]);
+            break;
+        case 1:
+            url = parse('/reports/:campaign_id/click-details/:link_id/members/:subscriber_hash', [campaignId, linkId, subscriberHash]);
+            break;
+        case 2:
+            url = parse('/reports/:campaign_id/click-details/:link_id/members/:subscriber_hash', [campaignId,linkId,subscriberHash]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.reports.domainPerformance.get = function(campaignId, httpOptions) {
+    if (!campaignId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId].');
+        return;
+    }
+    var url = parse('/reports/:campaign_id/domain-performance', [campaignId]);
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.reports.eepurl.get = function(campaignId, httpOptions) {
+    if (!campaignId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId].');
+        return;
+    }
+    var url = parse('/reports/:campaign_id/eepurl', [campaignId]);
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.reports.emailActivity.get = function(campaignId, subscriberHash, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/reports/:campaign_id/email-activity', [campaignId]);
+            break;
+        case 1:
+            url = parse('/reports/:campaign_id/email-activity/:subscriber_hash', [campaignId, subscriberHash]);
+            break;
+        case 2:
+            url = parse('/reports/:campaign_id/email-activity/:subscriber_hash', [campaignId,subscriberHash]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.reports.locations.get = function(campaignId, httpOptions) {
+    if (!campaignId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId].');
+        return;
+    }
+    var url = parse('/reports/:campaign_id/locations', [campaignId]);
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.reports.sentTo.get = function(campaignId, subscriberHash, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/reports/:campaign_id/sent-to', [campaignId]);
+            break;
+        case 1:
+            url = parse('/reports/:campaign_id/sent-to/:subscriber_hash', [campaignId, subscriberHash]);
+            break;
+        case 2:
+            url = parse('/reports/:campaign_id/sent-to/:subscriber_hash', [campaignId,subscriberHash]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.reports.subReports.get = function(campaignId, httpOptions) {
+    if (!campaignId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId].');
+        return;
+    }
+    var url = parse('/reports/:campaign_id/sub-reports', [campaignId]);
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.reports.unsubscribed.get = function(campaignId, subscriberHash, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
+    }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/reports/:campaign_id/unsubscribed', [campaignId]);
+            break;
+        case 1:
+            url = parse('/reports/:campaign_id/unsubscribed/:subscriber_hash', [campaignId, subscriberHash]);
+            break;
+        case 2:
+            url = parse('/reports/:campaign_id/unsubscribed/:subscriber_hash', [campaignId,subscriberHash]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
     sys.logs.debug('[mailchimp] GET from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._get(options);
@@ -1385,309 +2151,423 @@ endpoint.searchMembers.get = function(httpOptions) {
     return endpoint._get(options);
 };
 
-endpoint.templateFolders.get = function(httpOptions) {
-    var url = parse('/template-folders');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.templateFolders.folderId.get = function(httpOptions) {
-    var url = parse('/template-folders/{folder_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.templates.get = function(httpOptions) {
-    var url = parse('/templates');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.templates.templateId.get = function(httpOptions) {
-    var url = parse('/templates/{template_id}');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.templates.templateId.defaultContent.get = function(httpOptions) {
-    var url = parse('/templates/{template_id}/default-content');
-    sys.logs.debug('[mailchimp] GET from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options);
-};
-
-endpoint.automations.workflowId.emails.workflowEmailId.delete = function(httpOptions) {
-    var url = parse('/automations/{workflow_id}/emails/{workflow_email_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.batches.batchId.delete = function(httpOptions) {
-    var url = parse('/batches/{batch_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.batchWebhooks.batchWebhookId.delete = function(httpOptions) {
-    var url = parse('/batch-webhooks/{batch_webhook_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.campaignFolders.folderId.delete = function(httpOptions) {
-    var url = parse('/campaign-folders/{folder_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.campaigns.campaignId.delete = function(httpOptions) {
-    var url = parse('/campaigns/{campaign_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.campaigns.campaignId.feedback.feedbackId.delete = function(httpOptions) {
-    var url = parse('/campaigns/{campaign_id}/feedback/{feedback_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.ecommerce.stores.storeId.delete = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.ecommerce.stores.storeId.carts.cartId.delete = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/carts/{cart_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.ecommerce.stores.storeId.carts.cartId.lines.lineId.delete = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/carts/{cart_id}/lines/{line_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.ecommerce.stores.storeId.customers.customerId.delete = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/customers/{customer_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.ecommerce.stores.storeId.orders.orderId.delete = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/orders/{order_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.ecommerce.stores.storeId.orders.orderId.lines.lineId.delete = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/orders/{order_id}/lines/{line_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.ecommerce.stores.storeId.products.productId.delete = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/products/{product_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.ecommerce.stores.storeId.products.productId.images.imageId.delete = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/products/{product_id}/images/{image_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.ecommerce.stores.storeId.products.productId.variants.variantId.delete = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.fileManager.files.fileId.delete = function(httpOptions) {
-    var url = parse('/file-manager/files/{file_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.fileManager.folders.folderId.delete = function(httpOptions) {
-    var url = parse('/file-manager/folders/{folder_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.lists.listId.delete = function(httpOptions) {
-    var url = parse('/lists/{list_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.lists.listId.interestCategories.interestCategoryId.delete = function(httpOptions) {
-    var url = parse('/lists/{list_id}/interest-categories/{interest_category_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.lists.listId.interestCategories.interestCategoryId.interests.interestId.delete = function(httpOptions) {
-    var url = parse('/lists/{list_id}/interest-categories/{interest_category_id}/interests/{interest_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.lists.listId.members.subscriberHash.delete = function(httpOptions) {
-    var url = parse('/lists/{list_id}/members/{subscriber_hash}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.lists.listId.members.subscriberHash.notes.noteId.delete = function(httpOptions) {
-    var url = parse('/lists/{list_id}/members/{subscriber_hash}/notes/{note_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.lists.listId.mergeFields.mergeId.delete = function(httpOptions) {
-    var url = parse('/lists/{list_id}/merge-fields/{merge_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.lists.listId.segments.segmentId.delete = function(httpOptions) {
-    var url = parse('/lists/{list_id}/segments/{segment_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.lists.listId.segments.segmentId.members.subscriberHash.delete = function(httpOptions) {
-    var url = parse('/lists/{list_id}/segments/{segment_id}/members/{subscriber_hash}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.lists.listId.webhooks.webhookId.delete = function(httpOptions) {
-    var url = parse('/lists/{list_id}/webhooks/{webhook_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.templateFolders.folderId.delete = function(httpOptions) {
-    var url = parse('/template-folders/{folder_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.templates.templateId.delete = function(httpOptions) {
-    var url = parse('/templates/{template_id}');
-    sys.logs.debug('[mailchimp] DELETE from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options);
-};
-
-endpoint.campaigns.campaignId.content.put = function(httpOptions) {
-    var url = parse('/campaigns/{campaign_id}/content');
-    sys.logs.debug('[mailchimp] PUT from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._put(options);
-};
-
-endpoint.ecommerce.stores.storeId.customers.customerId.put = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/customers/{customer_id}');
-    sys.logs.debug('[mailchimp] PUT from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._put(options);
-};
-
-endpoint.ecommerce.stores.storeId.products.productId.variants.variantId.put = function(httpOptions) {
-    var url = parse('/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}');
-    sys.logs.debug('[mailchimp] PUT from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._put(options);
-};
-
-endpoint.lists.listId.members.subscriberHash.put = function(httpOptions) {
-    var url = parse('/lists/{list_id}/members/{subscriber_hash}');
-    sys.logs.debug('[mailchimp] PUT from: ' + url);
-    var options = checkHttpOptions(url, httpOptions);
-    return endpoint._put(options);
-};
-
-/////////////////////////////
-// Public API
-/////////////////////////////
-
-endpoint.dates = {};
-endpoint.dates.toMillis = function (stringDate) {
-    var json = endpoint._convertDateToTimestamp({date: stringDate});
-    if (json && json instanceof Object) {
-        return json.timestamp;
-    }
-    return null;
-};
-
-endpoint.dates.toDate = function (stringDate) {
-    var json = endpoint._convertDateToTimestamp({date: stringDate});
-    if (json && json instanceof Object) {
-        return new Date(json.timestamp);
-    }
-    return null;
-};
-
-endpoint.dates.fromMillis = function (millis) {
-    var json = endpoint._formatFromMillis({millis: millis});
-    if (json && json instanceof Object) {
-        return json.date;
-    }
-    return null;
-};
-
-endpoint.dates.fromDate = function (date) {
-    if (date) {
-        var json = endpoint._formatFromMillis({millis: date.getTime()});
-        if (json && json instanceof Object) {
-            return json.date;
+endpoint.templateFolders.get = function(folderId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
         }
     }
-    return null;
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/template-folders');
+            break;
+        case 1:
+            url = parse('/template-folders/:folder_id', [folderId]);
+            break;
+        case 2:
+            url = parse('/template-folders/:folder_id', [folderId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
 };
 
-endpoint.emailHash = function (email) {
-    var json = endpoint._emailHash({email: email});
-    if (json && json instanceof Object) {
-        return json.hash;
+endpoint.templates.get = function(templateId, httpOptions) {
+    if(!httpOptions){
+        for (var i = 0 ; i < arguments.length; i++){
+            if (isObject(arguments[i])){
+                httpOptions = arguments[i];
+            }
+        }
     }
+    var url;
+    switch(arguments.length){
+        case 0:
+            url = parse('/templates');
+            break;
+        case 1:
+            url = parse('/templates/:template_id', [templateId]);
+            break;
+        case 2:
+            url = parse('/templates/:template_id', [templateId]);
+            break;
+        default:
+            sys.logs.error('Invalid argument received.');
+            return;
+    }
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.templates.defaultContent.get = function(templateId, httpOptions) {
+    if (!templateId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [templateId].');
+        return;
+    }
+    var url = parse('/templates/:template_id/default-content', [templateId]);
+    sys.logs.debug('[mailchimp] GET from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
+endpoint.automations.emails.delete = function(workflowId, workflowEmailId, httpOptions) {
+    if (!workflowId || !workflowEmailId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [workflowId,workflowEmailId].');
+        return;
+    }
+    var url = parse('/automations/:workflow_id/emails/:workflow_email_id', [workflowId, workflowEmailId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.batches.delete = function(batchId, httpOptions) {
+    if (!batchId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [batchId].');
+        return;
+    }
+    var url = parse('/batches/:batch_id', [batchId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.batchWebhooks.delete = function(batchWebhookId, httpOptions) {
+    if (!batchWebhookId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [batchWebhookId].');
+        return;
+    }
+    var url = parse('/batch-webhooks/:batch_webhook_id', [batchWebhookId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.campaignFolders.delete = function(folderId, httpOptions) {
+    if (!folderId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [folderId].');
+        return;
+    }
+    var url = parse('/campaign-folders/:folder_id', [folderId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.campaigns.delete = function(campaignId, httpOptions) {
+    if (!campaignId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId].');
+        return;
+    }
+    var url = parse('/campaigns/:campaign_id', [campaignId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.campaigns.feedback.delete = function(campaignId, feedbackId, httpOptions) {
+    if (!campaignId || !feedbackId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId,feedbackId].');
+        return;
+    }
+    var url = parse('/campaigns/:campaign_id/feedback/:feedback_id', [campaignId, feedbackId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.ecommerce.stores.delete = function(storeId, httpOptions) {
+    if (!storeId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id', [storeId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.ecommerce.stores.carts.delete = function(storeId, cartId, httpOptions) {
+    if (!storeId || !cartId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,cartId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/carts/:cart_id', [storeId, cartId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.ecommerce.stores.carts.lines.delete = function(storeId, cartId, lineId, httpOptions) {
+    if (!storeId || !cartId || !lineId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,cartId,lineId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id', [storeId, cartId, lineId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.ecommerce.stores.customers.delete = function(storeId, customerId, httpOptions) {
+    if (!storeId || !customerId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,customerId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/customers/:customer_id', [storeId, customerId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.ecommerce.stores.orders.delete = function(storeId, orderId, httpOptions) {
+    if (!storeId || !orderId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,orderId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/orders/:order_id', [storeId, orderId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.ecommerce.stores.orders.lines.delete = function(storeId, orderId, lineId, httpOptions) {
+    if (!storeId || !orderId || !lineId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,orderId,lineId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id', [storeId, orderId, lineId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.ecommerce.stores.products.delete = function(storeId, productId, httpOptions) {
+    if (!storeId || !productId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,productId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/products/:product_id', [storeId, productId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.ecommerce.stores.products.images.delete = function(storeId, productId, imageId, httpOptions) {
+    if (!storeId || !productId || !imageId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,productId,imageId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/products/:product_id/images/:image_id', [storeId, productId, imageId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.ecommerce.stores.products.variants.delete = function(storeId, productId, variantId, httpOptions) {
+    if (!storeId || !productId || !variantId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,productId,variantId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id', [storeId, productId, variantId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.fileManager.files.delete = function(fileId, httpOptions) {
+    if (!fileId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [fileId].');
+        return;
+    }
+    var url = parse('/file-manager/files/:file_id', [fileId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.fileManager.folders.delete = function(folderId, httpOptions) {
+    if (!folderId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [folderId].');
+        return;
+    }
+    var url = parse('/file-manager/folders/:folder_id', [folderId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.lists.delete = function(listId, httpOptions) {
+    if (!listId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId].');
+        return;
+    }
+    var url = parse('/lists/:list_id', [listId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.lists.interestCategories.delete = function(listId, interestCategoryId, httpOptions) {
+    if (!listId || !interestCategoryId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,interestCategoryId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/interest-categories/:interest_category_id', [listId, interestCategoryId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.lists.interestCategories.interests.delete = function(listId, interestCategoryId, interestId, httpOptions) {
+    if (!listId || !interestCategoryId || !interestId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,interestCategoryId,interestId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id', [listId, interestCategoryId, interestId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.lists.members.delete = function(listId, subscriberHash, httpOptions) {
+    if (!listId || !subscriberHash) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,subscriberHash].');
+        return;
+    }
+    var url = parse('/lists/:list_id/members/:subscriber_hash', [listId, subscriberHash]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.lists.members.notes.delete = function(listId, subscriberHash, noteId, httpOptions) {
+    if (!listId || !subscriberHash || !noteId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,subscriberHash,noteId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/members/:subscriber_hash/notes/:note_id', [listId, subscriberHash, noteId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.lists.mergeFields.delete = function(listId, mergeId, httpOptions) {
+    if (!listId || !mergeId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,mergeId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/merge-fields/:merge_id', [listId, mergeId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.lists.segments.delete = function(listId, segmentId, httpOptions) {
+    if (!listId || !segmentId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,segmentId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/segments/:segment_id', [listId, segmentId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.lists.segments.members.delete = function(listId, segmentId, subscriberHash, httpOptions) {
+    if (!listId || !segmentId || !subscriberHash) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,segmentId,subscriberHash].');
+        return;
+    }
+    var url = parse('/lists/:list_id/segments/:segment_id/members/:subscriber_hash', [listId, segmentId, subscriberHash]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.lists.webhooks.delete = function(listId, webhookId, httpOptions) {
+    if (!listId || !webhookId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,webhookId].');
+        return;
+    }
+    var url = parse('/lists/:list_id/webhooks/:webhook_id', [listId, webhookId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.templateFolders.delete = function(folderId, httpOptions) {
+    if (!folderId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [folderId].');
+        return;
+    }
+    var url = parse('/template-folders/:folder_id', [folderId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.templates.delete = function(templateId, httpOptions) {
+    if (!templateId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [templateId].');
+        return;
+    }
+    var url = parse('/templates/:template_id', [templateId]);
+    sys.logs.debug('[mailchimp] DELETE from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._delete(options);
+};
+
+endpoint.campaigns.content.put = function(campaignId, httpOptions) {
+    if (!campaignId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [campaignId].');
+        return;
+    }
+    var url = parse('/campaigns/:campaign_id/content', [campaignId]);
+    sys.logs.debug('[mailchimp] PUT from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._put(options);
+};
+
+endpoint.ecommerce.stores.customers.put = function(storeId, customerId, httpOptions) {
+    if (!storeId || !customerId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,customerId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/customers/:customer_id', [storeId, customerId]);
+    sys.logs.debug('[mailchimp] PUT from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._put(options);
+};
+
+endpoint.ecommerce.stores.products.variants.put = function(storeId, productId, variantId, httpOptions) {
+    if (!storeId || !productId || !variantId) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [storeId,productId,variantId].');
+        return;
+    }
+    var url = parse('/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id', [storeId, productId, variantId]);
+    sys.logs.debug('[mailchimp] PUT from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._put(options);
+};
+
+endpoint.lists.members.put = function(listId, subscriberHash, httpOptions) {
+    if (!listId || !subscriberHash) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [listId,subscriberHash].');
+        return;
+    }
+    var url = parse('/lists/:list_id/members/:subscriber_hash', [listId, subscriberHash]);
+    sys.logs.debug('[mailchimp] PUT from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._put(options);
 };
 
 ////////////////////////////////////
