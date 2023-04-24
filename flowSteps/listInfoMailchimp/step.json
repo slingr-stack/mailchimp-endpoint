@@ -1,0 +1,16 @@
+{
+  "label": "Get information about all lists in the account.",
+  "name": "listInfoMailchimp",
+  "category": "integrations",
+  "description": "This flow step will get information about all lists in the account.",
+  "inputs": [
+  ],
+  "outputs": [
+    {
+      "label": "Response",
+      "name": "response",
+      "type": "object",
+      "description": "The response to external URL"
+    }
+  ]
+}

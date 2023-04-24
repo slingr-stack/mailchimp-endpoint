@@ -1,0 +1,3 @@
+step.addCampaignMailchimp = function (inputs) {
+
+}

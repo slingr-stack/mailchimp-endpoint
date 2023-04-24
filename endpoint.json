@@ -71,8 +71,10 @@
   "flowSteps": [
     "apiCallMailchimp",
     "listCampaignsMailchimp",
-    "getCampaignInfoMailchimp",
-    "addCampaignMailchimp"
+    "campaignInfoMailchimp",
+    "addCampaignMailchimp",
+    "listInfoMailchimp",
+    "createNewListMailchimp"
   ],
   "configuration": [
     {

@@ -1,8 +1,8 @@
 {
-  "label": "Get information about a specific campaign.",
-  "name": "getCampaignInfoMailchimp",
+  "label": "Create a new Mailchimp campaign.",
+  "name": "addCampaignMailchimp",
   "category": "integrations",
-  "description": "This flow step will get information about a specific campaign.",
+  "description": "This flow step will create a new Mailchimp campaign.",
   "inputs": [
     {
       "label": "Campaign Id",
