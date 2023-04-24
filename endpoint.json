@@ -68,6 +68,12 @@
     "mailchimp-fn-helpers.js",
     "functions.js"
   ],
+  "flowSteps": [
+    "apiCallMailchimp",
+    "listCampaignsMailchimp",
+    "getCampaignInfoMailchimp",
+    "addCampaignMailchimp"
+  ],
   "configuration": [
     {
       "name": "apiKey",

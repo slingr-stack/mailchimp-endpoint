@@ -1,0 +1,26 @@
+{
+  "label": "Get information about a specific campaign.",
+  "name": "getCampaignInfoMailchimp",
+  "category": "integrations",
+  "description": "This flow step will get information about a specific campaign.",
+  "inputs": [
+    {
+      "label": "Campaign Id",
+      "name": "campaignId",
+      "description": "The unique id for the campaign.",
+      "type": "text",
+      "required": "true",
+      "options": {
+        "allowContextSelector": "true"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": "Response",
+      "name": "response",
+      "type": "object",
+      "description": "The response to external URL"
+    }
+  ]
+}
