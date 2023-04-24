@@ -9,14 +9,14 @@ The Javascript API of the mailchimp endpoint has three pieces:
 ## HTTP requests
 You can make `PATCH`,`POST`,`GET`,`DELETE`,`PUT` requests to the [mailchimp API](API_URL_HERE) like this:
 ```javascript
-var response = app.endpoints.mailchimp.patch('/lists/:list_id/webhooks/:webhook_id', body)
-var response = app.endpoints.mailchimp.patch('/lists/:list_id/webhooks/:webhook_id')
-var response = app.endpoints.mailchimp.post('/lists/:list_id/interest-categories/:interest_category_id', body)
-var response = app.endpoints.mailchimp.post('/lists/:list_id/interest-categories/:interest_category_id')
-var response = app.endpoints.mailchimp.get('/file-manager/files/:file_id')
-var response = app.endpoints.mailchimp.delete('/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id')
-var response = app.endpoints.mailchimp.put('/ecommerce/stores/:store_id/customers/:customer_id', body)
-var response = app.endpoints.mailchimp.put('/ecommerce/stores/:store_id/customers/:customer_id')
+var response = app.endpoints.mailchimp.patch('/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id', body)
+var response = app.endpoints.mailchimp.patch('/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id')
+var response = app.endpoints.mailchimp.post('/ecommerce/stores/:store_id/products/:product_id/variants', body)
+var response = app.endpoints.mailchimp.post('/ecommerce/stores/:store_id/products/:product_id/variants')
+var response = app.endpoints.mailchimp.get('/automations')
+var response = app.endpoints.mailchimp.delete('/ecommerce/stores/:store_id/customers/:customer_id')
+var response = app.endpoints.mailchimp.put('/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id', body)
+var response = app.endpoints.mailchimp.put('/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id')
 ```
 
 Please take a look at the documentation of the [HTTP endpoint](https://github.com/slingr-stack/http-endpoint#javascript-api)
@@ -315,19 +315,13 @@ app.endpoints.mailchimp.ecommerce.stores.post(body)
 * API URL: '/ecommerce/stores/:store_id/carts'
 * HTTP Method: 'POST'
 ```javascript
+app.endpoints.mailchimp.ecommerce.stores.carts.post(body)
+```
+---
+* API URL: '/ecommerce/stores/:store_id/carts/:cart_id'
+* HTTP Method: 'POST'
+```javascript
 app.endpoints.mailchimp.ecommerce.stores.carts.post(storeId, body)
-```
----
-* API URL: '/ecommerce/stores/:store_id/carts/:cart_id'
-* HTTP Method: 'POST'
-```javascript
-app.endpoints.mailchimp.ecommerce.stores.carts.post(storeId, cartId, body)
-```
----
-* API URL: '/ecommerce/stores/:store_id/carts/:cart_id'
-* HTTP Method: 'POST'
-```javascript
-app.endpoints.mailchimp.ecommerce.stores.carts.post(storeId, cartId, body)
 ```
 ---
 * API URL: '/ecommerce/stores/:store_id/carts/:cart_id/lines'
@@ -387,31 +381,19 @@ app.endpoints.mailchimp.lists.post(body)
 * API URL: '/lists/:list_id'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.mailchimp.lists.post(listId, body)
-```
----
-* API URL: '/lists/:list_id'
-* HTTP Method: 'POST'
-```javascript
-app.endpoints.mailchimp.lists.post(listId, body)
+app.endpoints.mailchimp.lists.post(body)
 ```
 ---
 * API URL: '/lists/:list_id/interest-categories'
 * HTTP Method: 'POST'
 ```javascript
+app.endpoints.mailchimp.lists.interestCategories.post(body)
+```
+---
+* API URL: '/lists/:list_id/interest-categories/:interest_category_id'
+* HTTP Method: 'POST'
+```javascript
 app.endpoints.mailchimp.lists.interestCategories.post(listId, body)
-```
----
-* API URL: '/lists/:list_id/interest-categories/:interest_category_id'
-* HTTP Method: 'POST'
-```javascript
-app.endpoints.mailchimp.lists.interestCategories.post(listId, interestCategoryId, body)
-```
----
-* API URL: '/lists/:list_id/interest-categories/:interest_category_id'
-* HTTP Method: 'POST'
-```javascript
-app.endpoints.mailchimp.lists.interestCategories.post(listId, interestCategoryId, body)
 ```
 ---
 * API URL: '/lists/:list_id/interest-categories/:interest_category_id/interests'
@@ -441,19 +423,13 @@ app.endpoints.mailchimp.lists.mergeFields.post(listId, body)
 * API URL: '/lists/:list_id/segments'
 * HTTP Method: 'POST'
 ```javascript
+app.endpoints.mailchimp.lists.segments.post(body)
+```
+---
+* API URL: '/lists/:list_id/segments/:segment_id'
+* HTTP Method: 'POST'
+```javascript
 app.endpoints.mailchimp.lists.segments.post(listId, body)
-```
----
-* API URL: '/lists/:list_id/segments/:segment_id'
-* HTTP Method: 'POST'
-```javascript
-app.endpoints.mailchimp.lists.segments.post(listId, segmentId, body)
-```
----
-* API URL: '/lists/:list_id/segments/:segment_id'
-* HTTP Method: 'POST'
-```javascript
-app.endpoints.mailchimp.lists.segments.post(listId, segmentId, body)
 ```
 ---
 * API URL: '/lists/:list_id/segments/:segment_id/members'
@@ -495,12 +471,6 @@ app.endpoints.mailchimp.authorizedApps.get()
 * API URL: '/authorized-apps/:app_id'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.authorizedApps.get(appId)
-```
----
-* API URL: '/authorized-apps/:app_id'
-* HTTP Method: 'GET'
-```javascript
 app.endpoints.mailchimp.authorizedApps.get()
 ```
 ---
@@ -513,25 +483,13 @@ app.endpoints.mailchimp.automations.get()
 * API URL: '/automations/:workflow_id'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.automations.get(workflowId)
-```
----
-* API URL: '/automations/:workflow_id'
-* HTTP Method: 'GET'
-```javascript
 app.endpoints.mailchimp.automations.get()
 ```
 ---
 * API URL: '/automations/:workflow_id/emails'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.automations.emails.get(workflowId)
-```
----
-* API URL: '/automations/:workflow_id/emails/:workflow_email_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.automations.emails.get(workflowId, workflowEmailId)
+app.endpoints.mailchimp.automations.emails.get()
 ```
 ---
 * API URL: '/automations/:workflow_id/emails/:workflow_email_id'
@@ -543,13 +501,7 @@ app.endpoints.mailchimp.automations.emails.get(workflowId)
 * API URL: '/automations/:workflow_id/emails/:workflow_email_id/queue'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.automations.emails.queue.get(workflowId, workflowEmailId)
-```
----
-* API URL: '/automations/:workflow_id/emails/:workflow_email_id/queue/:subscriber_hash'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.automations.emails.queue.get(workflowId, workflowEmailId, subscriberHash)
+app.endpoints.mailchimp.automations.emails.queue.get(workflowId)
 ```
 ---
 * API URL: '/automations/:workflow_id/emails/:workflow_email_id/queue/:subscriber_hash'
@@ -573,12 +525,6 @@ app.endpoints.mailchimp.batches.get()
 * API URL: '/batches/:batch_id'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.batches.get(batchId)
-```
----
-* API URL: '/batches/:batch_id'
-* HTTP Method: 'GET'
-```javascript
 app.endpoints.mailchimp.batches.get()
 ```
 ---
@@ -586,12 +532,6 @@ app.endpoints.mailchimp.batches.get()
 * HTTP Method: 'GET'
 ```javascript
 app.endpoints.mailchimp.batchWebhooks.get()
-```
----
-* API URL: '/batch-webhooks/:batch_webhook_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.batchWebhooks.get(batchWebhookId)
 ```
 ---
 * API URL: '/batch-webhooks/:batch_webhook_id'
@@ -609,12 +549,6 @@ app.endpoints.mailchimp.campaignFolders.get()
 * API URL: '/campaign-folders/:folder_id'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.campaignFolders.get(folderId)
-```
----
-* API URL: '/campaign-folders/:folder_id'
-* HTTP Method: 'GET'
-```javascript
 app.endpoints.mailchimp.campaignFolders.get()
 ```
 ---
@@ -622,12 +556,6 @@ app.endpoints.mailchimp.campaignFolders.get()
 * HTTP Method: 'GET'
 ```javascript
 app.endpoints.mailchimp.campaigns.get()
-```
----
-* API URL: '/campaigns/:campaign_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.campaigns.get(campaignId)
 ```
 ---
 * API URL: '/campaigns/:campaign_id'
@@ -645,13 +573,7 @@ app.endpoints.mailchimp.campaigns.content.get(campaignId)
 * API URL: '/campaigns/:campaign_id/feedback'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.campaigns.feedback.get(campaignId)
-```
----
-* API URL: '/campaigns/:campaign_id/feedback/:feedback_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.campaigns.feedback.get(campaignId, feedbackId)
+app.endpoints.mailchimp.campaigns.feedback.get()
 ```
 ---
 * API URL: '/campaigns/:campaign_id/feedback/:feedback_id'
@@ -675,25 +597,13 @@ app.endpoints.mailchimp.conversations.get()
 * API URL: '/conversations/:conversation_id'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.conversations.get(conversationId)
-```
----
-* API URL: '/conversations/:conversation_id'
-* HTTP Method: 'GET'
-```javascript
 app.endpoints.mailchimp.conversations.get()
 ```
 ---
 * API URL: '/conversations/:conversation_id/messages'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.conversations.messages.get(conversationId)
-```
----
-* API URL: '/conversations/:conversation_id/messages/:message_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.conversations.messages.get(conversationId, messageId)
+app.endpoints.mailchimp.conversations.messages.get()
 ```
 ---
 * API URL: '/conversations/:conversation_id/messages/:message_id'
@@ -711,25 +621,13 @@ app.endpoints.mailchimp.ecommerce.stores.get()
 * API URL: '/ecommerce/stores/:store_id'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.get(storeId)
-```
----
-* API URL: '/ecommerce/stores/:store_id'
-* HTTP Method: 'GET'
-```javascript
 app.endpoints.mailchimp.ecommerce.stores.get()
 ```
 ---
 * API URL: '/ecommerce/stores/:store_id/carts/:cart_id/lines'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.carts.lines.get(storeId, cartId)
-```
----
-* API URL: '/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.ecommerce.stores.carts.lines.get(storeId, cartId, lineId)
+app.endpoints.mailchimp.ecommerce.stores.carts.lines.get(storeId)
 ```
 ---
 * API URL: '/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id'
@@ -741,13 +639,7 @@ app.endpoints.mailchimp.ecommerce.stores.carts.lines.get(storeId, cartId)
 * API URL: '/ecommerce/stores/:store_id/customers'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.customers.get(storeId)
-```
----
-* API URL: '/ecommerce/stores/:store_id/customers/:customer_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.ecommerce.stores.customers.get(storeId, customerId)
+app.endpoints.mailchimp.ecommerce.stores.customers.get()
 ```
 ---
 * API URL: '/ecommerce/stores/:store_id/customers/:customer_id'
@@ -759,13 +651,7 @@ app.endpoints.mailchimp.ecommerce.stores.customers.get(storeId)
 * API URL: '/ecommerce/stores/:store_id/orders'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.orders.get(storeId)
-```
----
-* API URL: '/ecommerce/stores/:store_id/orders/:order_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.ecommerce.stores.orders.get(storeId, orderId)
+app.endpoints.mailchimp.ecommerce.stores.orders.get()
 ```
 ---
 * API URL: '/ecommerce/stores/:store_id/orders/:order_id'
@@ -777,13 +663,7 @@ app.endpoints.mailchimp.ecommerce.stores.orders.get(storeId)
 * API URL: '/ecommerce/stores/:store_id/orders/:order_id/lines'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.orders.lines.get(storeId, orderId)
-```
----
-* API URL: '/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.ecommerce.stores.orders.lines.get(storeId, orderId, lineId)
+app.endpoints.mailchimp.ecommerce.stores.orders.lines.get(storeId)
 ```
 ---
 * API URL: '/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id'
@@ -795,13 +675,7 @@ app.endpoints.mailchimp.ecommerce.stores.orders.lines.get(storeId, orderId)
 * API URL: '/ecommerce/stores/:store_id/products'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.products.get(storeId)
-```
----
-* API URL: '/ecommerce/stores/:store_id/products/:product_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.ecommerce.stores.products.get(storeId, productId)
+app.endpoints.mailchimp.ecommerce.stores.products.get()
 ```
 ---
 * API URL: '/ecommerce/stores/:store_id/products/:product_id'
@@ -813,13 +687,7 @@ app.endpoints.mailchimp.ecommerce.stores.products.get(storeId)
 * API URL: '/ecommerce/stores/:store_id/products/:product_id/images'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.products.images.get(storeId, productId)
-```
----
-* API URL: '/ecommerce/stores/:store_id/products/:product_id/images/:image_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.ecommerce.stores.products.images.get(storeId, productId, imageId)
+app.endpoints.mailchimp.ecommerce.stores.products.images.get(storeId)
 ```
 ---
 * API URL: '/ecommerce/stores/:store_id/products/:product_id/images/:image_id'
@@ -831,13 +699,7 @@ app.endpoints.mailchimp.ecommerce.stores.products.images.get(storeId, productId)
 * API URL: '/ecommerce/stores/:store_id/products/:product_id/variants'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.ecommerce.stores.products.variants.get(storeId, productId)
-```
----
-* API URL: '/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.ecommerce.stores.products.variants.get(storeId, productId, variantId)
+app.endpoints.mailchimp.ecommerce.stores.products.variants.get(storeId)
 ```
 ---
 * API URL: '/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id'
@@ -855,12 +717,6 @@ app.endpoints.mailchimp.fileManager.files.get()
 * API URL: '/file-manager/files/:file_id'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.fileManager.files.get(fileId)
-```
----
-* API URL: '/file-manager/files/:file_id'
-* HTTP Method: 'GET'
-```javascript
 app.endpoints.mailchimp.fileManager.files.get()
 ```
 ---
@@ -868,12 +724,6 @@ app.endpoints.mailchimp.fileManager.files.get()
 * HTTP Method: 'GET'
 ```javascript
 app.endpoints.mailchimp.fileManager.folders.get()
-```
----
-* API URL: '/file-manager/folders/:folder_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.fileManager.folders.get(folderId)
 ```
 ---
 * API URL: '/file-manager/folders/:folder_id'
@@ -891,25 +741,13 @@ app.endpoints.mailchimp.lists.get()
 * API URL: '/lists/:list_id'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.get(listId)
-```
----
-* API URL: '/lists/:list_id'
-* HTTP Method: 'GET'
-```javascript
 app.endpoints.mailchimp.lists.get()
 ```
 ---
 * API URL: '/lists/:list_id/abuse-reports'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.abuseReports.get(listId)
-```
----
-* API URL: '/lists/:list_id/abuse-reports/:report_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.lists.abuseReports.get(listId, reportId)
+app.endpoints.mailchimp.lists.abuseReports.get()
 ```
 ---
 * API URL: '/lists/:list_id/abuse-reports/:report_id'
@@ -933,13 +771,7 @@ app.endpoints.mailchimp.lists.clients.get(listId)
 * API URL: '/lists/:list_id/growth-history'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.growthHistory.get(listId)
-```
----
-* API URL: '/lists/:list_id/growth-history/:month'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.lists.growthHistory.get(listId, month)
+app.endpoints.mailchimp.lists.growthHistory.get()
 ```
 ---
 * API URL: '/lists/:list_id/growth-history/:month'
@@ -951,13 +783,7 @@ app.endpoints.mailchimp.lists.growthHistory.get(listId)
 * API URL: '/lists/:list_id/interest-categories/:interest_category_id/interests'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.interestCategories.interests.get(listId, interestCategoryId)
-```
----
-* API URL: '/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.lists.interestCategories.interests.get(listId, interestCategoryId, interestId)
+app.endpoints.mailchimp.lists.interestCategories.interests.get(listId)
 ```
 ---
 * API URL: '/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id'
@@ -975,13 +801,7 @@ app.endpoints.mailchimp.lists.locations.get(listId)
 * API URL: '/lists/:list_id/members'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.members.get(listId)
-```
----
-* API URL: '/lists/:list_id/members/:subscriber_hash'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.lists.members.get(listId, subscriberHash)
+app.endpoints.mailchimp.lists.members.get()
 ```
 ---
 * API URL: '/lists/:list_id/members/:subscriber_hash'
@@ -1005,13 +825,7 @@ app.endpoints.mailchimp.lists.members.goals.get(listId, subscriberHash)
 * API URL: '/lists/:list_id/members/:subscriber_hash/notes'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.members.notes.get(listId, subscriberHash)
-```
----
-* API URL: '/lists/:list_id/members/:subscriber_hash/notes/:note_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.lists.members.notes.get(listId, subscriberHash, noteId)
+app.endpoints.mailchimp.lists.members.notes.get(listId)
 ```
 ---
 * API URL: '/lists/:list_id/members/:subscriber_hash/notes/:note_id'
@@ -1023,13 +837,7 @@ app.endpoints.mailchimp.lists.members.notes.get(listId, subscriberHash)
 * API URL: '/lists/:list_id/merge-fields'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.mergeFields.get(listId)
-```
----
-* API URL: '/lists/:list_id/merge-fields/:merge_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.lists.mergeFields.get(listId, mergeId)
+app.endpoints.mailchimp.lists.mergeFields.get()
 ```
 ---
 * API URL: '/lists/:list_id/merge-fields/:merge_id'
@@ -1041,13 +849,7 @@ app.endpoints.mailchimp.lists.mergeFields.get(listId)
 * API URL: '/lists/:list_id/segments'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.segments.get(listId)
-```
----
-* API URL: '/lists/:list_id/segments/:segment_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.lists.segments.get(listId, segmentId)
+app.endpoints.mailchimp.lists.segments.get()
 ```
 ---
 * API URL: '/lists/:list_id/segments/:segment_id'
@@ -1071,13 +873,7 @@ app.endpoints.mailchimp.lists.signupForms.get(listId)
 * API URL: '/lists/:list_id/webhooks'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.lists.webhooks.get(listId)
-```
----
-* API URL: '/lists/:list_id/webhooks/:webhook_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.lists.webhooks.get(listId, webhookId)
+app.endpoints.mailchimp.lists.webhooks.get()
 ```
 ---
 * API URL: '/lists/:list_id/webhooks/:webhook_id'
@@ -1095,25 +891,13 @@ app.endpoints.mailchimp.reports.get()
 * API URL: '/reports/:campaign_id'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.get(campaignId)
-```
----
-* API URL: '/reports/:campaign_id'
-* HTTP Method: 'GET'
-```javascript
 app.endpoints.mailchimp.reports.get()
 ```
 ---
 * API URL: '/reports/:campaign_id/abuse-reports'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.abuseReports.get(campaignId)
-```
----
-* API URL: '/reports/:campaign_id/abuse-reports/:report_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.reports.abuseReports.get(campaignId, reportId)
+app.endpoints.mailchimp.reports.abuseReports.get()
 ```
 ---
 * API URL: '/reports/:campaign_id/abuse-reports/:report_id'
@@ -1131,13 +915,7 @@ app.endpoints.mailchimp.reports.advice.get(campaignId)
 * API URL: '/reports/:campaign_id/click-details'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.clickDetails.get(campaignId)
-```
----
-* API URL: '/reports/:campaign_id/click-details/:link_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.reports.clickDetails.get(campaignId, linkId)
+app.endpoints.mailchimp.reports.clickDetails.get()
 ```
 ---
 * API URL: '/reports/:campaign_id/click-details/:link_id'
@@ -1149,13 +927,7 @@ app.endpoints.mailchimp.reports.clickDetails.get(campaignId)
 * API URL: '/reports/:campaign_id/click-details/:link_id/members'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.clickDetails.members.get(campaignId, linkId)
-```
----
-* API URL: '/reports/:campaign_id/click-details/:link_id/members/:subscriber_hash'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.reports.clickDetails.members.get(campaignId, linkId, subscriberHash)
+app.endpoints.mailchimp.reports.clickDetails.members.get(campaignId)
 ```
 ---
 * API URL: '/reports/:campaign_id/click-details/:link_id/members/:subscriber_hash'
@@ -1179,13 +951,7 @@ app.endpoints.mailchimp.reports.eepurl.get(campaignId)
 * API URL: '/reports/:campaign_id/email-activity'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.emailActivity.get(campaignId)
-```
----
-* API URL: '/reports/:campaign_id/email-activity/:subscriber_hash'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.reports.emailActivity.get(campaignId, subscriberHash)
+app.endpoints.mailchimp.reports.emailActivity.get()
 ```
 ---
 * API URL: '/reports/:campaign_id/email-activity/:subscriber_hash'
@@ -1203,13 +969,7 @@ app.endpoints.mailchimp.reports.locations.get(campaignId)
 * API URL: '/reports/:campaign_id/sent-to'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.sentTo.get(campaignId)
-```
----
-* API URL: '/reports/:campaign_id/sent-to/:subscriber_hash'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.reports.sentTo.get(campaignId, subscriberHash)
+app.endpoints.mailchimp.reports.sentTo.get()
 ```
 ---
 * API URL: '/reports/:campaign_id/sent-to/:subscriber_hash'
@@ -1227,13 +987,7 @@ app.endpoints.mailchimp.reports.subReports.get(campaignId)
 * API URL: '/reports/:campaign_id/unsubscribed'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.reports.unsubscribed.get(campaignId)
-```
----
-* API URL: '/reports/:campaign_id/unsubscribed/:subscriber_hash'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.reports.unsubscribed.get(campaignId, subscriberHash)
+app.endpoints.mailchimp.reports.unsubscribed.get()
 ```
 ---
 * API URL: '/reports/:campaign_id/unsubscribed/:subscriber_hash'
@@ -1263,12 +1017,6 @@ app.endpoints.mailchimp.templateFolders.get()
 * API URL: '/template-folders/:folder_id'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.mailchimp.templateFolders.get(folderId)
-```
----
-* API URL: '/template-folders/:folder_id'
-* HTTP Method: 'GET'
-```javascript
 app.endpoints.mailchimp.templateFolders.get()
 ```
 ---
@@ -1276,12 +1024,6 @@ app.endpoints.mailchimp.templateFolders.get()
 * HTTP Method: 'GET'
 ```javascript
 app.endpoints.mailchimp.templates.get()
-```
----
-* API URL: '/templates/:template_id'
-* HTTP Method: 'GET'
-```javascript
-app.endpoints.mailchimp.templates.get(templateId)
 ```
 ---
 * API URL: '/templates/:template_id'
@@ -1540,7 +1282,7 @@ Generic flow step for full use of the entire endpoint and its services.
         <td>
             The url to which this endpoint will send the request. This is the exact service to which the http request will be made. <br>
             Possible values are: <br>
-            <i><strong>/batch-webhooks/{batch_webhook_id}<br>/campaign-folders/{folder_id}<br>/campaigns/{campaign_id}<br>/campaigns/{campaign_id}/feedback/{feedback_id}<br>/ecommerce/stores/{store_id}<br>/ecommerce/stores/{store_id}/carts/{cart_id}<br>/ecommerce/stores/{store_id}/carts/{cart_id}/lines/{line_id}<br>/ecommerce/stores/{store_id}/customers/{customer_id}<br>/ecommerce/stores/{store_id}/orders/{order_id}<br>/ecommerce/stores/{store_id}/orders/{order_id}/lines/{line_id}<br>/ecommerce/stores/{store_id}/products/{product_id}<br>/ecommerce/stores/{store_id}/products/{product_id}/images/{image_id}<br>/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}<br>/file-manager/files/{file_id}<br>/file-manager/folders/{folder_id}<br>/lists/{list_id}<br>/lists/{list_id}/interest-categories/{interest_category_id}<br>/lists/{list_id}/interest-categories/{interest_category_id}/interests/{interest_id}<br>/lists/{list_id}/members/{subscriber_hash}<br>/lists/{list_id}/members/{subscriber_hash}/notes/{note_id}<br>/lists/{list_id}/merge-fields/{merge_id}<br>/lists/{list_id}/segments/{segment_id}<br>/lists/{list_id}/webhooks/{webhook_id}<br>/template-folders/{folder_id}<br>/templates/{template_id}<br>/authorized-apps<br>/automations/{workflow_id}/actions/pause-all-emails<br>/automations/{workflow_id}/actions/start-all-emails<br>/automations/{workflow_id}/emails/{workflow_email_id}/actions/pause<br>/automations/{workflow_id}/emails/{workflow_email_id}/actions/start<br>/automations/{workflow_id}/emails/{workflow_email_id}/queue<br>/automations/{workflow_id}/removed-subscribers<br>/batches<br>/batch-webhooks<br>/campaign-folders<br>/campaigns<br>/campaigns/{campaign_id}/actions/cancel-send<br>/campaigns/{campaign_id}/actions/pause<br>/campaigns/{campaign_id}/actions/replicate<br>/campaigns/{campaign_id}/actions/resume<br>/campaigns/{campaign_id}/actions/schedule<br>/campaigns/{campaign_id}/actions/send<br>/campaigns/{campaign_id}/actions/test<br>/campaigns/{campaign_id}/actions/unschedule<br>/campaigns/{campaign_id}/feedback<br>/conversations/{conversation_id}/messages<br>/ecommerce/stores<br>/ecommerce/stores/{store_id}/carts<br>/ecommerce/stores/{store_id}/carts/{cart_id}<br>/ecommerce/stores/{store_id}/carts/{cart_id}<br>/ecommerce/stores/{store_id}/carts/{cart_id}/lines<br>/ecommerce/stores/{store_id}/customers<br>/ecommerce/stores/{store_id}/orders<br>/ecommerce/stores/{store_id}/products<br>/ecommerce/stores/{store_id}/products/{product_id}/images<br>/ecommerce/stores/{store_id}/products/{product_id}/variants<br>/file-manager/files<br>/file-manager/folders<br>/lists<br>/lists/{list_id}<br>/lists/{list_id}<br>/lists/{list_id}/interest-categories<br>/lists/{list_id}/interest-categories/{interest_category_id}<br>/lists/{list_id}/interest-categories/{interest_category_id}<br>/lists/{list_id}/interest-categories/{interest_category_id}/interests<br>/lists/{list_id}/members<br>/lists/{list_id}/members/{subscriber_hash}/notes<br>/lists/{list_id}/merge-fields<br>/lists/{list_id}/segments<br>/lists/{list_id}/segments/{segment_id}<br>/lists/{list_id}/segments/{segment_id}<br>/lists/{list_id}/segments/{segment_id}/members<br>/lists/{list_id}/signup-forms<br>/lists/{list_id}/webhooks<br>/template-folders<br>/templates<br>/authorized-apps<br>/authorized-apps/{app_id}<br>/authorized-apps/{app_id}<br>/automations<br>/automations/{workflow_id}<br>/automations/{workflow_id}<br>/automations/{workflow_id}/emails<br>/automations/{workflow_id}/emails/{workflow_email_id}<br>/automations/{workflow_id}/emails/{workflow_email_id}<br>/automations/{workflow_id}/emails/{workflow_email_id}/queue<br>/automations/{workflow_id}/emails/{workflow_email_id}/queue/{subscriber_hash}<br>/automations/{workflow_id}/emails/{workflow_email_id}/queue/{subscriber_hash}<br>/automations/{workflow_id}/removed-subscribers<br>/batches<br>/batches/{batch_id}<br>/batches/{batch_id}<br>/batch-webhooks<br>/batch-webhooks/{batch_webhook_id}<br>/batch-webhooks/{batch_webhook_id}<br>/campaign-folders<br>/campaign-folders/{folder_id}<br>/campaign-folders/{folder_id}<br>/campaigns<br>/campaigns/{campaign_id}<br>/campaigns/{campaign_id}<br>/campaigns/{campaign_id}/content<br>/campaigns/{campaign_id}/feedback<br>/campaigns/{campaign_id}/feedback/{feedback_id}<br>/campaigns/{campaign_id}/feedback/{feedback_id}<br>/campaigns/{campaign_id}/send-checklist<br>/conversations<br>/conversations/{conversation_id}<br>/conversations/{conversation_id}<br>/conversations/{conversation_id}/messages<br>/conversations/{conversation_id}/messages/{message_id}<br>/conversations/{conversation_id}/messages/{message_id}<br>/ecommerce/stores<br>/ecommerce/stores/{store_id}<br>/ecommerce/stores/{store_id}<br>/ecommerce/stores/{store_id}/carts/{cart_id}/lines<br>/ecommerce/stores/{store_id}/carts/{cart_id}/lines/{line_id}<br>/ecommerce/stores/{store_id}/carts/{cart_id}/lines/{line_id}<br>/ecommerce/stores/{store_id}/customers<br>/ecommerce/stores/{store_id}/customers/{customer_id}<br>/ecommerce/stores/{store_id}/customers/{customer_id}<br>/ecommerce/stores/{store_id}/orders<br>/ecommerce/stores/{store_id}/orders/{order_id}<br>/ecommerce/stores/{store_id}/orders/{order_id}<br>/ecommerce/stores/{store_id}/orders/{order_id}/lines<br>/ecommerce/stores/{store_id}/orders/{order_id}/lines/{line_id}<br>/ecommerce/stores/{store_id}/orders/{order_id}/lines/{line_id}<br>/ecommerce/stores/{store_id}/products<br>/ecommerce/stores/{store_id}/products/{product_id}<br>/ecommerce/stores/{store_id}/products/{product_id}<br>/ecommerce/stores/{store_id}/products/{product_id}/images<br>/ecommerce/stores/{store_id}/products/{product_id}/images/{image_id}<br>/ecommerce/stores/{store_id}/products/{product_id}/images/{image_id}<br>/ecommerce/stores/{store_id}/products/{product_id}/variants<br>/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}<br>/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}<br>/file-manager/files<br>/file-manager/files/{file_id}<br>/file-manager/files/{file_id}<br>/file-manager/folders<br>/file-manager/folders/{folder_id}<br>/file-manager/folders/{folder_id}<br>/lists<br>/lists/{list_id}<br>/lists/{list_id}<br>/lists/{list_id}/abuse-reports<br>/lists/{list_id}/abuse-reports/{report_id}<br>/lists/{list_id}/abuse-reports/{report_id}<br>/lists/{list_id}/activity<br>/lists/{list_id}/clients<br>/lists/{list_id}/growth-history<br>/lists/{list_id}/growth-history/{month}<br>/lists/{list_id}/growth-history/{month}<br>/lists/{list_id}/interest-categories/{interest_category_id}/interests<br>/lists/{list_id}/interest-categories/{interest_category_id}/interests/{interest_id}<br>/lists/{list_id}/interest-categories/{interest_category_id}/interests/{interest_id}<br>/lists/{list_id}/locations<br>/lists/{list_id}/members<br>/lists/{list_id}/members/{subscriber_hash}<br>/lists/{list_id}/members/{subscriber_hash}<br>/lists/{list_id}/members/{subscriber_hash}/activity<br>/lists/{list_id}/members/{subscriber_hash}/goals<br>/lists/{list_id}/members/{subscriber_hash}/notes<br>/lists/{list_id}/members/{subscriber_hash}/notes/{note_id}<br>/lists/{list_id}/members/{subscriber_hash}/notes/{note_id}<br>/lists/{list_id}/merge-fields<br>/lists/{list_id}/merge-fields/{merge_id}<br>/lists/{list_id}/merge-fields/{merge_id}<br>/lists/{list_id}/segments<br>/lists/{list_id}/segments/{segment_id}<br>/lists/{list_id}/segments/{segment_id}<br>/lists/{list_id}/segments/{segment_id}/members<br>/lists/{list_id}/signup-forms<br>/lists/{list_id}/webhooks<br>/lists/{list_id}/webhooks/{webhook_id}<br>/lists/{list_id}/webhooks/{webhook_id}<br>/reports<br>/reports/{campaign_id}<br>/reports/{campaign_id}<br>/reports/{campaign_id}/abuse-reports<br>/reports/{campaign_id}/abuse-reports/{report_id}<br>/reports/{campaign_id}/abuse-reports/{report_id}<br>/reports/{campaign_id}/advice<br>/reports/{campaign_id}/click-details<br>/reports/{campaign_id}/click-details/{link_id}<br>/reports/{campaign_id}/click-details/{link_id}<br>/reports/{campaign_id}/click-details/{link_id}/members<br>/reports/{campaign_id}/click-details/{link_id}/members/{subscriber_hash}<br>/reports/{campaign_id}/click-details/{link_id}/members/{subscriber_hash}<br>/reports/{campaign_id}/domain-performance<br>/reports/{campaign_id}/eepurl<br>/reports/{campaign_id}/email-activity<br>/reports/{campaign_id}/email-activity/{subscriber_hash}<br>/reports/{campaign_id}/email-activity/{subscriber_hash}<br>/reports/{campaign_id}/locations<br>/reports/{campaign_id}/sent-to<br>/reports/{campaign_id}/sent-to/{subscriber_hash}<br>/reports/{campaign_id}/sent-to/{subscriber_hash}<br>/reports/{campaign_id}/sub-reports<br>/reports/{campaign_id}/unsubscribed<br>/reports/{campaign_id}/unsubscribed/{subscriber_hash}<br>/reports/{campaign_id}/unsubscribed/{subscriber_hash}<br>/search-campaigns<br>/search-members<br>/template-folders<br>/template-folders/{folder_id}<br>/template-folders/{folder_id}<br>/templates<br>/templates/{template_id}<br>/templates/{template_id}<br>/templates/{template_id}/default-content<br>/automations/{workflow_id}/emails/{workflow_email_id}<br>/batches/{batch_id}<br>/batch-webhooks/{batch_webhook_id}<br>/campaign-folders/{folder_id}<br>/campaigns/{campaign_id}<br>/campaigns/{campaign_id}/feedback/{feedback_id}<br>/ecommerce/stores/{store_id}<br>/ecommerce/stores/{store_id}/carts/{cart_id}<br>/ecommerce/stores/{store_id}/carts/{cart_id}/lines/{line_id}<br>/ecommerce/stores/{store_id}/customers/{customer_id}<br>/ecommerce/stores/{store_id}/orders/{order_id}<br>/ecommerce/stores/{store_id}/orders/{order_id}/lines/{line_id}<br>/ecommerce/stores/{store_id}/products/{product_id}<br>/ecommerce/stores/{store_id}/products/{product_id}/images/{image_id}<br>/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}<br>/file-manager/files/{file_id}<br>/file-manager/folders/{folder_id}<br>/lists/{list_id}<br>/lists/{list_id}/interest-categories/{interest_category_id}<br>/lists/{list_id}/interest-categories/{interest_category_id}/interests/{interest_id}<br>/lists/{list_id}/members/{subscriber_hash}<br>/lists/{list_id}/members/{subscriber_hash}/notes/{note_id}<br>/lists/{list_id}/merge-fields/{merge_id}<br>/lists/{list_id}/segments/{segment_id}<br>/lists/{list_id}/segments/{segment_id}/members/{subscriber_hash}<br>/lists/{list_id}/webhooks/{webhook_id}<br>/template-folders/{folder_id}<br>/templates/{template_id}<br>/campaigns/{campaign_id}/content<br>/ecommerce/stores/{store_id}/customers/{customer_id}<br>/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}<br>/lists/{list_id}/members/{subscriber_hash}<br></strong></i>
+            <i><strong>/batch-webhooks/{batch_webhook_id}<br>/campaign-folders/{folder_id}<br>/campaigns/{campaign_id}<br>/campaigns/{campaign_id}/feedback/{feedback_id}<br>/ecommerce/stores/{store_id}<br>/ecommerce/stores/{store_id}/carts/{cart_id}<br>/ecommerce/stores/{store_id}/carts/{cart_id}/lines/{line_id}<br>/ecommerce/stores/{store_id}/customers/{customer_id}<br>/ecommerce/stores/{store_id}/orders/{order_id}<br>/ecommerce/stores/{store_id}/orders/{order_id}/lines/{line_id}<br>/ecommerce/stores/{store_id}/products/{product_id}<br>/ecommerce/stores/{store_id}/products/{product_id}/images/{image_id}<br>/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}<br>/file-manager/files/{file_id}<br>/file-manager/folders/{folder_id}<br>/lists/{list_id}<br>/lists/{list_id}/interest-categories/{interest_category_id}<br>/lists/{list_id}/interest-categories/{interest_category_id}/interests/{interest_id}<br>/lists/{list_id}/members/{subscriber_hash}<br>/lists/{list_id}/members/{subscriber_hash}/notes/{note_id}<br>/lists/{list_id}/merge-fields/{merge_id}<br>/lists/{list_id}/segments/{segment_id}<br>/lists/{list_id}/webhooks/{webhook_id}<br>/template-folders/{folder_id}<br>/templates/{template_id}<br>/authorized-apps<br>/automations/{workflow_id}/actions/pause-all-emails<br>/automations/{workflow_id}/actions/start-all-emails<br>/automations/{workflow_id}/emails/{workflow_email_id}/actions/pause<br>/automations/{workflow_id}/emails/{workflow_email_id}/actions/start<br>/automations/{workflow_id}/emails/{workflow_email_id}/queue<br>/automations/{workflow_id}/removed-subscribers<br>/batches<br>/batch-webhooks<br>/campaign-folders<br>/campaigns<br>/campaigns/{campaign_id}/actions/cancel-send<br>/campaigns/{campaign_id}/actions/pause<br>/campaigns/{campaign_id}/actions/replicate<br>/campaigns/{campaign_id}/actions/resume<br>/campaigns/{campaign_id}/actions/schedule<br>/campaigns/{campaign_id}/actions/send<br>/campaigns/{campaign_id}/actions/test<br>/campaigns/{campaign_id}/actions/unschedule<br>/campaigns/{campaign_id}/feedback<br>/conversations/{conversation_id}/messages<br>/ecommerce/stores<br>/ecommerce/stores/{store_id}/carts<br>/ecommerce/stores/{store_id}/carts/{cart_id}<br>/ecommerce/stores/{store_id}/carts/{cart_id}/lines<br>/ecommerce/stores/{store_id}/customers<br>/ecommerce/stores/{store_id}/orders<br>/ecommerce/stores/{store_id}/products<br>/ecommerce/stores/{store_id}/products/{product_id}/images<br>/ecommerce/stores/{store_id}/products/{product_id}/variants<br>/file-manager/files<br>/file-manager/folders<br>/lists<br>/lists/{list_id}<br>/lists/{list_id}/interest-categories<br>/lists/{list_id}/interest-categories/{interest_category_id}<br>/lists/{list_id}/interest-categories/{interest_category_id}/interests<br>/lists/{list_id}/members<br>/lists/{list_id}/members/{subscriber_hash}/notes<br>/lists/{list_id}/merge-fields<br>/lists/{list_id}/segments<br>/lists/{list_id}/segments/{segment_id}<br>/lists/{list_id}/segments/{segment_id}/members<br>/lists/{list_id}/signup-forms<br>/lists/{list_id}/webhooks<br>/template-folders<br>/templates<br>/authorized-apps<br>/authorized-apps/{app_id}<br>/automations<br>/automations/{workflow_id}<br>/automations/{workflow_id}/emails<br>/automations/{workflow_id}/emails/{workflow_email_id}<br>/automations/{workflow_id}/emails/{workflow_email_id}/queue<br>/automations/{workflow_id}/emails/{workflow_email_id}/queue/{subscriber_hash}<br>/automations/{workflow_id}/removed-subscribers<br>/batches<br>/batches/{batch_id}<br>/batch-webhooks<br>/batch-webhooks/{batch_webhook_id}<br>/campaign-folders<br>/campaign-folders/{folder_id}<br>/campaigns<br>/campaigns/{campaign_id}<br>/campaigns/{campaign_id}/content<br>/campaigns/{campaign_id}/feedback<br>/campaigns/{campaign_id}/feedback/{feedback_id}<br>/campaigns/{campaign_id}/send-checklist<br>/conversations<br>/conversations/{conversation_id}<br>/conversations/{conversation_id}/messages<br>/conversations/{conversation_id}/messages/{message_id}<br>/ecommerce/stores<br>/ecommerce/stores/{store_id}<br>/ecommerce/stores/{store_id}/carts/{cart_id}/lines<br>/ecommerce/stores/{store_id}/carts/{cart_id}/lines/{line_id}<br>/ecommerce/stores/{store_id}/customers<br>/ecommerce/stores/{store_id}/customers/{customer_id}<br>/ecommerce/stores/{store_id}/orders<br>/ecommerce/stores/{store_id}/orders/{order_id}<br>/ecommerce/stores/{store_id}/orders/{order_id}/lines<br>/ecommerce/stores/{store_id}/orders/{order_id}/lines/{line_id}<br>/ecommerce/stores/{store_id}/products<br>/ecommerce/stores/{store_id}/products/{product_id}<br>/ecommerce/stores/{store_id}/products/{product_id}/images<br>/ecommerce/stores/{store_id}/products/{product_id}/images/{image_id}<br>/ecommerce/stores/{store_id}/products/{product_id}/variants<br>/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}<br>/file-manager/files<br>/file-manager/files/{file_id}<br>/file-manager/folders<br>/file-manager/folders/{folder_id}<br>/lists<br>/lists/{list_id}<br>/lists/{list_id}/abuse-reports<br>/lists/{list_id}/abuse-reports/{report_id}<br>/lists/{list_id}/activity<br>/lists/{list_id}/clients<br>/lists/{list_id}/growth-history<br>/lists/{list_id}/growth-history/{month}<br>/lists/{list_id}/interest-categories/{interest_category_id}/interests<br>/lists/{list_id}/interest-categories/{interest_category_id}/interests/{interest_id}<br>/lists/{list_id}/locations<br>/lists/{list_id}/members<br>/lists/{list_id}/members/{subscriber_hash}<br>/lists/{list_id}/members/{subscriber_hash}/activity<br>/lists/{list_id}/members/{subscriber_hash}/goals<br>/lists/{list_id}/members/{subscriber_hash}/notes<br>/lists/{list_id}/members/{subscriber_hash}/notes/{note_id}<br>/lists/{list_id}/merge-fields<br>/lists/{list_id}/merge-fields/{merge_id}<br>/lists/{list_id}/segments<br>/lists/{list_id}/segments/{segment_id}<br>/lists/{list_id}/segments/{segment_id}/members<br>/lists/{list_id}/signup-forms<br>/lists/{list_id}/webhooks<br>/lists/{list_id}/webhooks/{webhook_id}<br>/reports<br>/reports/{campaign_id}<br>/reports/{campaign_id}/abuse-reports<br>/reports/{campaign_id}/abuse-reports/{report_id}<br>/reports/{campaign_id}/advice<br>/reports/{campaign_id}/click-details<br>/reports/{campaign_id}/click-details/{link_id}<br>/reports/{campaign_id}/click-details/{link_id}/members<br>/reports/{campaign_id}/click-details/{link_id}/members/{subscriber_hash}<br>/reports/{campaign_id}/domain-performance<br>/reports/{campaign_id}/eepurl<br>/reports/{campaign_id}/email-activity<br>/reports/{campaign_id}/email-activity/{subscriber_hash}<br>/reports/{campaign_id}/locations<br>/reports/{campaign_id}/sent-to<br>/reports/{campaign_id}/sent-to/{subscriber_hash}<br>/reports/{campaign_id}/sub-reports<br>/reports/{campaign_id}/unsubscribed<br>/reports/{campaign_id}/unsubscribed/{subscriber_hash}<br>/search-campaigns<br>/search-members<br>/template-folders<br>/template-folders/{folder_id}<br>/templates<br>/templates/{template_id}<br>/templates/{template_id}/default-content<br>/automations/{workflow_id}/emails/{workflow_email_id}<br>/batches/{batch_id}<br>/batch-webhooks/{batch_webhook_id}<br>/campaign-folders/{folder_id}<br>/campaigns/{campaign_id}<br>/campaigns/{campaign_id}/feedback/{feedback_id}<br>/ecommerce/stores/{store_id}<br>/ecommerce/stores/{store_id}/carts/{cart_id}<br>/ecommerce/stores/{store_id}/carts/{cart_id}/lines/{line_id}<br>/ecommerce/stores/{store_id}/customers/{customer_id}<br>/ecommerce/stores/{store_id}/orders/{order_id}<br>/ecommerce/stores/{store_id}/orders/{order_id}/lines/{line_id}<br>/ecommerce/stores/{store_id}/products/{product_id}<br>/ecommerce/stores/{store_id}/products/{product_id}/images/{image_id}<br>/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}<br>/file-manager/files/{file_id}<br>/file-manager/folders/{folder_id}<br>/lists/{list_id}<br>/lists/{list_id}/interest-categories/{interest_category_id}<br>/lists/{list_id}/interest-categories/{interest_category_id}/interests/{interest_id}<br>/lists/{list_id}/members/{subscriber_hash}<br>/lists/{list_id}/members/{subscriber_hash}/notes/{note_id}<br>/lists/{list_id}/merge-fields/{merge_id}<br>/lists/{list_id}/segments/{segment_id}<br>/lists/{list_id}/segments/{segment_id}/members/{subscriber_hash}<br>/lists/{list_id}/webhooks/{webhook_id}<br>/template-folders/{folder_id}<br>/templates/{template_id}<br>/campaigns/{campaign_id}/content<br>/ecommerce/stores/{store_id}/customers/{customer_id}<br>/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}<br>/lists/{list_id}/members/{subscriber_hash}<br></strong></i>
         </td>
     </tr>
     <tr>

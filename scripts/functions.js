@@ -658,21 +658,22 @@ endpoint.ecommerce.stores.carts.post = function(storeId, cartId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
+        } if(!httpOptions){
+            sys.logs.error('Invalid argument received.');
+            return;
         }
     }
     var url;
-    switch(arguments.length){
+    switch(arguments.length - 1){
         case 1:
 			url = parse('/ecommerce/stores/:store_id/carts', [storeId]);
 			break;
 		case 2:
 			url = parse('/ecommerce/stores/:store_id/carts/:cart_id', [storeId, cartId]);
 			break;
-		case 3:
-            url = parse('/ecommerce/stores/:store_id/carts/:cart_id', [storeId,cartId,body]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -766,21 +767,22 @@ endpoint.lists.post = function(listId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
+        } if(!httpOptions){
+            sys.logs.error('Invalid argument received.');
+            return;
         }
     }
     var url;
-    switch(arguments.length){
-        case 1:
+    switch(arguments.length - 1){
+        case 0:
 			url = parse('/lists');
 			break;
-		case 2:
+		case 1:
 			url = parse('/lists/:list_id', [listId]);
 			break;
-		case 3:
-            url = parse('/lists/:list_id', [listId,body]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -794,21 +796,22 @@ endpoint.lists.interestCategories.post = function(listId, interestCategoryId, ht
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
+        } if(!httpOptions){
+            sys.logs.error('Invalid argument received.');
+            return;
         }
     }
     var url;
-    switch(arguments.length){
+    switch(arguments.length - 1){
         case 1:
 			url = parse('/lists/:list_id/interest-categories', [listId]);
 			break;
 		case 2:
 			url = parse('/lists/:list_id/interest-categories/:interest_category_id', [listId, interestCategoryId]);
 			break;
-		case 3:
-            url = parse('/lists/:list_id/interest-categories/:interest_category_id', [listId,interestCategoryId,body]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -866,21 +869,22 @@ endpoint.lists.segments.post = function(listId, segmentId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
+        } if(!httpOptions){
+            sys.logs.error('Invalid argument received.');
+            return;
         }
     }
     var url;
-    switch(arguments.length){
+    switch(arguments.length - 1){
         case 1:
 			url = parse('/lists/:list_id/segments', [listId]);
 			break;
 		case 2:
 			url = parse('/lists/:list_id/segments/:segment_id', [listId, segmentId]);
 			break;
-		case 3:
-            url = parse('/lists/:list_id/segments/:segment_id', [listId,segmentId,body]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -941,21 +945,19 @@ endpoint.authorizedApps.get = function(appId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
         case 0:
 			url = parse('/authorized-apps');
 			break;
 		case 1:
 			url = parse('/authorized-apps/:app_id', [appId]);
 			break;
-		case 2:
-            url = parse('/authorized-apps/:app_id', [appId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -969,21 +971,19 @@ endpoint.automations.get = function(workflowId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
         case 0:
 			url = parse('/automations');
 			break;
 		case 1:
 			url = parse('/automations/:workflow_id', [workflowId]);
 			break;
-		case 2:
-            url = parse('/automations/:workflow_id', [workflowId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -997,21 +997,19 @@ endpoint.automations.emails.get = function(workflowId, workflowEmailId, httpOpti
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 1:
 			url = parse('/automations/:workflow_id/emails', [workflowId]);
 			break;
-		case 1:
+		case 2:
 			url = parse('/automations/:workflow_id/emails/:workflow_email_id', [workflowId, workflowEmailId]);
 			break;
-		case 2:
-            url = parse('/automations/:workflow_id/emails/:workflow_email_id', [workflowId,workflowEmailId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1025,21 +1023,19 @@ endpoint.automations.emails.queue.get = function(workflowId, workflowEmailId, su
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 2:
 			url = parse('/automations/:workflow_id/emails/:workflow_email_id/queue', [workflowId, workflowEmailId]);
 			break;
-		case 1:
+		case 3:
 			url = parse('/automations/:workflow_id/emails/:workflow_email_id/queue/:subscriber_hash', [workflowId, workflowEmailId, subscriberHash]);
 			break;
-		case 2:
-            url = parse('/automations/:workflow_id/emails/:workflow_email_id/queue/:subscriber_hash', [workflowId,workflowEmailId,subscriberHash]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1064,21 +1060,19 @@ endpoint.batches.get = function(batchId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
         case 0:
 			url = parse('/batches');
 			break;
 		case 1:
 			url = parse('/batches/:batch_id', [batchId]);
 			break;
-		case 2:
-            url = parse('/batches/:batch_id', [batchId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1092,21 +1086,19 @@ endpoint.batchWebhooks.get = function(batchWebhookId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
         case 0:
 			url = parse('/batch-webhooks');
 			break;
 		case 1:
 			url = parse('/batch-webhooks/:batch_webhook_id', [batchWebhookId]);
 			break;
-		case 2:
-            url = parse('/batch-webhooks/:batch_webhook_id', [batchWebhookId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1120,21 +1112,19 @@ endpoint.campaignFolders.get = function(folderId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
         case 0:
 			url = parse('/campaign-folders');
 			break;
 		case 1:
 			url = parse('/campaign-folders/:folder_id', [folderId]);
 			break;
-		case 2:
-            url = parse('/campaign-folders/:folder_id', [folderId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1148,21 +1138,19 @@ endpoint.campaigns.get = function(campaignId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
         case 0:
 			url = parse('/campaigns');
 			break;
 		case 1:
 			url = parse('/campaigns/:campaign_id', [campaignId]);
 			break;
-		case 2:
-            url = parse('/campaigns/:campaign_id', [campaignId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1187,21 +1175,19 @@ endpoint.campaigns.feedback.get = function(campaignId, feedbackId, httpOptions) 
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 1:
 			url = parse('/campaigns/:campaign_id/feedback', [campaignId]);
 			break;
-		case 1:
+		case 2:
 			url = parse('/campaigns/:campaign_id/feedback/:feedback_id', [campaignId, feedbackId]);
 			break;
-		case 2:
-            url = parse('/campaigns/:campaign_id/feedback/:feedback_id', [campaignId,feedbackId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1226,21 +1212,19 @@ endpoint.conversations.get = function(conversationId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
         case 0:
 			url = parse('/conversations');
 			break;
 		case 1:
 			url = parse('/conversations/:conversation_id', [conversationId]);
 			break;
-		case 2:
-            url = parse('/conversations/:conversation_id', [conversationId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1254,21 +1238,19 @@ endpoint.conversations.messages.get = function(conversationId, messageId, httpOp
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 1:
 			url = parse('/conversations/:conversation_id/messages', [conversationId]);
 			break;
-		case 1:
+		case 2:
 			url = parse('/conversations/:conversation_id/messages/:message_id', [conversationId, messageId]);
 			break;
-		case 2:
-            url = parse('/conversations/:conversation_id/messages/:message_id', [conversationId,messageId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1282,21 +1264,19 @@ endpoint.ecommerce.stores.get = function(storeId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
         case 0:
 			url = parse('/ecommerce/stores');
 			break;
 		case 1:
 			url = parse('/ecommerce/stores/:store_id', [storeId]);
 			break;
-		case 2:
-            url = parse('/ecommerce/stores/:store_id', [storeId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1310,21 +1290,19 @@ endpoint.ecommerce.stores.carts.lines.get = function(storeId, cartId, lineId, ht
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 2:
 			url = parse('/ecommerce/stores/:store_id/carts/:cart_id/lines', [storeId, cartId]);
 			break;
-		case 1:
+		case 3:
 			url = parse('/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id', [storeId, cartId, lineId]);
 			break;
-		case 2:
-            url = parse('/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id', [storeId,cartId,lineId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1338,21 +1316,19 @@ endpoint.ecommerce.stores.customers.get = function(storeId, customerId, httpOpti
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 1:
 			url = parse('/ecommerce/stores/:store_id/customers', [storeId]);
 			break;
-		case 1:
+		case 2:
 			url = parse('/ecommerce/stores/:store_id/customers/:customer_id', [storeId, customerId]);
 			break;
-		case 2:
-            url = parse('/ecommerce/stores/:store_id/customers/:customer_id', [storeId,customerId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1366,21 +1342,19 @@ endpoint.ecommerce.stores.orders.get = function(storeId, orderId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 1:
 			url = parse('/ecommerce/stores/:store_id/orders', [storeId]);
 			break;
-		case 1:
+		case 2:
 			url = parse('/ecommerce/stores/:store_id/orders/:order_id', [storeId, orderId]);
 			break;
-		case 2:
-            url = parse('/ecommerce/stores/:store_id/orders/:order_id', [storeId,orderId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1394,21 +1368,19 @@ endpoint.ecommerce.stores.orders.lines.get = function(storeId, orderId, lineId, 
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 2:
 			url = parse('/ecommerce/stores/:store_id/orders/:order_id/lines', [storeId, orderId]);
 			break;
-		case 1:
+		case 3:
 			url = parse('/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id', [storeId, orderId, lineId]);
 			break;
-		case 2:
-            url = parse('/ecommerce/stores/:store_id/orders/:order_id/lines/:line_id', [storeId,orderId,lineId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1422,21 +1394,19 @@ endpoint.ecommerce.stores.products.get = function(storeId, productId, httpOption
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 1:
 			url = parse('/ecommerce/stores/:store_id/products', [storeId]);
 			break;
-		case 1:
+		case 2:
 			url = parse('/ecommerce/stores/:store_id/products/:product_id', [storeId, productId]);
 			break;
-		case 2:
-            url = parse('/ecommerce/stores/:store_id/products/:product_id', [storeId,productId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1450,21 +1420,19 @@ endpoint.ecommerce.stores.products.images.get = function(storeId, productId, ima
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 2:
 			url = parse('/ecommerce/stores/:store_id/products/:product_id/images', [storeId, productId]);
 			break;
-		case 1:
+		case 3:
 			url = parse('/ecommerce/stores/:store_id/products/:product_id/images/:image_id', [storeId, productId, imageId]);
 			break;
-		case 2:
-            url = parse('/ecommerce/stores/:store_id/products/:product_id/images/:image_id', [storeId,productId,imageId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1478,21 +1446,19 @@ endpoint.ecommerce.stores.products.variants.get = function(storeId, productId, v
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 2:
 			url = parse('/ecommerce/stores/:store_id/products/:product_id/variants', [storeId, productId]);
 			break;
-		case 1:
+		case 3:
 			url = parse('/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id', [storeId, productId, variantId]);
 			break;
-		case 2:
-            url = parse('/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id', [storeId,productId,variantId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1506,21 +1472,19 @@ endpoint.fileManager.files.get = function(fileId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
         case 0:
 			url = parse('/file-manager/files');
 			break;
 		case 1:
 			url = parse('/file-manager/files/:file_id', [fileId]);
 			break;
-		case 2:
-            url = parse('/file-manager/files/:file_id', [fileId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1534,21 +1498,19 @@ endpoint.fileManager.folders.get = function(folderId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
         case 0:
 			url = parse('/file-manager/folders');
 			break;
 		case 1:
 			url = parse('/file-manager/folders/:folder_id', [folderId]);
 			break;
-		case 2:
-            url = parse('/file-manager/folders/:folder_id', [folderId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1562,21 +1524,19 @@ endpoint.lists.get = function(listId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
         case 0:
 			url = parse('/lists');
 			break;
 		case 1:
 			url = parse('/lists/:list_id', [listId]);
 			break;
-		case 2:
-            url = parse('/lists/:list_id', [listId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1590,21 +1550,19 @@ endpoint.lists.abuseReports.get = function(listId, reportId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 1:
 			url = parse('/lists/:list_id/abuse-reports', [listId]);
 			break;
-		case 1:
+		case 2:
 			url = parse('/lists/:list_id/abuse-reports/:report_id', [listId, reportId]);
 			break;
-		case 2:
-            url = parse('/lists/:list_id/abuse-reports/:report_id', [listId,reportId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1640,21 +1598,19 @@ endpoint.lists.growthHistory.get = function(listId, month, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 1:
 			url = parse('/lists/:list_id/growth-history', [listId]);
 			break;
-		case 1:
+		case 2:
 			url = parse('/lists/:list_id/growth-history/:month', [listId, month]);
 			break;
-		case 2:
-            url = parse('/lists/:list_id/growth-history/:month', [listId,month]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1668,21 +1624,19 @@ endpoint.lists.interestCategories.interests.get = function(listId, interestCateg
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 2:
 			url = parse('/lists/:list_id/interest-categories/:interest_category_id/interests', [listId, interestCategoryId]);
 			break;
-		case 1:
+		case 3:
 			url = parse('/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id', [listId, interestCategoryId, interestId]);
 			break;
-		case 2:
-            url = parse('/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id', [listId,interestCategoryId,interestId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1707,21 +1661,19 @@ endpoint.lists.members.get = function(listId, subscriberHash, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 1:
 			url = parse('/lists/:list_id/members', [listId]);
 			break;
-		case 1:
+		case 2:
 			url = parse('/lists/:list_id/members/:subscriber_hash', [listId, subscriberHash]);
 			break;
-		case 2:
-            url = parse('/lists/:list_id/members/:subscriber_hash', [listId,subscriberHash]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1757,21 +1709,19 @@ endpoint.lists.members.notes.get = function(listId, subscriberHash, noteId, http
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 2:
 			url = parse('/lists/:list_id/members/:subscriber_hash/notes', [listId, subscriberHash]);
 			break;
-		case 1:
+		case 3:
 			url = parse('/lists/:list_id/members/:subscriber_hash/notes/:note_id', [listId, subscriberHash, noteId]);
 			break;
-		case 2:
-            url = parse('/lists/:list_id/members/:subscriber_hash/notes/:note_id', [listId,subscriberHash,noteId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1785,21 +1735,19 @@ endpoint.lists.mergeFields.get = function(listId, mergeId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 1:
 			url = parse('/lists/:list_id/merge-fields', [listId]);
 			break;
-		case 1:
+		case 2:
 			url = parse('/lists/:list_id/merge-fields/:merge_id', [listId, mergeId]);
 			break;
-		case 2:
-            url = parse('/lists/:list_id/merge-fields/:merge_id', [listId,mergeId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1813,21 +1761,19 @@ endpoint.lists.segments.get = function(listId, segmentId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 1:
 			url = parse('/lists/:list_id/segments', [listId]);
 			break;
-		case 1:
+		case 2:
 			url = parse('/lists/:list_id/segments/:segment_id', [listId, segmentId]);
 			break;
-		case 2:
-            url = parse('/lists/:list_id/segments/:segment_id', [listId,segmentId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1863,21 +1809,19 @@ endpoint.lists.webhooks.get = function(listId, webhookId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 1:
 			url = parse('/lists/:list_id/webhooks', [listId]);
 			break;
-		case 1:
+		case 2:
 			url = parse('/lists/:list_id/webhooks/:webhook_id', [listId, webhookId]);
 			break;
-		case 2:
-            url = parse('/lists/:list_id/webhooks/:webhook_id', [listId,webhookId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1891,21 +1835,19 @@ endpoint.reports.get = function(campaignId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
         case 0:
 			url = parse('/reports');
 			break;
 		case 1:
 			url = parse('/reports/:campaign_id', [campaignId]);
 			break;
-		case 2:
-            url = parse('/reports/:campaign_id', [campaignId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1919,21 +1861,19 @@ endpoint.reports.abuseReports.get = function(campaignId, reportId, httpOptions) 
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 1:
 			url = parse('/reports/:campaign_id/abuse-reports', [campaignId]);
 			break;
-		case 1:
+		case 2:
 			url = parse('/reports/:campaign_id/abuse-reports/:report_id', [campaignId, reportId]);
 			break;
-		case 2:
-            url = parse('/reports/:campaign_id/abuse-reports/:report_id', [campaignId,reportId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1958,21 +1898,19 @@ endpoint.reports.clickDetails.get = function(campaignId, linkId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 1:
 			url = parse('/reports/:campaign_id/click-details', [campaignId]);
 			break;
-		case 1:
+		case 2:
 			url = parse('/reports/:campaign_id/click-details/:link_id', [campaignId, linkId]);
 			break;
-		case 2:
-            url = parse('/reports/:campaign_id/click-details/:link_id', [campaignId,linkId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -1986,21 +1924,19 @@ endpoint.reports.clickDetails.members.get = function(campaignId, linkId, subscri
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 2:
 			url = parse('/reports/:campaign_id/click-details/:link_id/members', [campaignId, linkId]);
 			break;
-		case 1:
+		case 3:
 			url = parse('/reports/:campaign_id/click-details/:link_id/members/:subscriber_hash', [campaignId, linkId, subscriberHash]);
 			break;
-		case 2:
-            url = parse('/reports/:campaign_id/click-details/:link_id/members/:subscriber_hash', [campaignId,linkId,subscriberHash]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -2036,21 +1972,19 @@ endpoint.reports.emailActivity.get = function(campaignId, subscriberHash, httpOp
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 1:
 			url = parse('/reports/:campaign_id/email-activity', [campaignId]);
 			break;
-		case 1:
+		case 2:
 			url = parse('/reports/:campaign_id/email-activity/:subscriber_hash', [campaignId, subscriberHash]);
 			break;
-		case 2:
-            url = parse('/reports/:campaign_id/email-activity/:subscriber_hash', [campaignId,subscriberHash]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -2075,21 +2009,19 @@ endpoint.reports.sentTo.get = function(campaignId, subscriberHash, httpOptions) 
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 1:
 			url = parse('/reports/:campaign_id/sent-to', [campaignId]);
 			break;
-		case 1:
+		case 2:
 			url = parse('/reports/:campaign_id/sent-to/:subscriber_hash', [campaignId, subscriberHash]);
 			break;
-		case 2:
-            url = parse('/reports/:campaign_id/sent-to/:subscriber_hash', [campaignId,subscriberHash]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -2114,21 +2046,19 @@ endpoint.reports.unsubscribed.get = function(campaignId, subscriberHash, httpOpt
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
-        case 0:
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
+        case 1:
 			url = parse('/reports/:campaign_id/unsubscribed', [campaignId]);
 			break;
-		case 1:
+		case 2:
 			url = parse('/reports/:campaign_id/unsubscribed/:subscriber_hash', [campaignId, subscriberHash]);
 			break;
-		case 2:
-            url = parse('/reports/:campaign_id/unsubscribed/:subscriber_hash', [campaignId,subscriberHash]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -2156,21 +2086,19 @@ endpoint.templateFolders.get = function(folderId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
         case 0:
 			url = parse('/template-folders');
 			break;
 		case 1:
 			url = parse('/template-folders/:folder_id', [folderId]);
 			break;
-		case 2:
-            url = parse('/template-folders/:folder_id', [folderId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
@@ -2184,21 +2112,19 @@ endpoint.templates.get = function(templateId, httpOptions) {
         for (var i = 0 ; i < arguments.length; i++){
             if (isObject(arguments[i])){
                 httpOptions = arguments[i];
+                arguments[i] = undefined;
             }
-        }
+        } 
     }
     var url;
-    switch(arguments.length){
+    switch(httpOptions ? arguments.length - 1 : arguments.length){
         case 0:
 			url = parse('/templates');
 			break;
 		case 1:
 			url = parse('/templates/:template_id', [templateId]);
 			break;
-		case 2:
-            url = parse('/templates/:template_id', [templateId]);
-            break;
-        default:
+		default:
             sys.logs.error('Invalid argument received.');
             return;
     }
