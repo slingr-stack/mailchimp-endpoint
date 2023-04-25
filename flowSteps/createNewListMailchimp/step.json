@@ -1,8 +1,8 @@
 {
-  "label": "Create a new Mailchimp campaign.",
+  "label": "Get campaign info",
   "name": "createNewListMailchimp",
   "category": "integrations",
-  "description": "This flow step will create a new Mailchimp campaign.",
+  "description": "Create a new Mailchimp campaign.",
   "inputs": [
     {
       "label": "Name",

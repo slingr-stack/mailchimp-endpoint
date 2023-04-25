@@ -1,13 +1,13 @@
 {
-  "label": "Get campaign info",
-  "name": "campaignInfoMailchimp",
+  "label": "List members info",
+  "name": "listMembersInfoMailchimp",
   "category": "integrations",
-  "description": "Get information about a specific campaign.",
+  "description": "This flow step will get information about members in a specific Mailchimp list.",
   "inputs": [
     {
-      "label": "Campaign Id",
-      "name": "campaignId",
-      "description": "The unique id for the campaign.",
+      "label": "List Id",
+      "name": "listId",
+      "description": "The unique ID for the list.",
       "type": "text",
       "required": "true",
       "options": {

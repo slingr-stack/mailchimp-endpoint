@@ -1,8 +1,8 @@
 {
-  "label": "Get information about all lists in the account.",
+  "label": "Get lists info",
   "name": "listInfoMailchimp",
   "category": "integrations",
-  "description": "This flow step will get information about all lists in the account.",
+  "description": "Get information about all lists in the account.",
   "inputs": [
   ],
   "outputs": [

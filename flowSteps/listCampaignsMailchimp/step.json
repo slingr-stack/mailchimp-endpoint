@@ -1,8 +1,8 @@
 {
-  "label": "Get all campaigns in an account.",
+  "label": "List campaigns",
   "name": "listCampaignsMailchimp",
   "category": "integrations",
-  "description": "This flow step will get all campaigns in an account.",
+  "description": "Get all campaigns in an account.",
   "inputs": [
 
   ],

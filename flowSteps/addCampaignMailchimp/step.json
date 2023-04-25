@@ -1,5 +1,5 @@
 {
-  "label": "Create a new Mailchimp campaign.",
+  "label": "Add campaign",
   "name": "addCampaignMailchimp",
   "category": "integrations",
   "description": "This flow step will create a new Mailchimp campaign.",
