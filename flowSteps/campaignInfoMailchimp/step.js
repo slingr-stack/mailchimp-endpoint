@@ -1,4 +1,4 @@
-step.getCampaignInfoMailchimp = function (inputs) {
+step.campaignInfoMailchimp = function (inputs) {
 
 	var inputsLogic = {
 		campaignId: inputs.campaignId || "",

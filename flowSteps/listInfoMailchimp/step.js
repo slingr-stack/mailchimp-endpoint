@@ -1,4 +1,4 @@
-step.getCampaignInfoMailchimp = function (inputs) {
+step.listInfoMailchimp = function (inputs) {
 
 	var options = {
 		path: "/lists"

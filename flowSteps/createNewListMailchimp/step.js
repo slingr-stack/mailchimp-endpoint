@@ -1,4 +1,4 @@
-step.addCampaignMailchimp = function (inputs) {
+step.createNewListMailchimp = function (inputs) {
 
     var inputsLogic = {
         name: inputs.name || "",
