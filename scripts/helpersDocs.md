@@ -9,12 +9,12 @@ The Javascript API of the mailchimp endpoint has three pieces:
 ## HTTP requests
 You can make `PATCH`,`POST`,`GET`,`DELETE`,`PUT` requests to the [mailchimp API](API_URL_HERE) like this:
 ```javascript
-var response = app.endpoints.mailchimp.patch('/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id', body)
-var response = app.endpoints.mailchimp.patch('/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id')
-var response = app.endpoints.mailchimp.post('/ecommerce/stores/:store_id/products/:product_id/variants', body)
-var response = app.endpoints.mailchimp.post('/ecommerce/stores/:store_id/products/:product_id/variants')
-var response = app.endpoints.mailchimp.get('/automations')
-var response = app.endpoints.mailchimp.delete('/ecommerce/stores/:store_id/customers/:customer_id')
+var response = app.endpoints.mailchimp.patch('/lists/:list_id/members/:subscriber_hash', body)
+var response = app.endpoints.mailchimp.patch('/lists/:list_id/members/:subscriber_hash')
+var response = app.endpoints.mailchimp.post('/file-manager/files', body)
+var response = app.endpoints.mailchimp.post('/file-manager/files')
+var response = app.endpoints.mailchimp.get('/ecommerce/stores/:store_id/carts/:cart_id/lines/:line_id')
+var response = app.endpoints.mailchimp.delete('/lists/:list_id/interest-categories/:interest_category_id/interests/:interest_id')
 var response = app.endpoints.mailchimp.put('/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id', body)
 var response = app.endpoints.mailchimp.put('/ecommerce/stores/:store_id/products/:product_id/variants/:variant_id')
 ```
@@ -1440,14 +1440,351 @@ For more information about how shortcuts or flow steps works, and how they are g
 
 <br>
 
-
-
 ### Custom Flow Steps Name
 
 Description of Custom Flow Steps
 
-*MANUALLY ADD THE DOCUMENTATION OF THESE FLOW STEPS HERE...*
+### Add campaign
 
+This flow step will create a new Mailchimp campaign.
+
+
+<h3>Inputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Label</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Default</th>
+        <th>Visibility</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Type</td>
+        <td>dropDown</td>
+        <td>yes</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            There are four types of campaigns you can create in Mailchimp.
+        </td>
+    </tr>
+    <tr>
+        <td>List Id</td>
+        <td>text</td>
+        <td>yes</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            The unique list id.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>Outputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>response</td>
+        <td>object</td>
+        <td>
+            Object resulting from the response to the endpoint call.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+### Add member to list
+
+Add member of a specific Mailchimp list.
+
+
+<h3>Inputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Label</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Default</th>
+        <th>Visibility</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>List Id</td>
+        <td>text</td>
+        <td>yes</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            The unique list id.
+        </td>
+    </tr>
+    <tr>
+        <td>Email Address</td>
+        <td>email</td>
+        <td>yes</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            Email address for a subscriber.
+        </td>
+    </tr>
+    <tr>
+        <td>Status</td>
+        <td>dropDown</td>
+        <td>yes</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            Subscriber's current status.
+        </td>
+    </tr>
+    <tr>
+        <td>First Name</td>
+        <td>text</td>
+        <td>yes</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            First Name
+        </td>
+    </tr>
+    <tr>
+        <td>Last Name</td>
+        <td>text</td>
+        <td>yes</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            Last Name
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Outputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>response</td>
+        <td>object</td>
+        <td>
+            Object resulting from the response to the endpoint call.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+### Get campaign info
+
+Get information about a specific campaign.
+
+
+<h3>Inputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Label</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Default</th>
+        <th>Visibility</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Campaign Id</td>
+        <td>text</td>
+        <td>yes</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            The unique id for the campaign.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>Outputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>response</td>
+        <td>object</td>
+        <td>
+            Object resulting from the response to the endpoint call.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+### List campaigns
+
+Get all campaigns in an account.
+
+<h3>Outputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>response</td>
+        <td>object</td>
+        <td>
+            Object resulting from the response to the endpoint call.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+### Get lists info
+
+Get information about all lists in the account.
+
+
+<h3>Inputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Label</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Default</th>
+        <th>Visibility</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Campaign Id</td>
+        <td>text</td>
+        <td>yes</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            The unique id for the campaign.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>Outputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>response</td>
+        <td>object</td>
+        <td>
+            Object resulting from the response to the endpoint call.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+### List members info
+
+This flow step will get information about members in a specific Mailchimp list.
+
+
+<h3>Inputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Label</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Default</th>
+        <th>Visibility</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>List Id</td>
+        <td>text</td>
+        <td>yes</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            The unique ID for the list.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>Outputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>response</td>
+        <td>object</td>
+        <td>
+            Object resulting from the response to the endpoint call.
+        </td>
+    </tr>
+    </tbody>
+</table>
 
 </details>
 
