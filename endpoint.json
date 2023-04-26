@@ -48,14 +48,6 @@
       "name": "_delete"
     },
     {
-      "label": "Convert date to time",
-      "name": "_convertDateToTimestamp"
-    },
-    {
-      "label": "Format from milliseconds",
-      "name": "_formatFromMillis"
-    },
-    {
       "label": "Transform email to hash md5",
       "name": "_emailHash"
     },
@@ -65,8 +57,17 @@
     }
   ],
   "scripts": [
-    "mailchimp-fn-helpers.js",
     "functions.js"
+  ],
+  "flowSteps": [
+    "apiCallMailchimp",
+    "listCampaignsMailchimp",
+    "campaignInfoMailchimp",
+    "addCampaignMailchimp",
+    "listInfoMailchimp",
+    "createNewListMailchimp",
+    "addMemberToListMailchimp",
+    "listMembersInfoMailchimp"
   ],
   "configuration": [
     {

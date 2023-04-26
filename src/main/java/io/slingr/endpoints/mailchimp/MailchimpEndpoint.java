@@ -113,41 +113,6 @@ public class MailchimpEndpoint extends HttpEndpoint {
         return new String(chars);
     }
 
-    @EndpointFunction(name = "_convertDateToTimestamp")
-    public Json convertDateToTimestamp(Json params) {
-        if (params != null && params.size() > 0) {
-
-            String dateStr = params.string("date");
-            if (StringUtils.isEmpty(dateStr)) {
-                throw EndpointException.permanent(ErrorCode.ARGUMENT, "Parameter 'date' is required");
-            }
-
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssX");
-
-            try {
-                Json res = Json.map();
-                Date d = sdf.parse(dateStr);
-                return res.set("timestamp", d.getTime());
-            } catch (ParseException e) {
-                throw EndpointException.permanent(ErrorCode.CONVERSION, String.format("Parameter '%s' can not be converted.", dateStr));
-            }
-        }
-        return null;
-    }
-
-    @EndpointFunction(name = "_formatFromMillis")
-    public Json formatFromMillis(Json params) {
-        if (params != null && params.size() > 0) {
-            long millis = params.longInteger("millis");
-
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssX");
-
-            Json res = Json.map();
-            Date d = new Date(millis);
-            return res.set("date", sdf.format(d));
-        }
-        return null;
-    }
 
     @EndpointFunction(name = "_getResourceById")
     public Json getResourceById(Json request) {
