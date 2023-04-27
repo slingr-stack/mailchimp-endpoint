@@ -1,7 +1,7 @@
 ---
 title: MailChimp endpoint
 keywords: 
-last_updated: July 31, 2017
+last_updated: April 27, 2023
 tags: []
 summary: "Detailed description of the API of the MailChimp endpoint."
 ---
